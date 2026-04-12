@@ -1,4 +1,4 @@
-<a href="https://wa.me/+212771278882">
+<a href="https://wa.me/+212771278882" about="_blank">
   <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" width="40" height="40" style="fill:#25D366"/>
 </a>
 
