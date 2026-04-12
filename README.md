@@ -39,7 +39,7 @@
 
 | Projet | Description | Langage |
 |--------|-------------|---------|
-| [gestion-etudiants](https://github.com/elmeee-1/ProjectWeb-V1-) | Site de Guide touristique au Maroc | HTML/CSS/JavaScript |
+| [WEBSTIE](https://github.com/elmeee-1/ProjectWeb-V1-) | Site de Guide touristique au Maroc | HTML/CSS/JavaScript |
 
 ---
 
