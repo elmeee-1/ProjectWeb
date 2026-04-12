@@ -1,11 +1,11 @@
-<a href="https://wa.me/+212771278882" target="_blank">
-  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" width="40" height="40" style="fill:#25D366"/>
-</a>
+<button onclick="window.open('https://wa.me/212XXXXXXXXX', '_blank')">
+  WhatsApp
+</button>
 
-<a href="https://instagram.com/Elmeee_1" target="_blank">
-  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" width="40" height="40"/>
-</a>
+<button onclick="window.open('https://instagram.com/TONPSEUDO', '_blank')">
+  Instagram
+</button>
 
-<a href="https://linkedin.com/in/Elmehdi Elmellouki" target="_blank">
-  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" width="40" height="40"/>
-</a>
+<button onclick="window.open('https://linkedin.com/in/TONPSEUDO', '_blank')">
+  LinkedIn
+</button>
