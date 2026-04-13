@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cinzel:wght@400;600&family=Lato:wght@300;400&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --sand:    #c8975f;
+      --gold:    #d4a857;
+      --deep:    #1a100a;
+      --cream:   #f5ede0;
+      --red:     #c0392b;
+      --white:   #ffffff;
+    }
+
+    html, body { height: 100%; font-family: 'Lato', sans-serif; background: var(--deep); color: var(--cream); }
+
+    /* ── HERO ─────────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      min-height: 520px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Simulated desert background using CSS gradients & layered SVG noise */
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 120% 60% at 70% 55%, rgba(180,110,30,0.55) 0%, transparent 70%),
+        radial-gradient(ellipse 80% 80% at 20% 80%, rgba(80,40,10,0.7) 0%, transparent 65%),
+        linear-gradient(170deg, #0d0805 0%, #3a1e08 25%, #7b4716 50%, #b97230 68%, #d49050 80%, #b87640 90%, #6b3d18 100%);
+      z-index: 0;
+    }
+
+    /* Sand dune SVG shape */
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 200% 50% at 60% 100%, rgba(180,120,40,0.5) 0%, transparent 55%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='800' height='600' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+      mix-blend-mode: overlay;
+    }
+
+    /* Dune silhouette shape */
+    .dune-shape {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 55%;
+      background: radial-gradient(ellipse 130% 70% at 55% 100%, #b87030 0%, #7a4218 40%, transparent 75%);
+      clip-path: ellipse(70% 70% at 55% 100%);
+      z-index: 1;
+    }
+
+    /* Dark vignette overlay */
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,0,0,0.65) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 80% at 0% 50%, rgba(0,0,0,0.45) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 80% at 100% 50%, rgba(0,0,0,0.35) 0%, transparent 60%),
+        linear-gradient(to bottom, rgba(10,5,2,0.6) 0%, rgba(10,5,2,0.1) 35%, rgba(10,5,2,0.25) 70%, rgba(10,5,2,0.8) 100%);
+      z-index: 2;
+    }
+
+    /* ── NAV ──────────────────────────────────────────────── */
+    nav {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+    }
+
+    .nav-lang {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--red);
+      color: #fff;
+      padding: 6px 14px 6px 16px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.2s;
+    }
+    .nav-lang:hover { background: #a93226; }
+    .nav-lang svg { width: 10px; height: 10px; fill: #fff; }
+
+    .nav-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+    .nav-logo svg { width: 52px; height: 52px; }
+    .nav-logo-text {
+      font-family: 'Cinzel', serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.32em;
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      color: var(--white);
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      font-family: 'Cinzel', serif;
+      font-weight: 400;
+      opacity: 0.9;
+      transition: opacity 0.2s;
+      padding: 4px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+    .nav-menu:hover { opacity: 1; }
+    .nav-menu span { font-size: 1rem; }
+
+    /* ── HERO TITLE ───────────────────────────────────────── */
+    .hero-content {
+      position: relative;
+      background-image: url(blog-sand.png);
+      background-size: cover;
+      z-index: 10;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px 80px;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(3rem, 9vw, 7rem);
+      color: var(--white);
+      line-height: 1.1;
+      letter-spacing: 0.04em;
+      text-shadow:
+        0 2px 40px rgba(0,0,0,0.6),
+        0 0 80px rgba(0,0,0,0.4);
+      animation: fadeUp 1.2s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── BOTTOM PATTERN ───────────────────────────────────── */
+    .hero-pattern {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      z-index: 5;
+      height: 54px;
+      overflow: hidden;
+    }
+    .hero-pattern svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* ── BLOG CARDS SECTION ───────────────────────────────── */
+    .section {
+      padding: 80px 60px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: 'Cinzel', serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.4em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 300;
+      color: var(--cream);
+      margin-bottom: 50px;
+      line-height: 1.2;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(212,168,87,0.15);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+
+    .card-thumb {
+      height: 200px;
+      position: relative;
+      overflow: hidden;
+    }
+    .card-thumb-bg {
+      position: absolute;
+      inset: 0;
+      transition: transform 0.5s ease;
+    }
+    .card:hover .card-thumb-bg { transform: scale(1.06); }
+
+    .card-thumb-1 { background: linear-gradient(135deg, #7b3a0e 0%, #c8772a 40%, #e8a850 70%, #b06020 100%); }
+    .card-thumb-2 { background: linear-gradient(135deg, #0e3a3a 0%, #1a6a5a 40%, #2a9a7a 70%, #156050 100%); }
+    .card-thumb-3 { background: linear-gradient(135deg, #3a1a0e 0%, #7a3a1a 40%, #c06030 70%, #8a3010 100%); }
+
+    .card-thumb-label {
+      position: absolute;
+      bottom: 14px; left: 18px;
+      font-family: 'Cinzel', serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.35em;
+      color: rgba(255,255,255,0.8);
+      background: rgba(0,0,0,0.35);
+      padding: 4px 10px;
+      border-radius: 2px;
+    }
+
+    .card-body { padding: 24px 22px 26px; }
+
+    .card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .card-excerpt {
+      font-size: 0.82rem;
+      color: rgba(245,237,224,0.55);
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .card-link {
+      font-family: 'Cinzel', serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      color: var(--gold);
+      text-decoration: none;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(212,168,87,0.3);
+      padding-bottom: 2px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .card-link:hover { color: #f0c060; border-color: #f0c060; }
+
+    /* ── DIVIDER ──────────────────────────────────────────── */
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto 60px;
+      opacity: 0.4;
+    }
+
+    /* ── FOOTER ───────────────────────────────────────────── */
+    footer {
+      text-align: center;
+      padding: 40px;
+      border-top: 1px solid rgba(212,168,87,0.12);
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      color: rgba(245,237,224,0.3);
+      font-family: 'Cinzel', serif;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="dune-shape"></div>
+    <div class="hero-overlay"></div>
+
+    <!-- NAV -->
+    <nav>
+      <div class="nav-lang">
+        English
+        <svg viewBox="0 0 10 6"><path d="M0 0l5 6 5-6z"/></svg>
+      </div>
+
+      <div class="nav-logo">
+        <!-- Morocco-style geometric logo (simplified) -->
+        <svg viewBox="0 0 60 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M30 4 L54 18 L54 50 L30 64 L6 50 L6 18 Z" stroke="white" stroke-width="1.2" fill="none" opacity="0.9"/>
+          <path d="M30 12 L47 22 L47 46 L30 56 L13 46 L13 22 Z" stroke="white" stroke-width="0.8" fill="none" opacity="0.6"/>
+          <circle cx="30" cy="34" r="8" stroke="white" stroke-width="1" fill="none" opacity="0.8"/>
+          <path d="M30 22 L30 46 M18 28 L42 40 M18 40 L42 28" stroke="white" stroke-width="0.7" opacity="0.5"/>
+          <circle cx="30" cy="34" r="2.5" fill="white" opacity="0.9"/>
+        </svg>
+        <span class="nav-logo-text">MOROCCO</span>
+      </div>
+
+      <div class="nav-menu">
+        <span>☰</span> MENU
+      </div>
+    </nav>
+
+    <!-- TITLE -->
+    <div class="hero-content">
+      <h1 class="hero-title">MOROCCO<br>TRAVEL BLOG</h1>
+    </div>
+
+    <!-- Bottom ornamental pattern -->
+    <div class="hero-pattern">
+      <svg viewBox="0 0 1440 54" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="moroccan" x="0" y="0" width="72" height="54" patternUnits="userSpaceOnUse">
+            <!-- Zellige-inspired tile motif -->
+            <rect width="72" height="54" fill="rgba(10,5,2,0.75)"/>
+            <path d="M36 2 L70 27 L36 52 L2 27 Z" stroke="rgba(212,168,87,0.35)" stroke-width="0.8" fill="none"/>
+            <path d="M36 10 L62 27 L36 44 L10 27 Z" stroke="rgba(212,168,87,0.2)" stroke-width="0.6" fill="none"/>
+            <circle cx="36" cy="27" r="4" stroke="rgba(212,168,87,0.3)" stroke-width="0.7" fill="none"/>
+            <line x1="36" y1="2" x2="36" y2="52" stroke="rgba(212,168,87,0.12)" stroke-width="0.5"/>
+            <line x1="2" y1="27" x2="70" y2="27" stroke="rgba(212,168,87,0.12)" stroke-width="0.5"/>
+          </pattern>
+        </defs>
+        <rect width="1440" height="54" fill="url(#moroccan)"/>
+        <rect width="1440" height="1" fill="rgba(212,168,87,0.25)"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ── ARTICLES ── -->
+  <div class="section">
+    <p class="section-label">Discover</p>
+    <h2 class="section-title">Tales from the Kingdom</h2>
+    <div class="cards">
+
+      <article class="card">
+        <div class="card-thumb">
+          <div class="card-thumb-bg card-thumb-1"></div>
+          <span class="card-thumb-label">SAHARA</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Nights in the Erg Chebbi Dunes</h3>
+          <p class="card-excerpt">Sleeping under a canopy of stars in the Sahara, with camels silhouetted against the setting sun — a journey unlike any other.</p>
+          <a href="#" class="card-link">Read More</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-thumb">
+          <div class="card-thumb-bg card-thumb-2"></div>
+          <span class="card-thumb-label">MARRAKECH</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Lost in the Medina's Labyrinth</h3>
+          <p class="card-excerpt">Every turn in the souks of Marrakech reveals a new world — spices, leather, cedar wood, and the call to prayer echoing through alleyways.</p>
+          <a href="#" class="card-link">Read More</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-thumb">
+          <div class="card-thumb-bg card-thumb-3"></div>
+          <span class="card-thumb-label">ATLAS MOUNTAINS</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Crossing the High Atlas on Foot</h3>
+          <p class="card-excerpt">Berber villages cling to terracotta cliffs as a three-day trek reveals the breathtaking solitude of Morocco's forgotten highlands.</p>
+          <a href="#" class="card-link">Read More</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <footer>© MOROCCO TRAVEL BLOG &nbsp;·&nbsp; ALL RIGHTS RESERVED</footer>
+
+</body>
+</html>
