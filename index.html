@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProjectWeb</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleDEST.css">
 </head>
 <body>
     <header> 
@@ -43,7 +44,6 @@
       </div> 
     </div>
 
-
     <button class="slider-arrow prev" id="prevBtn" aria-label="Previous">
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
         <path d="M10 3L5 8l5 5" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -79,10 +79,6 @@
     document.getElementById('nextBtn').addEventListener('click', () => goTo(current + 1));
     document.getElementById('prevBtn').addEventListener('click', () => goTo(current - 1));
     dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
- 
-    // Auto-play
-    setInterval(() => goTo(current + 1), 4000);
-  </script>   
-
+</script>
 </body>
 </html>
