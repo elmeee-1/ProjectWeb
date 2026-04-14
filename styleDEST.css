@@ -94,6 +94,10 @@ nav.header a:hover { color: #8b6a3b;}
     .dest-card:nth-child(4) { background-image: url(slider4.png);background-position: center; }
     .dest-card:nth-child(5) { background-image: url(slider5.png);background-position: center; }
     .dest-card:nth-child(6) { background-image: url(slider6.png);background-position: center; }
+    .dest-card:nth-child(7) { background-image: url(slider7.png);background-position: center; }
+    .dest-card:nth-child(8) { background-image: url(slider8.png);background-position: center; }
+    .dest-card:nth-child(9) { background-image: url(slider9.png);background-position: center; }
+
 
 
 

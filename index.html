@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProjectWeb</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styleDEST.css">
 </head>
 <body>
     <header> 
@@ -31,19 +30,55 @@
  
       <div class="slide">
         <div class="slide-label">
-          <div class="slide-city">Hassan tour</div>
-          <div class="slide-sub">★ 4.2 &nbsp;|&nbsp; Rabat, Morocco</div>
+          <h2 class="slide-city">Hassan tour</h2>
+          <p class="slide-sub">★ 4.2 &nbsp;|&nbsp; Rabat, Morocco</p>
         </div>
       </div>
  
       <div class="slide">
         <div class="slide-label">
-          <div class="slide-city">Medina</div>
-          <div class="slide-sub">★ 4.0 &nbsp;|&nbsp; Essaouira, Morocco</div>
+          <h2 class="slide-city">Medina</h2>
+          <p class="slide-sub">★ 4.0 &nbsp;|&nbsp; Essaouira, Morocco</p>
         </div>
       </div> 
+    <div class="slide">
+        <div class="slide-label">
+          <h2 class="slide-city">université El Quaraouiyine</h2>
+          <p class="slide-sub">★ 4.5 &nbsp;|&nbsp; Fès, Morocco </p>
+        </div>
+      </div> 
+    <div class="slide">
+        <div class="slide-label">
+          <h2 class="slide-city">Agadir Oufella</h2>
+          <p class="slide-sub">★ 4.8 &nbsp;|&nbsp; Agadir, Morocco </p>
+        </div>
     </div>
-
+    <div class="slide">
+        <div class="slide-label">
+          <h2 class="slide-city">kasbah</h2>
+          <p class="slide-sub">★ 4.2 &nbsp;|&nbsp; Chefchaouen, Morocco </p>
+        </div>
+      </div> 
+      <div class="slide">
+        <div class="slide-label">
+          <h2 class="slide-city">Michlifen</h2>
+          <p class="slide-sub">★ 4.8 &nbsp;|&nbsp; Ifrane, Morocco </p>
+        </div>
+    </div>
+    <div class="slide">
+        <div class="slide-label">
+          <h2 class="slide-city">Ait ben haddou kasbah</h2>
+          <p class="slide-sub">★ 4.8 &nbsp;|&nbsp; ouarzazate, Morocco </p>
+        </div>
+    </div>
+    <div class="slide">
+        <div class="slide-label">
+          <h2 class="slide-city">Desert Camps</h2>
+          <p class="slide-sub">★ 4.8 &nbsp;|&nbsp; Merzouga, Morocco </p>
+        </div>
+    </div>
+    </div>
+    </section>
     <button class="slider-arrow prev" id="prevBtn" aria-label="Previous">
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
         <path d="M10 3L5 8l5 5" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -61,8 +96,15 @@
       <button class="dot active" aria-label="Slide 1"></button>
       <button class="dot" aria-label="Slide 2"></button>
       <button class="dot" aria-label="Slide 3"></button>
-    </div>
+      <button class="dot" aria-label="Slide 4"></button>
+      <button class="dot" aria-label="Slide 5"></button>
+      <button class="dot" aria-label="Slide 6"></button>
+      <button class="dot" aria-label="Slide 7"></button>
+      <button class="dot" aria-label="Slide 8"></button>
+      <button class="dot" aria-label="Slide 9"></button>
 
+
+    </div>
   </section>
  <script>
     const track = document.getElementById('sliderTrack');
@@ -79,6 +121,8 @@
     document.getElementById('nextBtn').addEventListener('click', () => goTo(current + 1));
     document.getElementById('prevBtn').addEventListener('click', () => goTo(current - 1));
     dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+    setInterval(()=>{
+      goTo(current+1);},3000);
 </script>
 </body>
 </html>
