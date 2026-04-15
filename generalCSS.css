@@ -1,0 +1,31 @@
+li{list-style:none ;}
+ul{
+    display: flex;
+    gap: 10px;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.book-now {
+  background: #07086d;
+
+  border: none;
+  border-radius: 12px;
+  padding: 10px 25px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.5s;
+nav.header a:hover { color: #8b6a3b;}
+}.book-now:hover { background: #8b6a3b; }
+.book-now a{
+      color: #F5F0E8 ;
+}
