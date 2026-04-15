@@ -109,6 +109,16 @@
     .slide:nth-child(1) { background-image:url(slider1.png); background-size: cover;background-position: center; }
     .slide:nth-child(2) { background-image:url(slider2.png);background-size: cover;background-position: center; }
     .slide:nth-child(3) { background-image:url(slider3.png);background-size: cover;background-position: center; }
+    .slide:nth-child(4) { background-image:url(slider4.png);background-size: cover;background-position: center; }
+    .slide:nth-child(5) { background-image:url(slider5.png);background-size: cover;background-position: center; }
+    .slide:nth-child(6) { background-image:url(slider6.png);background-size: cover;background-position: center; }
+    .slide:nth-child(7) { background-image:url(slider7.png);background-size: cover;background-position: center; }
+    .slide:nth-child(8) { background-image:url(slider8.png);background-size: cover;background-position: center; }
+    .slide:nth-child(9) { background-image:url(slider9.png);background-size: cover;background-position: center; }
+
+
+
+
  
     .slide::after {
       content: '';
@@ -120,7 +130,7 @@
     .slide-label {
   position: relative;
   z-index: 1;
-  padding: 2rem 2.5rem;
+  padding: 32px 40px;
 }
 
 .slide-city {
