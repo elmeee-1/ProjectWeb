@@ -3,6 +3,7 @@ nav.header {
   padding: 0px;
   min-height: 70px;
   font-family: 'DM Sans', sans-serif;
+  position: sticky;
 }
 nav.header a {
   text-decoration: none;
