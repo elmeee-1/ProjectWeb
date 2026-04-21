@@ -23,15 +23,15 @@
     .dest-card:hover { transform: translateY(-5px); box-shadow: 0 14px 30px rgba(0, 0, 0, 3); }
 
     
-    .dest-card:nth-child(1) { background-image:url(slider1.png);background-position: 100%; }
-    .dest-card:nth-child(2) { background-image: url(slider2.png);background-position:100%;}
-    .dest-card:nth-child(3) { background-image: url(slider3.png);background-position: 100%; }
-    .dest-card:nth-child(4) { background-image: url(slider4.png);background-position: 100%; }
-    .dest-card:nth-child(5) { background-image: url(slider5.png);background-position: 100%; }
-    .dest-card:nth-child(6) { background-image: url(slider6.png);background-position: 100%; }
-    .dest-card:nth-child(7) { background-image: url(slider7.png);background-position: 100%; }
-    .dest-card:nth-child(8) { background-image: url(slider8.png);background-position: 100%; }
-    .dest-card:nth-child(9) { background-image: url(slider9.png);background-position: 100%; }
+    .dest-card:nth-child(1) { background-image:url(sliders.pic/slider1.png);background-position: 100%; }
+    .dest-card:nth-child(2) { background-image: url(sliders.pic/slider2.png);background-position:100%;}
+    .dest-card:nth-child(3) { background-image: url(sliders.pic/slider3.png);background-position: 100%; }
+    .dest-card:nth-child(4) { background-image: url(sliders.pic/slider4.png);background-position: 100%; }
+    .dest-card:nth-child(5) { background-image: url(sliders.pic/slider5.png);background-position: 100%; }
+    .dest-card:nth-child(6) { background-image: url(sliders.pic/slider6.png);background-position: 100%; }
+    .dest-card:nth-child(7) { background-image: url(sliders.pic/slider7.png);background-position: 100%; }
+    .dest-card:nth-child(8) { background-image: url(sliders.pic/slider8.png);background-position: 100%; }
+    .dest-card:nth-child(9) { background-image: url(sliders.pic/slider9.png);background-position: 100%; }
 
 
 
