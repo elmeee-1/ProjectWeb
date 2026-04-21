@@ -43,7 +43,7 @@ nav.header a:hover { color: #8b6a3b;}
     .nav-links a.active { color: var(--brown); }
     .nav-links a.active::after { width: 100%; }
 
-.btn-book { 
+.book-now{ 
     background: #07086d;
     color: #F5F0E8;
     border: none;
@@ -56,3 +56,6 @@ nav.header a:hover { color: #8b6a3b;}
     transition: background 0.5s;
     nav.header a:hover { color: #8b6a3b;}
      } 
+.book-now:hover {
+    background: #8b6a3b;
+    color: #F5F0E8;}
