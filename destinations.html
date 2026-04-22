@@ -9,18 +9,64 @@
     <link rel="stylesheet" href="generalCSS.css">
 </head>
 <body>
-   <header> 
-        <nav class="header" style="display:flex; justify-content:space-between; align-items:center;">
-           <a href="index.html"><img src="Logo.png" alt="Home" class="logo"></a>
-           <a href="index.html">Home</a>
-           <a href="What-to-do.html">What to do</a>
-            <a href="destinations.html">Destinations</a>
-            <a href="about.html">About</a>
-            <input class="search-box" type="search" placeholder="Search for a city 🔍" required>
-            <button class="book-now">Book Now</button>
-        </nav>
-      </header>
- 
+  
+    <header> 
+   <ul class="nav-links">           
+          <nav class="header">
+            <a href="index.html" class="logo">
+              <img src="logo.png" alt="Logo">
+            </a>
+            <li class="dropdown">
+              <a href="#">Home &#9662;</a>
+              <div class="dropdown-content">
+                <a href="index.html">Home</a>
+              </div>
+            </li>
+    <!-- Dropdown: What to do -->
+    <li class="dropdown">
+      <a href="#">What to do &#9662;</a> <!-- &#9662; is a small down arrow -->
+      <div class="dropdown-content">
+        <a href="What-to-do.html">Adventure</a>
+        <a href="what-to-do.html">Culture & History</a>
+        <a href="what-to-do.html">Nature</a>
+        <a href="what-to-do.html">Beach</a>
+        <a href="What-to-do.html">Where to Stay</a>
+        <a href="what-to-do.html">Food & Drink</a>
+
+      </div>
+    </li>
+
+    <!-- Dropdown: Destinations -->
+    <li class="dropdown">
+      <a href="#">Destinations &#9662;</a>
+      <div class="dropdown-content">
+        <a href="destinations.html">Marrakech</a>
+        <a href="destinations.html">Essaouira</a>
+        <a href="destinations.html">Rabat</a>
+        <a href="destinations.html">Fès</a>
+        <a href="destinations.html">Agadir</a>
+        <a href="destinations.html">ifran</a>
+        <a href="destinations.html">Ourzazate</a>
+        <a href="destinations.html">Chefchaouen</a>
+        <a href="destinations.html">Merzouga</a>
+      </div>
+    </li>
+    <li>
+      <a href="about.html">About</a>
+    </li>
+    <!-- Search Box -->
+    <li>
+      <input type="search" class="search-box" placeholder="Search destinations...">
+    </li>
+
+    <!-- Book Now Button -->
+    <li>
+      <button class="book-now">Book Now</button>
+    </li>
+  </ul>
+</nav>
+</header>
+
   <!-- ══ PAGE HERO ══ -->
   <div class="page-hero">
     <h1>All Destinations</h1>

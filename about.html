@@ -6,10 +6,60 @@
   <title> Blog</title> 
 </head>
 <body>  
-    <div class="nav-menu">
-        <span>☰</span> MENU
+    <header> 
+   <ul class="nav-links">        
+          <nav class="header">
+            <a href="index.html" class="logo">
+              <img src="logo.png" alt="Logo">
+            </a>
+            <li class="dropdown">
+              <a href="#">Home &#9662;</a>
+              <div class="dropdown-content">
+                <a href="index.html">Home</a>
+              </div>
+            </li>
+    <!-- Dropdown: What to do -->
+    <li class="dropdown">
+      <a href="#">What to do &#9662;</a> <!-- &#9662; is a small down arrow -->
+      <div class="dropdown-content">
+        <a href="What-to-do.html">Adventure</a>
+        <a href="what-to-do.html">Culture & History</a>
+        <a href="what-to-do.html">where to stay</a>
+        <a href="what-to-do.html">Food & Drink</a>
       </div>
-    </nav>
+    </li>
+
+    <!-- Dropdown: Destinations -->
+    <li class="dropdown">
+      <a href="#">Destinations &#9662;</a>
+      <div class="dropdown-content">
+        <a href="destinations.html">Marrakech</a>
+        <a href="destinations.html">Essaouira</a>
+        <a href="destinations.html">Rabat</a>
+        <a href="destinations.html">Fès</a>
+        <a href="destinations.html">Chefchaouen</a>
+      </div>
+    </li>
+    
+    <!-- Simple Link: Home (No Dropdown) -->
+
+    <!-- Simple Link: About (No Dropdown) -->
+    <li>
+      <a href="about.html">About</a>
+    </li>
+
+    <!-- Search Box -->
+    <li>
+      <input type="search" class="search-box" placeholder="Search destinations...">
+    </li>
+
+    <!-- Book Now Button -->
+    <li>
+      <button class="book-now">Book Now</button>
+    </li>
+  </ul>
+</nav>
+</header>
 
     <!-- TITLE -->
     <div class="hero-content">

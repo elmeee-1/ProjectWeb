@@ -519,7 +519,7 @@ body {
     background-size: cover;
     color: #fff;
     padding: 60px 20px;
-    min-height: 100vh;
+    min-height: 120vh;
     font-family: 'Playfair Display', serif;
     display: flex;
   align-items: center;
@@ -543,16 +543,18 @@ body {
   
   .intro-text {
      display: flex;
-  align-items: center;
-  justify-content: justify;
+  align-items: start;
   text-align: left;
   gap: 20px;
   font-family: 'Lato', sans-serif; 
     margin-top: 20px;
     font-size: 1.25rem;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
     color: #fff; 
+  }
+  .intro-text p {
+    width: calc(100%/3);
   }
 
 
