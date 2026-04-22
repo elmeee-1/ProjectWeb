@@ -14,7 +14,6 @@ nav.header {
   
 }
 nav.header a {
-  white-space: nowrap;
   text-decoration: none;
   color: #1a1a1a;
   padding-bottom: 2px;
@@ -28,7 +27,6 @@ nav.header a {
   display: flex;
   list-style: none;
   gap: 16px;
-  align-items: center;
 }
 .nav-links a{
   text-decoration: none;
@@ -36,7 +34,8 @@ nav.header a {
   font-weight: 500;
 }
 .logo {
-  height: 4%;
+  height: 40px;
+  width: auto;
 }
 
 
@@ -66,29 +65,3 @@ nav.header a {
 .book-now:hover {
     background: #8b6a3b;
     color: #F5F0E8;}
-    @media (max-width: 768px) {
-  nav.header {
-    flex-direction: row;  
-    flex-wrap: nowrap;
-    gap: 8px;
-    text-align: center;
-    justify-content: space-between;
-    padding: 10px 12px;
-  }
-  .nav-links {
-    flex-wrap: nowrap;
-    gap: 8px;
-    justify-content: center;
-    width: 100%;       
-  }
-  .search-box {
-    width: 80px;
-    min-width:100px;
-  }
-  .btn-book {
-    width: auto;   
-    white-space: nowrap;   
-    padding: 10px 14px;  
-    max-width: 200px;
-  }
-}
