@@ -1,18 +1,27 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 nav.header {
-  padding: 0px;
-  min-height: 70px;
-  font-family: 'DM Sans', sans-serif;
+  
+  height:  50px;
+  width: 100%;
   position: sticky;
+  
 }
 nav.header a {
   text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
   color: #1a1a1a;
   padding-bottom: 2px;
   gap: 2rem;
-  transition: color 0.2s;
+  font-size: 20px;
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  
 }
 .nav-links{
   display: flex;
@@ -25,23 +34,21 @@ nav.header a {
   font-weight: 500;
 }
 .logo {
-  height: 40px;
-  width: auto;
+  height: 4%;
 }
 
-nav.header a:hover { color: #8b6a3b;}
 
 .search-box {
   padding: 10px 16px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
   font-size: 13px;
   background: #fff;
+  border: 1px solid #000000;
   width: 300px;
+  border-radius: 12px;
 }   
-    .nav-links a:hover { color: var(--brown); }
-    .nav-links a:hover::after { width: 100%; }
-    .nav-links a.active { color: var(--brown); }
-    .nav-links a.active::after { width: 100%; }
+    nav.header a:hover { color: #8b6a3b; text-decoration: underline} 
+    .nav-links a:hover { color: #8b6a3b; }
 
 .book-now{ 
     background: #07086d;
@@ -49,12 +56,10 @@ nav.header a:hover { color: #8b6a3b;}
     border: none;
     border-radius: 12px;
     padding: 10px 25px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 13px;
     font-weight: 500;
     cursor: pointer;
-    transition: background 0.5s;
-    nav.header a:hover { color: #8b6a3b;}
      } 
 .book-now:hover {
     background: #8b6a3b;
