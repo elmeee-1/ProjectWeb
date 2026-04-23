@@ -1,12 +1,3 @@
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #f7f3ef;
-    margin: 0;
-}
-a{
-    text-decoration: none;
-    color: inherit;
-  }
 .activities {
     text-align: center;
     padding: 50px 20px;
@@ -36,8 +27,14 @@ a{
 
 .card:hover {
     transform: translateY(-8px);
+    box-shadow: 0 10px 88px rgba(0,0,0,1);
+    
 }
 
+:has(.card:hover) .card:not(:hover) {
+  opacity: 0.8;
+  scale: 0.8;
+}
 .card img {
     width: 100%;
     height: 300px;
