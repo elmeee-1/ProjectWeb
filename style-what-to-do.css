@@ -138,3 +138,17 @@ a{
     font-size: 10px;
   }
 }
+
+.city-tag {
+    text-decoration: none; /* Bach t7iydi l-khatt */
+    color: #333;           /* Bedliha l-loun li bghiti */
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #f0f0f0; /* Ila bghiti t-khlihoum ibano b7al chi button sghira */
+    border-radius: 5px;
+    margin: 2px;
+}
+
+.city-tag:hover {
+    background-color: #e0e0e0; /* Bach t-beddel loun fach idouz l-la souris */
+}

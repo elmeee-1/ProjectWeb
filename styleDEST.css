@@ -105,3 +105,8 @@
       color: #888;
       max-width: 420px;
     }
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f7f3ef;
+    margin: 0;
+}
