@@ -1,128 +1,166 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Destinations</title>
-    <link rel="stylesheet" href="styleDEST.css">
-    <link rel="stylesheet" href="generalCSS.css">
-</head>
-<body>
-   <header> 
-        <nav class="header" style="display:flex; justify-content:space-between; align-items:center;">
-           <a href="index.html"><img src="Logo.png" alt="Home" class="logo"></a>
-           <a href="index.html">Home</a>
-           <a href="What-to-do.html">What to do</a>
-            <a href="destinations.html">Destinations</a>
-            <a href="about.html">About</a>
-            <input class="search-box" type="search" placeholder="Search for a city 🔍" required>
-            <button class="book-now">Book Now</button>
-        </nav>
-      </header>
- 
-  <!-- ══ PAGE HERO ══ -->
-  <div class="page-hero">
-    <h1>All Destinations</h1>
-    <p>From island escapes to cool mountain towns, discover where your next journey takes you.</p>
-  </div>
- 
-     <section class="dest-section">
-    <div class="dest-grid">
- 
-      <div class="dest-card">
-        <div class="card-price-tag">starts at $320</div>
-        <div class="card-info">
-          <div class="card-city">Marrakech</div>
-          <div class="card-tag">Monuments , Culture, History, Mountains</div>
-          <div class="card-meta">
-            <span class="card-star">★</span> 4.8 &nbsp;|&nbsp;Marrackech, Morocco</div>
-          </div>
-        </div>
- 
-      <div class="dest-card">
-        <div class="card-price-tag">starts at $320</div>
-        <div class="card-info">
-          <div class="card-city">Essaouira</div>
-          <div class="card-tag">Music, beach, culture,surf</div>
-          <div class="card-meta">
-            <span class="card-star">★</span> 4.7 &nbsp;|&nbsp; Essaouira,Morocco</div>
-          </div>
-        </div>
- 
-      <div class="dest-card">
-        <div class="card-price-tag">starts at $550</div>
-        <div class="card-info">
-          <div class="card-city">Rabat </div>
-          <div class="card-tag">culture, history,monuments,beach</div>
-          <div class="card-meta">
-            <span class="card-star">★</span> 4.9 &nbsp;|&nbsp; Rabat, Morocco</div>
-          </div>
-        </div>
-      <div class="dest-card">
-        <div class="card-price-tag">starts at $450</div>
-        <div class="card-info">
-          <div class="card-city">Fès</div>
-          <div class="card-tag">Monuments , Culture, History</div>
-          <div class="card-meta">
-            <span class="card-star">★</span> 4.6 &nbsp;|&nbsp;Fès, Morocco</div>
-          </div>
-        </div>
-      <div class="dest-card">
-        <div class="card-price-tag">starts at $450</div>
-        <div class="card-info">
-          <div class="card-city">Agadir</div>
-          <div class="card-tag">Places, Culture, History</div>
-          <div class="card-meta">
-            <span class="card-star">★</span> 4.6 &nbsp;|&nbsp;Agadir, Morocco</div>
-          </div>
-        </div>
+    <link rel="stylesheet" href="styleDEST.css" />
+    <link rel="stylesheet" href="generalCSS.css" />
+  </head>
+  <body>
+    <header>
+      <nav
+        class="header"
+        style="
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+        "
+      >
+        <a href="index.html"
+          ><img src="Logo.png" alt="Home" class="logo" style="height: 40px"
+        /></a>
+        <a href="index.html">Home</a>
+        <a href="what-to-do.html">What to do</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="about.html">About</a>
+        <button class="book-now">Book Now</button>
+        <button
+          id="themeToggle"
+          style="
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            margin-left: 10px;
+          "
+        >
+          🌙
+        </button>
+      </nav>
+    </header>
+
+    <!-- ══ PAGE HERO ══ -->
+    <div class="page-hero">
+      <h1>All Destinations</h1>
+      <p>
+        From island escapes to cool mountain towns, discover where your next
+        journey takes you.
+      </p>
+    </div>
+
+    <section class="dest-section">
+      <div class="dest-grid">
         <div class="dest-card">
-        <div class="card-price-tag">starts at $450</div>
-        <div class="card-info">
-          <div class="card-city">Chefchaouen</div>
-          <div class="card-tag">monuments, Culture, History</div>
-          <div class="card-meta">
-            <span class="card-star">★</span> 4.6 &nbsp;|&nbsp;Chefchaouen, Morocco</div>
-          </div>
-        </div>
-        <div class="dest-card">
-        <div class="card-price-tag">starts at $320</div>
-        <div class="card-info">
-          <div class="card-city">Ifrane</div>
-          <div class="card-tag"> winter culture,Nature,</div>
-          <div class="card-meta">
-            <span class="card-star">★</span> 4.5 &nbsp;|&nbsp; Ifrane,Morocco</div>
-          </div>
-        </div>
-        <div class="dest-card">
-        <div class="card-price-tag">starts at $320</div>
-        <div class="card-info">
-          <div class="card-city">ouarzazate</div>
-          <div class="card-tag">desert,culture,history,cinema</div>
-          <div class="card-meta">
-            <span class="card-star">★</span> 4.5 &nbsp;|&nbsp; ouarzazate,Morocco</div>
-          </div>
-        </div>
-        <div class="dest-card">
-        <div class="card-price-tag">starts at $320</div>
-        <div class="card-info">
-          <div class="card-city">Merzouga</div>
-          <div class="card-tag">dunes,camel,adventure</div>
-          <div class="card-meta">
-            <span class="card-star">★</span> 4.5 &nbsp;|&nbsp; Merzouga,Morocco</div>
+          <div class="card-price-tag">starts at $320</div>
+          <div class="card-info">
+            <div class="card-city">Marrakech</div>
+            <div class="card-tag">Monuments , Culture, History, Mountains</div>
+            <div class="card-meta">
+              <span class="card-star">★</span> 4.8 &nbsp;|&nbsp;Marrackech,
+              Morocco
+            </div>
           </div>
         </div>
 
-      </div></section>
-       <script>
-    // Filter buttons toggle
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+        <div class="dest-card">
+          <div class="card-price-tag">starts at $320</div>
+          <div class="card-info">
+            <div class="card-city">Essaouira</div>
+            <div class="card-tag">Music, beach, culture,surf</div>
+            <div class="card-meta">
+              <span class="card-star">★</span> 4.7 &nbsp;|&nbsp;
+              Essaouira,Morocco
+            </div>
+          </div>
+        </div>
+
+        <div class="dest-card">
+          <div class="card-price-tag">starts at $550</div>
+          <div class="card-info">
+            <div class="card-city">Rabat</div>
+            <div class="card-tag">culture, history,monuments,beach</div>
+            <div class="card-meta">
+              <span class="card-star">★</span> 4.9 &nbsp;|&nbsp; Rabat, Morocco
+            </div>
+          </div>
+        </div>
+        <div class="dest-card">
+          <div class="card-price-tag">starts at $450</div>
+          <div class="card-info">
+            <div class="card-city">Fès</div>
+            <div class="card-tag">Monuments , Culture, History</div>
+            <div class="card-meta">
+              <span class="card-star">★</span> 4.6 &nbsp;|&nbsp;Fès, Morocco
+            </div>
+          </div>
+        </div>
+        <div class="dest-card">
+          <div class="card-price-tag">starts at $450</div>
+          <div class="card-info">
+            <div class="card-city">Agadir</div>
+            <div class="card-tag">Places, Culture, History</div>
+            <div class="card-meta">
+              <span class="card-star">★</span> 4.6 &nbsp;|&nbsp;Agadir, Morocco
+            </div>
+          </div>
+        </div>
+        <div class="dest-card">
+          <div class="card-price-tag">starts at $450</div>
+          <div class="card-info">
+            <div class="card-city">Chefchaouen</div>
+            <div class="card-tag">monuments, Culture, History</div>
+            <div class="card-meta">
+              <span class="card-star">★</span> 4.6 &nbsp;|&nbsp;Chefchaouen,
+              Morocco
+            </div>
+          </div>
+        </div>
+        <div class="dest-card">
+          <div class="card-price-tag">starts at $320</div>
+          <div class="card-info">
+            <div class="card-city">Ifrane</div>
+            <div class="card-tag">winter culture,Nature,</div>
+            <div class="card-meta">
+              <span class="card-star">★</span> 4.5 &nbsp;|&nbsp; Ifrane,Morocco
+            </div>
+          </div>
+        </div>
+        <div class="dest-card">
+          <div class="card-price-tag">starts at $320</div>
+          <div class="card-info">
+            <div class="card-city">ouarzazate</div>
+            <div class="card-tag">desert,culture,history,cinema</div>
+            <div class="card-meta">
+              <span class="card-star">★</span> 4.5 &nbsp;|&nbsp;
+              ouarzazate,Morocco
+            </div>
+          </div>
+        </div>
+        <div class="dest-card">
+          <div class="card-price-tag">starts at $320</div>
+          <div class="card-info">
+            <div class="card-city">Merzouga</div>
+            <div class="card-tag">dunes,camel,adventure</div>
+            <div class="card-meta">
+              <span class="card-star">★</span> 4.5 &nbsp;|&nbsp;
+              Merzouga,Morocco
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      // Filter buttons toggle
+      document.querySelectorAll(".filter-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document
+            .querySelectorAll(".filter-btn")
+            .forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+        });
       });
-    });
-  </script>
-</body>
+    </script>
+    <script src="darkmode.js"></script>
+  </body>
 </html>

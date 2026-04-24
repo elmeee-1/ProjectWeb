@@ -8,16 +8,16 @@
      <link rel="stylesheet" href="generalCSS.css">
 </head>
         <header> 
-        <nav class="header" style="display:flex; justify-content:space-between; align-items:center;">
-           <a href="index.html"><img src="Logo.png" alt="Home" class="logo"></a>
-           <a href="index.html">Home</a>
-           <a href="what-to-do.html">What to do</a>
-            <a href="destinations.html">Destinations</a>
-            <a href="about.html">About</a>
-            <input class="search-box" type="search" placeholder="Search for a city 🔍" required>
-            <button class="book-now">Book Now</button>
-        </nav>
-      </header>
+    <nav class="header" style="display:flex; justify-content:space-evenly; align-items:center;">
+       <a href="index.html"><img src="Logo.png" alt="Home" class="logo" style="height: 40px;"></a>
+       <a href="index.html">Home</a>
+       <a href="what-to-do.html">What to do</a>
+       <a href="destinations.html">Destinations</a>
+       <a href="about.html">About</a>
+       <button class="book-now">Book Now</button>
+       <button id="themeToggle" style="background:none; border:none; cursor:pointer; font-size:20px; margin-left:10px;">🌙</button>
+    </nav>
+</header>
       <body>
         <section class="activities">
     <h2>What to do in Morroco</h2>
@@ -61,6 +61,6 @@
             <span class="city-tag">Chefchaouen</span>
     </div>
 </section>
-    
+<script src="darkmode.js"></script>
 </body>
 </html>
