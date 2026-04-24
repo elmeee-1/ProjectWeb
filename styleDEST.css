@@ -13,19 +13,20 @@
     .dest-card {
       background-size: cover;
       background-repeat: no-repeat;
-      border-radius: var(--card-radius);
+      border-radius: 20px;
       overflow: hidden;
       position: relative;
       height: 300px;
       cursor: pointer;
-      transition: transform 0.25s, box-shadow 0.25s ;
+      transition: transform 0.25s, box-shadow 0.5s ;
     }
-    .dest-card:hover { transform: translateY(-5px); box-shadow: 0 14px 30px rgba(0, 0, 0, 3); }
-
+    .dest-card:hover { transform: translateY(-7px); box-shadow: 0 10px 80px rgba(0, 0, 0, 1); }
+    :has(.dest-card:hover) .dest-card:not(:hover) { opacity: 0.82; }
     
-    .dest-card:nth-child(1) { background-image:url(sliders.pic/slider1.png);background-position: 100%; }
-    .dest-card:nth-child(2) { background-image: url(sliders.pic/slider2.png);background-position:100%;}
-    .dest-card:nth-child(3) { background-image: url(sliders.pic/slider3.png);background-position: 100%; }
+    
+    .dest-card:nth-child(1) { background-image:url(sliders.pic/slider1.png);background-position: 100%;  }
+    .dest-card:nth-child(2) { background-image: url(sliders.pic/slider3.png);background-position:100%;}
+    .dest-card:nth-child(3) { background-image: url(sliders.pic/slider2.png);background-position: 100%; }
     .dest-card:nth-child(4) { background-image: url(sliders.pic/slider4.png);background-position: 100%; }
     .dest-card:nth-child(5) { background-image: url(sliders.pic/slider5.png);background-position: 100%; }
     .dest-card:nth-child(6) { background-image: url(sliders.pic/slider6.png);background-position: 100%; }
@@ -33,40 +34,39 @@
     .dest-card:nth-child(8) { background-image: url(sliders.pic/slider8.png);background-position: 100%; }
     .dest-card:nth-child(9) { background-image: url(sliders.pic/slider9.png);background-position: 100%; }
 
-
-
-
+.dest-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+    }
     
- 
     .dest-card::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 55%);
     }
  
     .card-price-tag {
       position: absolute;
       top: 14px; right: 14px;
-      z-index: 1;
-      background: rgba(255,255,255,0.9);
+      background: rgba(255,255,255,0.35);
       border-radius: 999px;
       padding: 4px 12px;
       font-size: 12px;
-      font-weight: 500;
-      color: var(--black);
+      font-weight: 500; color: black;
     }
  
     .card-info {
       position: absolute;
       bottom: 0; left: 0; right: 0;
+      color: black;
       z-index: 1;
       padding: 1.2rem 1.3rem;
     }
  
     .card-city {
       font-family: 'Playfair Display', serif;
-      font-size: 22px;
+      font-size: 24px;
       color: #fff;
       margin-bottom: 4px;
     }
@@ -105,3 +105,8 @@
       color: #888;
       max-width: 420px;
     }
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f7f3ef;
+    margin: 0;
+}

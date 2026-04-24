@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
@@ -9,26 +10,65 @@ nav.header {
   height: 50px;
   width: 100%;
   position: sticky;
+=======
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 10px 4px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px; /* horizontal padding for nav content */
+  height: 70px; /* set explicit height */
+>>>>>>> 59329393429f77bb6fca9eb4e9172562fea5d2aa
+}
+
+body {
+  padding-top: 70px; /* match nav height */
+}
+
 nav.header a {
   text-decoration: none;
   color: #1a1a1a;
-  padding-bottom: 2px;
-  gap: 2rem;
+  padding-bottom: 5px;
   font-size: 20px;
   font-style: italic;
+<<<<<<< HEAD
   font-family: Georgia, "Times New Roman", Times, serif;
 }
+=======
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+>>>>>>> 59329393429f77bb6fca9eb4e9172562fea5d2aa
 .nav-links {
   display: flex;
   list-style: none;
   gap: 16px;
+  align-items: center;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 59329393429f77bb6fca9eb4e9172562fea5d2aa
 .nav-links a {
   text-decoration: none;
   color: #1a1a1a;
   font-weight: 500;
 }
+
 .logo {
   height: 40px;
   width: auto;
@@ -43,10 +83,15 @@ nav.header a {
   width: 300px;
   border-radius: 12px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 59329393429f77bb6fca9eb4e9172562fea5d2aa
 nav.header a:hover {
   color: #8b6a3b;
   text-decoration: underline;
 }
+<<<<<<< HEAD
 .nav-links a:hover {
   color: #8b6a3b;
 }
@@ -65,4 +110,83 @@ nav.header a:hover {
 .book-now:hover {
   background: #8b6a3b;
   color: #f5f0e8;
+=======
+
+.nav-links a:hover {
+  color: #8b6a3b;
+}
+
+.book-now {
+  background: #07086d;
+  color: #F5F0E8;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.book-now:hover {
+  background: #8b6a3b;
+  color: #F5F0E8;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #1a1a1a;
+  padding-bottom: 2px;
+  font-size: 20px;
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.dropdown-content {
+  display: none; 
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 9999; /* Ensure it sits above other content */
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 5px; /* Small gap from the parent */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 16px;
+  font-style: normal; /* Reset italic for sub-items */
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.3s;
+}
+
+/* Remove border from the last item */
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hover effect for dropdown items */
+.dropdown-content a:hover {
+  background-color: #f5f5f5;
+  color: #8b6a3b;
+>>>>>>> 59329393429f77bb6fca9eb4e9172562fea5d2aa
 }
