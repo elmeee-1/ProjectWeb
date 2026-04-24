@@ -54,16 +54,18 @@
     <li>
       <a href="about.html">About</a>
     </li>
-    <!-- Search Box -->
+    
+        <!-- Book Now Button -->
+        <li>
+          <button class="book-now">Book Now</button>
+        </li>
+    
+    <!-- Theme Toggle Button -->
     <li>
-      <input type="search" class="search-box" placeholder="Search destinations...">
-    </li>
-
-    <!-- Book Now Button -->
-    <li>
-      <button class="book-now">Book Now</button>
+      <button class="theme-btn" id="themeToggle" title="Toggle Dark Mode">🌙</button>
     </li>
   </ul>
+  
 </nav>
 </header>
 
@@ -170,6 +172,32 @@
       });
     });
   </script>
+  
+ <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const themeBtn = document.getElementById("themeToggle");
+    const body = document.body;
+    
+    if (themeBtn) {
+      if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-theme");
+        themeBtn.textContent = "☀️"; 
+      }
+
+      themeBtn.addEventListener("click", () => {
+        body.classList.toggle("dark-theme");
+        
+        if (body.classList.contains("dark-theme")) {
+          localStorage.setItem("theme", "dark");
+          themeBtn.textContent = "☀️";
+        } else {
+          localStorage.setItem("theme", "light");
+          themeBtn.textContent = "🌙";
+        }
+      });
+    }
+  });
+</script>
   
 </body>
 </html>
