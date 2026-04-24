@@ -359,6 +359,28 @@
           direction: ltr;
         }
       }
+
+      /* FOOLPROOF DARK THEME FOR RABAT */
+      body.dark-theme {
+        --white: #121212 !important;
+        --offwhite: #1a1a1a !important;
+        --light: #222222 !important;
+        --dark: #f5f2ee !important;
+        --mid: #cccccc !important;
+        --border: #333333 !important;
+        background-color: #121212 !important;
+        animation: none !important; /* This kills the white flash animation */
+      }
+      body.dark-theme h1,
+      body.dark-theme h2,
+      body.dark-theme p {
+        color: #f5f2ee !important;
+      }
+      body.dark-theme .city-pill {
+        background-color: #333 !important;
+        color: #fff !important;
+        border-color: #555 !important;
+      }
     </style>
   </head>
   <body>
