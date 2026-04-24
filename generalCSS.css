@@ -1,28 +1,48 @@
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+/* dark mode */
+:root {
+  --page-bg: #f7f3ef;
+  --text-color: #1a1a1a;
+  --nav-bg: #ffffff;
 }
 
-nav {
+body.dark-theme {
+  --page-bg: #121212;
+  --text-color: #f5f5f5;
+  --nav-bg: #1a1a1a;
+}
+
+body {
+  background-color: var(--page-bg);
+  color: var(--text-color);
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+nav.header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
   z-index: 1000;
-  background-color: white;
+  background-color: var(--nav-bg);
   box-shadow: 0 10px 4px rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px; /* horizontal padding for nav content */
-  height: 70px; /* set explicit height */
+  padding: 0 40px;
+  height: 70px;
 }
 
 body {
-  padding-top: 70px; /* match nav height */
+  padding-top: 70px;
 }
 
 nav.header a {
@@ -31,7 +51,7 @@ nav.header a {
   padding-bottom: 5px;
   font-size: 20px;
   font-style: italic;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .nav-links {
@@ -54,7 +74,7 @@ nav.header a {
 
 .search-box {
   padding: 10px 16px;
-  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-family: "Georgia", "Times New Roman", Times, serif;
   font-size: 13px;
   background: #fff;
   border: 1px solid #000000;
@@ -73,11 +93,11 @@ nav.header a:hover {
 
 .book-now {
   background: #07086d;
-  color: #F5F0E8;
+  color: #f5f0e8;
   border: none;
   border-radius: 12px;
   padding: 10px 25px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 13px;
   font-weight: 500;
   cursor: pointer;
@@ -85,9 +105,10 @@ nav.header a:hover {
 
 .book-now:hover {
   background: #8b6a3b;
-  color: #F5F0E8;
+  color: #f5f0e8;
 }
 
+/* DROPDOWN MENU ADDED BY TEAMMATE */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -100,47 +121,61 @@ nav.header a:hover {
   padding-bottom: 2px;
   font-size: 20px;
   font-style: italic;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .dropdown-content {
-  display: none; 
+  display: none;
   position: absolute;
-  top: 100%; 
+  top: 100%;
   left: 0;
   background-color: white;
   min-width: 200px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  z-index: 9999; /* Ensure it sits above other content */
+  z-index: 9999;
   border-radius: 8px;
   overflow: hidden;
-  margin-top: 5px; /* Small gap from the parent */
+  margin-top: 5px;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
   display: block;
   padding: 12px 16px;
   text-decoration: none;
   color: #1a1a1a;
   font-size: 16px;
-  font-style: normal; /* Reset italic for sub-items */
+  font-style: normal;
   border-bottom: 1px solid #f0f0f0;
   transition: background-color 0.3s;
 }
 
-/* Remove border from the last item */
 .dropdown-content a:last-child {
   border-bottom: none;
 }
 
-/* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Hover effect for dropdown items */
 .dropdown-content a:hover {
   background-color: #f5f5f5;
+  color: #8b6a3b;
+}
+body.dark-theme nav.header a {
+  color: #f5f5f5;
+}
+
+body.dark-theme .dropdown-content {
+  background-color: #1a1a1a;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .dropdown-content a {
+  color: #f5f5f5;
+  border-bottom: 1px solid #333;
+}
+
+body.dark-theme .dropdown-content a:hover {
+  background-color: #333;
   color: #8b6a3b;
 }

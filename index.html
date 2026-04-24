@@ -9,64 +9,61 @@
 
   </head>
 <body>
-      
-    <header> 
-   <ul class="nav-links">           
-          <nav class="header">
-            <a href="index.html" class="logo">
-              <img src="Logo.png" alt="Logo">
-            </a>
-            <li class="dropdown">
-              <a href="index.html">Home &#9662;</a>
-              <div class="dropdown-content">
-                <a href="index.html">Home</a>
-              </div>
-            </li>
-    <!-- Dropdown: What to do -->
-    <li class="dropdown">
-      <a href="what-to-do.html">What to do &#9662;</a> <!-- &#9662; is a small down arrow -->
-      <div class="dropdown-content">
-        <a href="What-to-do.html">Adventure</a>
-        <a href="what-to-do.html">Culture & History</a>
-        <a href="what-to-do.html">Nature</a>
-        <a href="what-to-do.html">Beach</a>
-        <a href="What-to-do.html">Where to Stay</a>
-        <a href="what-to-do.html">Food & Drink</a>
+      <header>
+      <ul class="nav-links">
+        <nav class="header" style="display: flex; justify-content: space-evenly; align-items: center;">
+          <a href="index.html" class="logo">
+            <img src="Logo.png" alt="Logo" style="height: 40px" />
+          </a>
+          
+          <li class="dropdown">
+            <a href="index.html">Home &#9662;</a>
+            <div class="dropdown-content">
+              <a href="index.html">Home</a>
+            </div>
+          </li>
+          
+          <li class="dropdown">
+            <a href="what-to-do.html">What to do &#9662;</a>
+            <div class="dropdown-content">
+              <a href="what-to-do.html">Adventure</a>
+              <a href="what-to-do.html">Culture & History</a>
+              <a href="what-to-do.html">Nature</a>
+              <a href="what-to-do.html">Beach</a>
+              <a href="what-to-do.html">Where to Stay</a>
+              <a href="what-to-do.html">Food & Drink</a>
+            </div>
+          </li>
 
-      </div>
-    </li>
+          <li class="dropdown">
+            <a href="destinations.html">Destinations &#9662;</a>
+            <div class="dropdown-content">
+              <a href="destinations.html">Marrakech</a>
+              <a href="destinations.html">Essaouira</a>
+              <a href="destinations.html">Rabat</a>
+              <a href="destinations.html">Fès</a>
+              <a href="destinations.html">Agadir</a>
+              <a href="destinations.html">Ifrane</a>
+              <a href="destinations.html">Ouarzazate</a>
+              <a href="destinations.html">Chefchaouen</a>
+              <a href="destinations.html">Merzouga</a>
+            </div>
+          </li>
+          
+          <li>
+            <a href="about.html">About</a>
+          </li>
 
-    <!-- Dropdown: Destinations -->
-    <li class="dropdown">
-      <a href="destinations.html">Destinations &#9662;</a>
-      <div class="dropdown-content">
-        <a href="destinations.html">Marrakech</a>
-        <a href="destinations.html">Essaouira</a>
-        <a href="destinations.html">Rabat</a>
-        <a href="destinations.html">Fès</a>
-        <a href="destinations.html">Agadir</a>
-        <a href="destinations.html">ifran</a>
-        <a href="destinations.html">Ourzazate</a>
-        <a href="destinations.html">Chefchaouen</a>
-        <a href="destinations.html">Merzouga</a>
-      </div>
-    </li>
-    <li>
-      <a href="about.html">About</a>
-    </li>
-    <!-- Search Box -->
-    <li>
-      <input type="search" class="search-box" placeholder="Search destinations...">
-    </li>
-
-    <!-- Book Now Button -->
-    <li>
-      <button class="book-now">Book Now</button>
-    </li>
-  </ul>
-</nav>
-</header>
-
+          <li>
+            <button class="book-now">Book Now</button>
+          </li>
+          
+          <button id="themeToggle" style="background: none; border: none; cursor: pointer; font-size: 20px; margin-left: 10px;">
+            🌙
+          </button>
+        </nav>
+      </ul>
+    </header>
       <section class="hero-section">
   <div class="hero-content">
     <h1 class="hero-title">Discover Morocco's Hidden Gems</h1>
@@ -96,7 +93,7 @@
           </a>
           <a href="food.html" class="card-link">
             <div class="card">
-              <img src="thumbnails/img2.png" alt="">
+              <img src="thumbnails/img2.png" alt
               <div><strong>Food</strong></div>
             </div>
           </a>
@@ -236,6 +233,6 @@
     </ul>
   </div>
 </div>
-
+<script src="darkmode.js"></script>
 </body>
 </html>

@@ -1,34 +1,33 @@
 .activities {
-    text-align: center;
-    padding: 50px 20px;
+  text-align: center;
+  padding: 50px 20px;
 }
 
 .activities h2 {
-    font-size: 30px;
-    margin-bottom: 40px;
-    color: #4e342e;
+  font-size: 30px;
+  margin-bottom: 40px;
+  color: #4e342e;
 }
 
 .card-container {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
 }
 
 .card {
-    width: 250px;
-    border-radius: 15px;
-    background: white;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    padding-bottom: 15px;
-    transition: 0.3s;
+  width: 250px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding-bottom: 15px;
+  transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 88px rgba(0,0,0,1);
-    
+  transform: translateY(-8px);
+  box-shadow: 0 10px 88px rgba(0, 0, 0, 1);
 }
 
 :has(.card:hover) .card:not(:hover) {
@@ -36,42 +35,41 @@
   scale: 0.8;
 }
 .card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border-radius: 10px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-radius: 10px;
 }
 
 .card h2 {
-    margin: 15px 0 5px;
-    color: #5d4037;
+  margin: 15px 0 5px;
+  color: #5d4037;
 }
 
 .card p {
-    font-size: 12px;
-    color: #777;
+  font-size: 12px;
+  color: #777;
 }
- 
+
 .city-list {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
 
 .city-tag {
-    background: #efebe9;
-     border-radius: 10px;
-    padding: 6px 15px;
-    font-size: 13px;
-    cursor: pointer;
-    transition: 0.3s;
+  background: #efebe9;
+  border-radius: 10px;
+  padding: 6px 15px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 @media (max-width: 768px) {
-
   .activities {
     padding: 30px 10px;
   }
@@ -137,15 +135,37 @@
 }
 
 .city-tag {
-    text-decoration: none; /* Bach t7iydi l-khatt */
-    color: #333;           /* Bedliha l-loun li bghiti */
-    display: inline-block;
-    padding: 5px 10px;
-    background-color: #f0f0f0; /* Ila bghiti t-khlihoum ibano b7al chi button sghira */
-    border-radius: 5px;
-    margin: 2px;
+  text-decoration: none; /* Bach t7iydi l-khatt */
+  color: #333; /* Bedliha l-loun li bghiti */
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #f0f0f0; /* Ila bghiti t-khlihoum ibano b7al chi button sghira */
+  border-radius: 5px;
+  margin: 2px;
 }
 
 .city-tag:hover {
-    background-color: #e0e0e0; /* Bach t-beddel loun fach idouz l-la souris */
+  background-color: #e0e0e0; /* Bach t-beddel loun fach idouz l-la souris */
+}
+body.dark-theme .card {
+  background: #1a1a1a;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme .activities h2,
+body.dark-theme .card h2 {
+  color: #f5f5f5;
+}
+
+body.dark-theme .card p {
+  color: #aaaaaa;
+}
+
+body.dark-theme .city-tag {
+  background-color: #333333;
+  color: #f5f5f5;
+}
+
+body.dark-theme .city-tag:hover {
+  background-color: #8b6a3b;
 }
