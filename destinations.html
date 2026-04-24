@@ -7,115 +7,64 @@
     <link rel="stylesheet" href="styleDEST.css" />
     <link rel="stylesheet" href="generalCSS.css" />
   </head>
+
   <body>
-    <header>
-      <nav
-        class="header"
-        style="
-          display: flex;
-          justify-content: space-evenly;
-          align-items: center;
-        "
-      >
-        <a href="index.html"
-          ><img src="Logo.png" alt="Home" class="logo" style="height: 40px"
-        /></a>
-        <a href="index.html">Home</a>
-        <a href="what-to-do.html">What to do</a>
-        <a href="destinations.html">Destinations</a>
-        <a href="about.html">About</a>
-        <button class="book-now">Book Now</button>
-        <button
-          id="themeToggle"
-          style="
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            margin-left: 10px;
-          "
-        >
-          🌙
-        </button>
-      </nav>
+       
+       <header>
+      <ul class="nav-links">
+        <nav class="header" style="display: flex; justify-content: space-evenly; align-items: center;">
+          <a href="index.html" class="logo">
+            <img src="Logo.png" alt="Logo" style="height: 40px" />
+          </a>
+          
+          <li class="dropdown">
+            <a href="index.html">Home &#9662;</a>
+            <div class="dropdown-content">
+              <a href="index.html">Home</a>
+            </div>
+          </li>
+          
+          <li class="dropdown">
+            <a href="what-to-do.html">What to do &#9662;</a>
+            <div class="dropdown-content">
+              <a href="what-to-do.html">Adventure</a>
+              <a href="what-to-do.html">Culture & History</a>
+              <a href="what-to-do.html">Nature</a>
+              <a href="what-to-do.html">Beach</a>
+              <a href="what-to-do.html">Where to Stay</a>
+              <a href="what-to-do.html">Food & Drink</a>
+            </div>
+          </li>
+
+          <li class="dropdown">
+            <a href="destinations.html">Destinations &#9662;</a>
+            <div class="dropdown-content">
+              <a href="destinations.html">Marrakech</a>
+              <a href="destinations.html">Essaouira</a>
+              <a href="destinations.html">Rabat</a>
+              <a href="destinations.html">Fès</a>
+              <a href="destinations.html">Agadir</a>
+              <a href="destinations.html">Ifrane</a>
+              <a href="destinations.html">Ouarzazate</a>
+              <a href="destinations.html">Chefchaouen</a>
+              <a href="destinations.html">Merzouga</a>
+            </div>
+          </li>
+          
+          <li>
+            <a href="about.html">About</a>
+          </li>
+
+          <li>
+            <button class="book-now">Book Now</button>
+          </li>
+          
+          <button id="themeToggle" style="background: none; border: none; cursor: pointer; font-size: 20px; margin-left: 10px;">
+            🌙
+          </button>
+        </nav>
+      </ul>
     </header>
-
-    <!-- ══ PAGE HERO ══ -->
-    <div class="page-hero">
-      <h1>All Destinations</h1>
-      <p>
-        From island escapes to cool mountain towns, discover where your next
-        journey takes you.
-      </p>
-    </div>
-
-    <section class="dest-section">
-      <div class="dest-grid">
-=======
-    <link rel="stylesheet" href="styleDEST.css">
-    <link rel="stylesheet" href="generalCSS.css">
-</head>
-<body>
-  
-    <header> 
-   <ul class="nav-links">           
-          <nav class="header">
-            <a href="index.html" class="logo">
-              <img src="Logo.png" alt="Logo">
-            </a>
-            <li class="dropdown">
-              <a href="index.html">Home &#9662;</a>
-              <div class="dropdown-content">
-                <a href="index.html">Home</a>
-              </div>
-            </li>
-    <!-- Dropdown: What to do -->
-    <li class="dropdown">
-      <a href="what-to-do.html">What to do &#9662;</a> <!-- &#9662; is a small down arrow -->
-      <div class="dropdown-content">
-        <a href="what-to-do.html">Adventure</a>
-        <a href="what-to-do.html">Culture & History</a>
-        <a href="what-to-do.html">Nature</a>
-        <a href="what-to-do.html">Beach</a>
-        <a href="what-to-do.html">Where to Stay</a>
-        <a href="what-to-do.html">Food & Drink</a>
-
-      </div>
-    </li>
-
-    <!-- Dropdown: Destinations -->
-    <li class="dropdown">
-      <a href="destinations.html ">Destinations &#9662;</a>
-      <div class="dropdown-content">
-        <a href="destinations.html">Marrakech</a>
-        <a href="destinations.html">Essaouira</a>
-        <a href="destinations.html">Rabat</a>
-        <a href="destinations.html">Fès</a>
-        <a href="destinations.html">Agadir</a>
-        <a href="destinations.html">ifran</a>
-        <a href="destinations.html">Ourzazate</a>
-        <a href="destinations.html">Chefchaouen</a>
-        <a href="destinations.html">Merzouga</a>
-      </div>
-    </li>
-    <li>
-      <a href="about.html">About</a>
-    </li>
-    
-        <!-- Book Now Button -->
-        <li>
-          <button class="book-now">Book Now</button>
-        </li>
-    
-    <!-- Theme Toggle Button -->
-    <li>
-      <button class="theme-btn" id="themeToggle" title="Toggle Dark Mode">🌙</button>
-    </li>
-  </ul>
-  
-</nav>
-</header>
-
   <!-- ══ PAGE HERO ══ -->
   <div class="page-hero">
     <h1>All Destinations</h1>
@@ -125,63 +74,13 @@
      <section class="dest-section">
     <div class="dest-grid">
  
-      <div class="dest-card">
-        <div class="card-price-tag">starts at $320</div>
-        <div class="card-info">
-          <div class="card-city">Marrakech</div>
-          <div class="card-tag">Monuments , Culture, History, Mountains</div>
-          <div class="card-meta">
-            <span class="card-star">★</span> 4.8 &nbsp;|&nbsp;Marrackech, Morocco</div>
-          </div>
-        </div>
- 
-      <div class="dest-card">
-        <div class="card-price-tag">starts at $320</div>
-        <div class="card-info">
-          <div class="card-city">Essaouira</div>
-          <div class="card-tag">Music, beach, culture,surf</div>
-          <div class="card-meta">
-            <span class="card-star">★</span> 4.7 &nbsp;|&nbsp; Essaouira,Morocco</div>
-          </div>
-        </div>
- 
-      <div class="dest-card">
-        <div class="card-price-tag">starts at $550</div>
-        <div class="card-info">
-          <div class="card-city">Rabat </div>
-          <div class="card-tag">culture, history,monuments,beach</div>
-          <div class="card-meta">
-            <span class="card-star">★</span> 4.9 &nbsp;|&nbsp; Rabat, Morocco</div>
-          </div>
-        </div>
-      <div class="dest-card">
-        <div class="card-price-tag">starts at $450</div>
-        <div class="card-info">
-          <div class="card-city">Fès</div>
-          <div class="card-tag">Monuments , Culture, History</div>
-          <div class="card-meta">
-            <span class="card-star">★</span> 4.6 &nbsp;|&nbsp;Fès, Morocco</div>
-          </div>
-        </div>
-      <div class="dest-card">
-        <div class="card-price-tag">starts at $450</div>
-        <div class="card-info">
-          <div class="card-city">Agadir</div>
-          <div class="card-tag">Places, Culture, History</div>
-          <div class="card-meta">
-            <span class="card-star">★</span> 4.6 &nbsp;|&nbsp;Agadir, Morocco</div>
-          </div>
-        </div>
->>>>>>> 59329393429f77bb6fca9eb4e9172562fea5d2aa
         <div class="dest-card">
           <div class="card-price-tag">starts at $320</div>
           <div class="card-info">
             <div class="card-city">Marrakech</div>
             <div class="card-tag">Monuments , Culture, History, Mountains</div>
             <div class="card-meta">
-              <span class="card-star">★</span> 4.8 &nbsp;|&nbsp;Marrackech,
-              Morocco
-            </div>
+              <span class="card-star">★</span> 4.8 &nbsp;|&nbsp;Marrackech,Morocco</div>
           </div>
         </div>
 
@@ -191,8 +90,7 @@
             <div class="card-city">Essaouira</div>
             <div class="card-tag">Music, beach, culture,surf</div>
             <div class="card-meta">
-              <span class="card-star">★</span> 4.7 &nbsp;|&nbsp;
-              Essaouira,Morocco
+              <span class="card-star">★</span> 4.7 &nbsp;|&nbsp;Essaouira,Morocco
             </div>
           </div>
         </div>
@@ -233,8 +131,7 @@
             <div class="card-city">Chefchaouen</div>
             <div class="card-tag">monuments, Culture, History</div>
             <div class="card-meta">
-              <span class="card-star">★</span> 4.6 &nbsp;|&nbsp;Chefchaouen,
-              Morocco
+              <span class="card-star">★</span> 4.6 &nbsp;|&nbsp;Chefchaouen,Morocco
             </div>
           </div>
         </div>
@@ -254,8 +151,7 @@
             <div class="card-city">ouarzazate</div>
             <div class="card-tag">desert,culture,history,cinema</div>
             <div class="card-meta">
-              <span class="card-star">★</span> 4.5 &nbsp;|&nbsp;
-              ouarzazate,Morocco
+              <span class="card-star">★</span> 4.5 &nbsp;|&nbsp;ouarzazate,Morocco
             </div>
           </div>
         </div>
@@ -265,8 +161,7 @@
             <div class="card-city">Merzouga</div>
             <div class="card-tag">dunes,camel,adventure</div>
             <div class="card-meta">
-              <span class="card-star">★</span> 4.5 &nbsp;|&nbsp;
-              Merzouga,Morocco
+              <span class="card-star">★</span> 4.5 &nbsp;|&nbsp;Merzouga,Morocco
             </div>
           </div>
         </div>
@@ -282,40 +177,7 @@
           btn.classList.add("active");
         });
       });
-<<<<<<< HEAD
     </script>
     <script src="darkmode.js"></script>
   </body>
-=======
-    });
-  </script>
-  
- <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const themeBtn = document.getElementById("themeToggle");
-    const body = document.body;
-    
-    if (themeBtn) {
-      if (localStorage.getItem("theme") === "dark") {
-        body.classList.add("dark-theme");
-        themeBtn.textContent = "☀️"; 
-      }
-
-      themeBtn.addEventListener("click", () => {
-        body.classList.toggle("dark-theme");
-        
-        if (body.classList.contains("dark-theme")) {
-          localStorage.setItem("theme", "dark");
-          themeBtn.textContent = "☀️";
-        } else {
-          localStorage.setItem("theme", "light");
-          themeBtn.textContent = "🌙";
-        }
-      });
-    }
-  });
-</script>
-  
-</body>
->>>>>>> 59329393429f77bb6fca9eb4e9172562fea5d2aa
 </html>

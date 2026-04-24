@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morocco: A Historical Journey</title>
+    <style>
+        :root {
+            --color-sand: #DB9F75;
+            --color-rust: #804012;
+            --glass-bg: rgba(0, 0, 0, 0.6); /* For text readability over images */
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Georgia', serif; }
+
+        body, html { height: 100%; overflow: hidden; background-color: #000; }
+
+        .presentation-container {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+
+        .slide {
+            height: 100vh;
+            width: 100%;
+            scroll-snap-align: start;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Parallax effect */
+        }
+
+        /* Dark overlay for every slide so text pops */
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8));
+            z-index: 1;
+        }
+
+        .slide-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            max-width: 1300px;
+            width: 100%;
+            gap: 3rem;
+            padding: 2rem;
+            color: white;
+        }
+
+        /* Text Panel styling */
+        .text-panel {
+            flex: 1;
+            background: var(--glass-bg);
+            padding: 2.5rem;
+            border-radius: 15px;
+            border-left: 5px solid var(--color-sand);
+            backdrop-filter: blur(10px);
+        }
+
+        .image-panel { flex: 1.2; display: flex; flex-direction: column; gap: 1rem; }
+        .image-row { display: flex; gap: 1rem; height: 300px; }
+
+        .image-container {
+            flex: 1;
+            position: relative;
+            border: 2px solid rgba(255,255,255,0.3);
+            overflow: hidden;
+        }
+        
+        .image-container img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .label {
+            position: absolute; bottom: 0; width: 100%;
+            background: rgba(0,0,0,0.7); color: var(--color-sand);
+            text-align: center; padding: 5px; font-size: 0.8rem;
+        }
+        
+        h2 { font-size: 3.5rem; color: var(--color-sand); margin-bottom: 1rem; }
+        .definition { font-style: italic; margin-bottom: 1rem; color: #eee; }
+        
+        /* --- BACKGROUND IMAGES FOR EACH SLIDE --- */
+        #slide1 { background-image: url('https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?auto=format&fit=crop&q=80&w=2000'); }
+        #slide2 { background-image: url('https://images.unsplash.com/photo-1539768942893-daf53e448371?auto=format&fit=crop&q=80&w=2000'); }
+        #slide3 { background-image: url('https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?auto=format&fit=crop&q=80&w=2000'); }
+        
+        html { scroll-behavior: smooth; scroll-snap-type: y mandatory; }
+        @media (max-width: 900px) {
+            .slide-content { flex-direction: column; overflow-y: auto; }
+            h2 { font-size: 2rem; }
+        }
+        /* ── Outro ── */
+        #outro {
+          scroll-snap-align: start;
+          height: 100vh;
+          display: flex; flex-direction: column;
+          align-items: center; justify-content: center;
+          position: relative;
+          overflow: hidden;
+          gap: 2rem;
+        }
+        #outro .bg-img {
+          position: absolute; inset: 0;
+          background: url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1600&q=80') center/cover no-repeat;
+          filter: brightness(.2) sepia(.5);
+        }
+        #outro .quote {
+          position: relative; z-index: 2;
+          font-family: 'Cormorant Garamond', serif;
+          font-style: italic;
+          font-size: clamp(1.5rem, 4vw, 3rem);
+          color: var(--parchment);
+          text-align: center;
+          max-width: 700px;
+          padding: 0 2rem;
+          line-height: 1.4;
+        }
+        #outro .quote::before, #outro .quote::after {
+          content: '"';
+          color: var(--gold);
+          font-size: 4rem;
+          line-height: 0;
+          vertical-align: -.5em;
+          margin: 0 .2em;
+        }
+        #outro .attr {
+          position: relative; z-index: 2;
+          font-family: 'Rajdhani', sans-serif;
+          letter-spacing: .3em;
+          font-size: .72rem;
+          color: var(--muted);
+          text-transform: uppercase;
+        }
+        #outro .zellige {
+          position: absolute; inset: 0; z-index: 1;
+          background-image: 
+            radial-gradient(circle at 20% 50%, rgba(200,169,110,.08) 0%, transparent 50%),
+            radial-gradient(circle at 80% 50%, rgba(194,96,63,.06) 0%, transparent 50%);
+        }
+        
+        @keyframes fadeUp {
+          from { opacity: 0; transform: translateY(24px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+    
+    
+      
+      #hero {
+        scroll-snap-align: start;
+        height: 100vh;
+        display: flex; flex-direction: column;
+        align-items: center; justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+      #hero .bg-img {
+        position: absolute; inset: 0;
+        background: url('https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=1600&q=80') center/cover no-repeat;
+        transform: scale(1.08);
+        filter: brightness(.28) sepia(.4);
+        transition: transform 8s ease;
+      }
+      #hero:hover .bg-img { transform: scale(1.0); }
+    
+      #hero .ornament {
+        width: 180px; height: 180px;
+        border: 1px solid rgba(200,169,110,.35);
+        border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        position: relative; z-index: 2;
+        animation: rotateSlow 30s linear infinite;
+      }
+      #hero .ornament::before {
+        content: '';
+        position: absolute;
+        width: 155px; height: 155px;
+        border: 1px solid rgba(200,169,110,.2);
+        border-radius: 50%;
+      }
+      @keyframes rotateSlow { to { transform: rotate(360deg); } }
+    
+      #hero .star { font-size: 2rem; color: var(--gold); animation: rotateSlow 30s linear infinite reverse; }
+    
+      .hero-text {
+        position: relative; z-index: 2;
+        text-align: center;
+        padding: 2rem;
+      }
+      .hero-eyebrow {
+        font-family: 'Rajdhani', sans-serif;
+        letter-spacing: .45em;
+        font-size: .75rem;
+        color: var(--sand);
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        opacity: 0;
+        animation: fadeUp .8s .4s forwards;
+      }
+      .hero-title {
+        font-family: 'Cinzel', serif;
+        font-size: clamp(3rem, 9vw, 8rem);
+        font-weight: 900;
+        line-height: .9;
+        color: var(--white);
+        opacity: 0;
+        animation: fadeUp .9s .6s forwards;
+      }
+      .hero-title span { color: var(--gold); display: block; }
+      .hero-sub {
+        margin-top: 2rem;
+        font-size: 1.1rem;
+        font-style: italic;
+        color: var(--muted);
+        letter-spacing: .05em;
+        opacity: 0;
+        animation: fadeUp .8s .9s forwards;
+      }
+      .scroll-hint {
+        position: absolute; bottom: 2.5rem; left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        display: flex; flex-direction: column; align-items: center;
+        gap: .4rem;
+        font-family: 'Rajdhani', sans-serif;
+        font-size: .68rem;
+        letter-spacing: .3em;
+        color: var(--muted);
+        text-transform: uppercase;
+        animation: fadeUp .8s 1.4s forwards; opacity: 0;
+      }
+      .scroll-hint .line {
+        width: 1px; height: 50px;
+        background: linear-gradient(to bottom, transparent, var(--sand));
+        animation: lineGrow 1.5s 1.8s ease forwards;
+        transform-origin: top;
+        transform: scaleY(0);
+      }
+      @keyframes lineGrow { to { transform: scaleY(1); } }
+    
+      
+    </style>
+    </head>
+
+<body>
+
+    <div class="presentation-container">
+
+        <section class="slide" id="slide1">
+            <div class="slide-content">
+                <div class="text-panel">
+                    <h2>Volubilis</h2>
+                    <p class="definition">Definition: A Roman outpost standing as a testament to North Africa's colonial antiquity.</p>
+                    <p>Built in the 3rd century BC, Volubilis is the best-preserved Roman ruin in Morocco. It was a center for olive oil production and regional administration.</p>
+                </div>
+                <div class="image-panel">
+                    <div class="image-row">
+                        <div class="image-container">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Volubilis_L'arc_de_Caracalla.jpg/800px-Volubilis_L'arc_de_Caracalla.jpg" alt="Then">
+                            <div class="label">Historical View</div>
+                        </div>
+                        <div class="image-container">
+                            <img src="https://images.unsplash.com/photo-1564507592333-c60657eaa0ae?auto=format&fit=crop&q=80&w=600" alt="Now">
+                            <div class="label">Preserved Site Today</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="slide" id="slide2">
+            <div class="slide-content">
+                <div class="text-panel">
+                    <h2>Koutoubia Mosque</h2>
+                    <p class="definition">Definition: The spiritual heartbeat of Marrakech, standing tall since the 12th century.</p>
+                    <p>The minaret was a model for the Giralda in Seville. It remains the tallest building in Marrakech by law.</p>
+                </div>
+                <div class="image-panel">
+                    <div class="image-row">
+                        <div class="image-container">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Marrakesh_Koutoubia_Mosque_1930s.jpg" alt="Then">
+                            <div class="label">Circa 1930</div>
+                        </div>
+                        <div class="image-container">
+                            <img src="https://images.unsplash.com/photo-1590132801449-0d3b15ed839c?auto=format&fit=crop&q=80&w=600" alt="Now">
+                            <div class="label">Modern Day</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+<!-- HERO -->
+<section id="hero">
+  <div class="bg-img"></div>
+  <div class="ornament"><span class="star">✦</span></div>
+  <div class="hero-text">
+    <p class="hero-eyebrow">A Journey Through Time</p>
+    <h1 class="hero-title">المغرب<span>Morocco</span></h1>
+    <p class="hero-sub">Monuments, Memory & the Art of Civilisation</p>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="line"></div>
+  </div>
+
+<!-- OUTRO -->
+<section id="outro">
+  <div class="bg-img"></div>
+  <div class="zellige"></div>
+  <p class="quote">Morocco is not a country to be explained. It is a world to be felt, stone by stone, minaret by minaret.</p>
+  <p class="attr">— Heritage of the Maghreb</p>
+</section>
+
+<body>
+</html>
