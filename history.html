@@ -3,323 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morocco: A Historical Journey</title>
-    <style>
-        :root {
-            --color-sand: #DB9F75;
-            --color-rust: #804012;
-            --glass-bg: rgba(0, 0, 0, 0.6); /* For text readability over images */
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Georgia', serif; }
-
-        body, html { height: 100%; overflow: hidden; background-color: #000; }
-
-        .presentation-container {
-            height: 100vh;
-            overflow-y: scroll;
-            scroll-snap-type: y mandatory;
-            scroll-behavior: smooth;
-        }
-
-        .slide {
-            height: 100vh;
-            width: 100%;
-            scroll-snap-align: start;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed; /* Parallax effect */
-        }
-
-        /* Dark overlay for every slide so text pops */
-        .slide::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8));
-            z-index: 1;
-        }
-
-        .slide-content {
-            position: relative;
-            z-index: 2;
-            display: flex;
-            max-width: 1300px;
-            width: 100%;
-            gap: 3rem;
-            padding: 2rem;
-            color: white;
-        }
-
-        /* Text Panel styling */
-        .text-panel {
-            flex: 1;
-            background: var(--glass-bg);
-            padding: 2.5rem;
-            border-radius: 15px;
-            border-left: 5px solid var(--color-sand);
-            backdrop-filter: blur(10px);
-        }
-
-        .image-panel { flex: 1.2; display: flex; flex-direction: column; gap: 1rem; }
-        .image-row { display: flex; gap: 1rem; height: 300px; }
-
-        .image-container {
-            flex: 1;
-            position: relative;
-            border: 2px solid rgba(255,255,255,0.3);
-            overflow: hidden;
-        }
-        
-        .image-container img { width: 100%; height: 100%; object-fit: cover; }
-        
-        .label {
-            position: absolute; bottom: 0; width: 100%;
-            background: rgba(0,0,0,0.7); color: var(--color-sand);
-            text-align: center; padding: 5px; font-size: 0.8rem;
-        }
-        
-        h2 { font-size: 3.5rem; color: var(--color-sand); margin-bottom: 1rem; }
-        .definition { font-style: italic; margin-bottom: 1rem; color: #eee; }
-        
-        /* --- BACKGROUND IMAGES FOR EACH SLIDE --- */
-        #slide1 { background-image: url('https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?auto=format&fit=crop&q=80&w=2000'); }
-        #slide2 { background-image: url('https://images.unsplash.com/photo-1539768942893-daf53e448371?auto=format&fit=crop&q=80&w=2000'); }
-        #slide3 { background-image: url('https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?auto=format&fit=crop&q=80&w=2000'); }
-        
-        html { scroll-behavior: smooth; scroll-snap-type: y mandatory; }
-        @media (max-width: 900px) {
-            .slide-content { flex-direction: column; overflow-y: auto; }
-            h2 { font-size: 2rem; }
-        }
-        /* ── Outro ── */
-        #outro {
-          scroll-snap-align: start;
-          height: 100vh;
-          display: flex; flex-direction: column;
-          align-items: center; justify-content: center;
-          position: relative;
-          overflow: hidden;
-          gap: 2rem;
-        }
-        #outro .bg-img {
-          position: absolute; inset: 0;
-          background: url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1600&q=80') center/cover no-repeat;
-          filter: brightness(.2) sepia(.5);
-        }
-        #outro .quote {
-          position: relative; z-index: 2;
-          font-family: 'Cormorant Garamond', serif;
-          font-style: italic;
-          font-size: clamp(1.5rem, 4vw, 3rem);
-          color: var(--parchment);
-          text-align: center;
-          max-width: 700px;
-          padding: 0 2rem;
-          line-height: 1.4;
-        }
-        #outro .quote::before, #outro .quote::after {
-          content: '"';
-          color: var(--gold);
-          font-size: 4rem;
-          line-height: 0;
-          vertical-align: -.5em;
-          margin: 0 .2em;
-        }
-        #outro .attr {
-          position: relative; z-index: 2;
-          font-family: 'Rajdhani', sans-serif;
-          letter-spacing: .3em;
-          font-size: .72rem;
-          color: var(--muted);
-          text-transform: uppercase;
-        }
-        #outro .zellige {
-          position: absolute; inset: 0; z-index: 1;
-          background-image: 
-            radial-gradient(circle at 20% 50%, rgba(200,169,110,.08) 0%, transparent 50%),
-            radial-gradient(circle at 80% 50%, rgba(194,96,63,.06) 0%, transparent 50%);
-        }
-        
-        @keyframes fadeUp {
-          from { opacity: 0; transform: translateY(24px); }
-          to   { opacity: 1; transform: translateY(0); }
-        }
-    
-    
-      
-      #hero {
-        scroll-snap-align: start;
-        height: 100vh;
-        display: flex; flex-direction: column;
-        align-items: center; justify-content: center;
-        position: relative;
-        overflow: hidden;
-      }
-      #hero .bg-img {
-        position: absolute; inset: 0;
-        background: url('https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=1600&q=80') center/cover no-repeat;
-        transform: scale(1.08);
-        filter: brightness(.28) sepia(.4);
-        transition: transform 8s ease;
-      }
-      #hero:hover .bg-img { transform: scale(1.0); }
-    
-      #hero .ornament {
-        width: 180px; height: 180px;
-        border: 1px solid rgba(200,169,110,.35);
-        border-radius: 50%;
-        display: flex; align-items: center; justify-content: center;
-        position: relative; z-index: 2;
-        animation: rotateSlow 30s linear infinite;
-      }
-      #hero .ornament::before {
-        content: '';
-        position: absolute;
-        width: 155px; height: 155px;
-        border: 1px solid rgba(200,169,110,.2);
-        border-radius: 50%;
-      }
-      @keyframes rotateSlow { to { transform: rotate(360deg); } }
-    
-      #hero .star { font-size: 2rem; color: var(--gold); animation: rotateSlow 30s linear infinite reverse; }
-    
-      .hero-text {
-        position: relative; z-index: 2;
-        text-align: center;
-        padding: 2rem;
-      }
-      .hero-eyebrow {
-        font-family: 'Rajdhani', sans-serif;
-        letter-spacing: .45em;
-        font-size: .75rem;
-        color: var(--sand);
-        text-transform: uppercase;
-        margin-bottom: 1.5rem;
-        opacity: 0;
-        animation: fadeUp .8s .4s forwards;
-      }
-      .hero-title {
-        font-family: 'Cinzel', serif;
-        font-size: clamp(3rem, 9vw, 8rem);
-        font-weight: 900;
-        line-height: .9;
-        color: var(--white);
-        opacity: 0;
-        animation: fadeUp .9s .6s forwards;
-      }
-      .hero-title span { color: var(--gold); display: block; }
-      .hero-sub {
-        margin-top: 2rem;
-        font-size: 1.1rem;
-        font-style: italic;
-        color: var(--muted);
-        letter-spacing: .05em;
-        opacity: 0;
-        animation: fadeUp .8s .9s forwards;
-      }
-      .scroll-hint {
-        position: absolute; bottom: 2.5rem; left: 50%;
-        transform: translateX(-50%);
-        z-index: 2;
-        display: flex; flex-direction: column; align-items: center;
-        gap: .4rem;
-        font-family: 'Rajdhani', sans-serif;
-        font-size: .68rem;
-        letter-spacing: .3em;
-        color: var(--muted);
-        text-transform: uppercase;
-        animation: fadeUp .8s 1.4s forwards; opacity: 0;
-      }
-      .scroll-hint .line {
-        width: 1px; height: 50px;
-        background: linear-gradient(to bottom, transparent, var(--sand));
-        animation: lineGrow 1.5s 1.8s ease forwards;
-        transform-origin: top;
-        transform: scaleY(0);
-      }
-      @keyframes lineGrow { to { transform: scaleY(1); } }
-    
-      
-    </style>
-    </head>
-
+    <title>Morocco : History </title>
+    <link rel="stylesheet" href="generalCSS.css">
+    <link rel="stylesheet" href="history-pg.css">
+</head>
 <body>
-
-    <div class="presentation-container">
-
-        <section class="slide" id="slide1">
-            <div class="slide-content">
-                <div class="text-panel">
-                    <h2>Volubilis</h2>
-                    <p class="definition">Definition: A Roman outpost standing as a testament to North Africa's colonial antiquity.</p>
-                    <p>Built in the 3rd century BC, Volubilis is the best-preserved Roman ruin in Morocco. It was a center for olive oil production and regional administration.</p>
-                </div>
-                <div class="image-panel">
-                    <div class="image-row">
-                        <div class="image-container">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Volubilis_L'arc_de_Caracalla.jpg/800px-Volubilis_L'arc_de_Caracalla.jpg" alt="Then">
-                            <div class="label">Historical View</div>
-                        </div>
-                        <div class="image-container">
-                            <img src="https://images.unsplash.com/photo-1564507592333-c60657eaa0ae?auto=format&fit=crop&q=80&w=600" alt="Now">
-                            <div class="label">Preserved Site Today</div>
-                        </div>
-                    </div>
-                </div>
+    <header>
+      <ul class="nav-links">
+        <nav class="header" style="display: flex; justify-content: space-evenly; align-items: center;">
+          <a href="index.html" class="logo">
+            <img src="Logo.png" alt="Logo"/>
+          </a>
+          
+          <li class="dropdown">
+            <a href="index.html">Home &#9662;</a>
+            <div class="dropdown-content">
+              <a href="index.html">Home</a>
             </div>
-        </section>
-
-        <section class="slide" id="slide2">
-            <div class="slide-content">
-                <div class="text-panel">
-                    <h2>Koutoubia Mosque</h2>
-                    <p class="definition">Definition: The spiritual heartbeat of Marrakech, standing tall since the 12th century.</p>
-                    <p>The minaret was a model for the Giralda in Seville. It remains the tallest building in Marrakech by law.</p>
-                </div>
-                <div class="image-panel">
-                    <div class="image-row">
-                        <div class="image-container">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Marrakesh_Koutoubia_Mosque_1930s.jpg" alt="Then">
-                            <div class="label">Circa 1930</div>
-                        </div>
-                        <div class="image-container">
-                            <img src="https://images.unsplash.com/photo-1590132801449-0d3b15ed839c?auto=format&fit=crop&q=80&w=600" alt="Now">
-                            <div class="label">Modern Day</div>
-                        </div>
-                    </div>
-                </div>
+          </li>
+          
+          <li class="dropdown">
+            <a href="what-to-do.html">What to do &#9662;</a>
+            <div class="dropdown-content">
+              <a href="what-to-do.html">Adventure</a>
+              <a href="what-to-do.html">Culture & History</a>
+              <a href="what-to-do.html">Nature</a>
+              <a href="what-to-do.html">Beach</a>
+              <a href="what-to-do.html">Where to Stay</a>
+              <a href="what-to-do.html">Food & Drink</a>
             </div>
-        </section>
+          </li>
 
+          <li class="dropdown">
+            <a href="destinations.html">Destinations &#9662;</a>
+            <div class="dropdown-content">
+              <a href="destinations.html">Marrakech</a>
+              <a href="destinations.html">Essaouira</a>
+              <a href="destinations.html">Rabat</a>
+              <a href="destinations.html">Fès</a>
+              <a href="destinations.html">Agadir</a>
+              <a href="destinations.html">Ifrane</a>
+              <a href="destinations.html">Ouarzazate</a>
+              <a href="destinations.html">Chefchaouen</a>
+              <a href="destinations.html">Merzouga</a>
+            </div>
+          </li>
+          
+          <li>
+            <a href="about.html">About</a>
+          </li>
+
+          <li>
+            <button class="book-now">Book Now</button>
+          </li>
+          
+          <button id="themeToggle" style="background: none; border: none; cursor: pointer; font-size: 20px; margin-left: 10px;">
+            🌙
+          </button>
+        </nav>
+      </ul>
+    </header>
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">A Journey Through Time</h1>
+            <p class="hero-subtitle"> Explore the History of the oldest cities in North Africa.</p>
+            <p class="hero-subtitle">Monuments , Memory & the Art of Civilisation</p>
+            <p class="hero-subtitle">— Heritage of the Maghreb</p>
+        </div>
+    </section>
+    
+    <section class="description">
+        <h2 class="description-h2">Morocco, a melting pot of dynasties and cultures :</h2>
+        <p class="description-text">Each country has its own history: historical facts, events and important milestones that gave the country its true historical value. The history of a country is one of the events considered worthy of remembrance, which perfectly applies to Morocco. With several dynasties that have succeeded one another over the years: the Idrisside dynasty, the Almoravid dynasty, the Almohad dynasty, the Merinid dynasty, the Saadian dynasty and the Alaouite dynasty, Morocco has gained international consideration as a multicultural country, with several types of heritage recognized as World Heritage by UNESCO. Morocco is one of the go-to destinations for discovery lovers, the most fascinated by nature, history, the art of living and Moroccan hospitality. The experience gained during their journeys in Morocco leave them pleasantly satisfied with their stay.</p>
+    </section>
+
+<!-- MONUMENT 1: Koutoubia -->
+<section class="monument" >
+  <div class="monument-label">
+    <div class="monument-number">01</div>
+    <div class="monument-info">
+      <p class="monument-era">· 1147 AD · Marrackech</p>
+      <h2 class="monument-name">Koutoubia Mosque<em>Jamaa Lafna</em></h2>
     </div>
-
-
-<!-- HERO -->
-<section id="hero">
-  <div class="bg-img"></div>
-  <div class="ornament"><span class="star">✦</span></div>
-  <div class="hero-text">
-    <p class="hero-eyebrow">A Journey Through Time</p>
-    <h1 class="hero-title">المغرب<span>Morocco</span></h1>
-    <p class="hero-sub">Monuments, Memory & the Art of Civilisation</p>
   </div>
-  <div class="scroll-hint">
-    <span>Scroll</span>
-    <div class="line"></div>
+  <div class="monument-split">
+    <div class="img-panel old">
+      <span class="img-badge badge-then">Then — 1900s</span>
+      <img src="marackech 1925.jpg" alt="Koutoubia" loading="eager">
+    </div>
+    
+    <div class="divider-label">vs</div>
+    <div class="img-panel new">
+      <span class="img-badge badge-now">Now — 2026</span>
+      <img src="marackech 2026.jpg" alt="Koutoubia modern" loading="eager">
+    </div>
+    <div class="desc-panel">
+      <div>
+        <div class="desc-text"><strong>Historical Context</strong>Built under Caliph Abd al-Mu'min after the Almohad conquest, the Koutoubia is the largest mosque in Marrakech. Its name derives from the booksellers' market that once surrounded it. The 69-metre minaret became the architectural blueprint for the Giralda of Seville and the Hassan Tower of Rabat.</div>
+      </div>
+      <div>
+        <div class="desc-text"><strong>Why It Endures</strong>The minaret is crowned with three gilded copper orbs of diminishing size, known as jamour — legend holds that they were forged from Yacoub el-Mansour's wife's jewellery as penance. UNESCO has recognized the Marrakech medina, anchored by Koutoubia, as a World Heritage Site.</div>
+      </div>
+    </div>
   </div>
+</section> 
+<!-- MONUMENT 2: Hassan Tower -->
+<section class="monument" >
+  <div class="monument-label">
+    <div class="monument-number">02</div>
+    <div class="monument-info">
+      <p class="monument-era">· 1195 AD · Rabat</p>
+      <h2 class="monument-name">Hassan Tower<em>Tour Hassan — The Unfinished Minaret</em></h2>
+    </div>
+  </div>
+  <div class="monument-split">
+    <div class="img-panel old">
+      <span class="img-badge badge-then">Then — 1900s</span>
+      <img src="rabat 1925.jpg" alt="Hassan" loading="eager">
+    </div>
+    <div class="divider-label">VS</div>
+    <div class="img-panel new">
+      <span class="img-badge badge-now">Now — 2024</span>
+      <img src="rabat 2026.jpg" alt="Hassan Tower modern" loading="eager">
+    </div> 
+    <div class="desc-panel">
+      <div>
+        <div class="desc-text"><strong>Historical Context</strong>Sultan Yacoub el-Mansour commissioned what was to be the world's largest mosque and minaret in 1195. At his death in 1199 construction halted — the tower stood at only 44 metres of a planned 86. The 1755 Lisbon earthquake toppled the mosque's columns.</div>
+      </div>
+      <div>
+        <div class="desc-text"><strong>Why It Endures</strong>The red sandstone tower, covered in intricate geometric arabesques, stands opposite the Mausoleum of Mohammed V . The site is an open-air monument to Moroccan architectural heritage.</div>
+      </div>
+    </div>
+  </div>
+  
+</section>
 
+
+ 
 <!-- OUTRO -->
 <section id="outro">
   <div class="bg-img"></div>
-  <div class="zellige"></div>
-  <p class="quote">Morocco is not a country to be explained. It is a world to be felt, stone by stone, minaret by minaret.</p>
-  <p class="attr">— Heritage of the Maghreb</p>
+  <p class="quote">Morocco is not a country to be explained. It is a world to be felt, stone by stone.</p>
 </section>
-
-<body>
+ 
+</body>
+<script src="darkmode.js"></script>
 </html>
