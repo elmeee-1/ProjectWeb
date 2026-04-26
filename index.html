@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ProjectWeb</title>
     <link rel="stylesheet" href="generalCSS.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
   </head>
   <body>
     <header>
@@ -19,7 +19,7 @@
           "
         >
           <a href="index.html" class="logo">
-            <img src="Logo.png" alt="Logo" style="height: 40px" />
+            <img src="/Picturs/Logo.png" alt="Logo" style="height: 40px" />
           </a>
 
           <li class="dropdown">
@@ -49,6 +49,7 @@
               <a href="rabat.html">Rabat</a>
               <a href="fes.html">Fès</a>
               <a href="agadir.html">Agadir</a>
+              <a href="tanger.html">Tangier</a>
               <a href="ifrane.html">Ifrane</a>
               <a href="ouarzazate.html">Ouarzazate</a>
               <a href="chefchaouen.html">Chefchaouen</a>
@@ -126,7 +127,7 @@
       <div class="cards">
         <a href="history.html" class="card-link">
           <div class="card">
-            <img src="thumbnails/img1 hstry.jpg" alt="Art and History" />
+            <img src="/Picturs/thumbnails/img1 hstry.jpg" alt="Art and History" />
             <div>
               <strong>Art and<br />History</strong>
             </div>
@@ -135,14 +136,14 @@
 
         <a href="food.html" class="card-link">
           <div class="card">
-            <img src="thumbnails/img2.png" alt="Food" />
+            <img src="/Picturs/thumbnails/img2.png" alt="Food" />
             <div><strong>Food</strong></div>
           </div>
         </a>
 
         <a href="events.html" class="card-link">
           <div class="card">
-            <img src="thumbnails/img3.png" alt="Events and Celebrations" />
+            <img src="/Picturs/thumbnails/img3.png" alt="Events and Celebrations" />
             <div>
               <strong>Events &<br />Celebrations</strong>
             </div>
@@ -151,7 +152,7 @@
 
         <a href="What-to-do.html" class="card-link">
           <div class="card">
-            <img src="thumbnails/img4.png" alt="Activities" />
+            <img src="/Picturs/thumbnails/img4.png" alt="Activities" />
             <div><strong>Activities</strong></div>
           </div>
         </a>
@@ -287,11 +288,8 @@
     <button class="dot" aria-label="Slide 9"></button>
   </div>
 </div>
-<!-- FIX 1: was </section> — #home is a <div>, not a <section> -->
 
     <script>
-      /* FIX 2: was getElementById("sliderTrack") — no such id exists.
-         The element has class="slider-track", so use querySelector.  */
       const track = document.querySelector(".slider-track");
       const dots = document.querySelectorAll(".dot");
       const total = dots.length;
