@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore Marrakech | Morocco Guide</title>
+
+    <link rel="stylesheet" href="generalCSS.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Page-Specific Styles */
+      :root {
+        --red: #c8102e;
+        --green: #006233;
+        --dark: #1a1a1a;
+        --mid: #444444;
+        --light: #f5f2ee;
+        --white: #ffffff;
+        --offwhite: #fafafa;
+        --border: #eaeaea;
+        --shadow: rgba(0, 0, 0, 0.05);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      @keyframes gradientShift {
+        0% {
+          background-color: var(--white);
+        }
+        50% {
+          background-color: var(--offwhite);
+        }
+        100% {
+          background-color: var(--white);
+        }
+      }
+
+      body {
+        font-family: "Source Sans 3", sans-serif;
+        color: var(--dark);
+        background-color: var(--white);
+        animation: gradientShift 10s ease-in-out infinite;
+        overflow-x: hidden;
+        transition:
+          color 0.4s ease,
+          background-color 0.4s ease;
+      }
+
+      .hero {
+        position: relative;
+        height: 500px;
+        display: flex;
+        align-items: flex-end;
+        overflow: hidden;
+      }
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+      }
+      .hero-bg video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.1),
+          rgba(0, 0, 0, 0.7)
+        );
+        z-index: 2;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 3;
+        padding: 0 60px 50px;
+        color: #fff;
+        width: 100%;
+      }
+      .hero h1 {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(40px, 5vw, 65px);
+        font-weight: 700;
+        line-height: 1.1;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .filter-container {
+        max-width: 1100px;
+        margin: 40px auto 20px;
+        padding: 0 40px;
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .filter-btn {
+        background: var(--light);
+        border: 1px solid var(--border);
+        padding: 10px 20px;
+        font-family: "Source Sans 3";
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 30px;
+        transition: 0.3s;
+        color: var(--mid);
+      }
+      .filter-btn:hover {
+        border-color: var(--green);
+        color: var(--green);
+      }
+      .filter-btn.active {
+        background: var(--green);
+        color: white;
+        border-color: var(--green);
+      }
+
+      .medinas-section {
+        max-width: 1100px;
+        margin: 0 auto 60px;
+        padding: 0 40px;
+        min-height: 400px;
+      }
+      .medina-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 50px;
+        box-shadow: 0 10px 30px var(--shadow);
+        background: var(--white);
+        border: 1px solid var(--border);
+        transition:
+          transform 0.4s ease,
+          opacity 0.4s ease,
+          background-color 0.4s,
+          border-color 0.4s;
+      }
+      .medina-card.reverse {
+        direction: rtl;
+      }
+      .medina-card.reverse > * {
+        direction: ltr;
+      }
+
+      .medina-img {
+        position: relative;
+        min-height: 380px;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .medina-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.6s ease;
+      }
+      .medina-card:hover .medina-img img {
+        transform: scale(1.05);
+      }
+      .medina-badge {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: var(--red);
+        color: #fff;
+        font-size: 11px;
+        font-weight: 700;
+        padding: 5px 12px;
+        text-transform: uppercase;
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      .medina-body {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: var(--light);
+        transition: 0.4s;
+      }
+      .city-label {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        color: var(--red);
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+      .medina-body h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 32px;
+        color: var(--dark);
+        margin-bottom: 15px;
+        transition: 0.4s;
+      }
+      .medina-body p {
+        font-size: 16px;
+        color: var(--mid);
+        line-height: 1.7;
+        transition: 0.4s;
+      }
+
+      .fade-in-element {
+        opacity: 0;
+        transform: translateY(40px);
+        transition:
+          opacity 0.3s ease-out,
+          transform 0.3s ease-out;
+      }
+      .fade-in-element.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .lightbox {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.95);
+        z-index: 2000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+      }
+      .lightbox.active {
+        opacity: 1;
+        pointer-events: all;
+      }
+      .lightbox img {
+        max-width: 90%;
+        max-height: 90vh;
+        border: 3px solid white;
+        border-radius: 2px;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+      }
+      .lightbox-close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: white;
+        font-size: 40px;
+        cursor: pointer;
+        font-family: sans-serif;
+        transition: color 0.2s;
+      }
+      .lightbox-close:hover {
+        color: var(--red);
+      }
+
+      .about-cta {
+        max-width: 800px;
+        margin: 0 auto 80px;
+        padding: 60px 40px;
+        text-align: center;
+      }
+      .about-cta h2 {
+        font-family: "Playfair Display", serif;
+        color: var(--dark);
+        font-size: 36px;
+        margin-bottom: 15px;
+        transition: 0.4s;
+      }
+      .about-cta p {
+        color: var(--mid);
+        font-size: 17px;
+        margin-bottom: 30px;
+        line-height: 1.6;
+        transition: 0.4s;
+      }
+      .about-btn {
+        display: inline-block;
+        background: var(--green);
+        color: white;
+        border: none;
+        padding: 15px 40px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+        text-decoration: none;
+        transition: 0.3s;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 4px;
+      }
+      .about-btn:hover {
+        background: #004d27;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 98, 51, 0.3);
+      }
+
+      .more-cities-section {
+        max-width: 1000px;
+        margin: 0 auto 80px;
+        padding: 0 40px;
+      }
+      .more-cities-section h2 {
+        font-family: "Playfair Display", serif;
+        text-align: center;
+        margin-bottom: 40px;
+        color: var(--dark);
+        font-size: 32px;
+        transition: 0.4s;
+      }
+      .city-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+      }
+      .city-pill {
+        background: var(--light);
+        color: var(--dark);
+        padding: 12px 25px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid var(--border);
+        transition: all 0.3s ease;
+        font-family: "Source Sans 3", sans-serif;
+      }
+      .city-pill:hover {
+        background: var(--green);
+        color: white;
+        border-color: var(--green);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      footer {
+        background: var(--white);
+        height: 50px;
+        transition: background-color 0.4s;
+        border-top: 1px solid var(--border);
+      }
+
+      @media (max-width: 768px) {
+        .medina-card {
+          grid-template-columns: 1fr;
+        }
+        .medina-card.reverse {
+          direction: ltr;
+        }
+      }
+
+      /* FOOLPROOF DARK THEME FOR MARRAKECH */
+      body.dark-theme {
+        --white: #121212 !important;
+        --offwhite: #1a1a1a !important;
+        --light: #222222 !important;
+        --dark: #f5f2ee !important;
+        --mid: #cccccc !important;
+        --border: #333333 !important;
+        background-color: #121212 !important;
+        animation: none !important;
+      }
+      body.dark-theme h1,
+      body.dark-theme h2,
+      body.dark-theme p {
+        color: #f5f2ee !important;
+      }
+      body.dark-theme .city-pill {
+        background-color: #333 !important;
+        color: #fff !important;
+        border-color: #555 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lightbox" id="imageLightbox">
+      <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+      <img id="lightboxImage" src="" alt="Enlarged Image" />
+    </div>
+
+    <header>
+      <ul class="nav-links" style="margin: 0; padding: 0">
+        <nav
+          class="header"
+          style="
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+          "
+        >
+          <a href="index.html" class="logo">
+            <img src="Logo.png" alt="Logo" style="height: 40px" />
+          </a>
+
+          <li class="dropdown">
+            <a href="index.html">Home &#9662;</a>
+            <div class="dropdown-content">
+              <a href="index.html">Home</a>
+            </div>
+          </li>
+
+          <li class="dropdown">
+            <a href="what-to-do.html">What to do &#9662;</a>
+            <div class="dropdown-content">
+              <a href="what-to-do.html">Adventure</a>
+              <a href="what-to-do.html">Culture & History</a>
+              <a href="what-to-do.html">Nature</a>
+              <a href="what-to-do.html">Beach</a>
+              <a href="what-to-do.html">Where to Stay</a>
+              <a href="what-to-do.html">Food & Drink</a>
+            </div>
+          </li>
+
+          <li class="dropdown">
+            <a href="destinations.html">Destinations &#9662;</a>
+            <div class="dropdown-content">
+              <a href="marrakech.html">Marrakech</a>
+              <a href="essaouira.html">Essaouira</a>
+              <a href="rabat.html">Rabat</a>
+              <a href="fes.html">Fès</a>
+              <a href="agadir.html">Agadir</a>
+              <a href="ifrane.html">Ifrane</a>
+              <a href="ouarzazate.html">Ouarzazate</a>
+              <a href="chefchaouen.html">Chefchaouen</a>
+              <a href="merzouga.html">Merzouga</a>
+            </div>
+          </li>
+
+          <li>
+            <a href="about.html">About</a>
+          </li>
+
+          <li>
+            <button class="book-now">Book Now</button>
+          </li>
+
+          <li>
+            <button
+              id="themeToggle"
+              style="
+                background: none;
+                border: none;
+                cursor: pointer;
+                font-size: 20px;
+                margin-left: 10px;
+              "
+            >
+              🌙
+            </button>
+          </li>
+        </nav>
+      </ul>
+    </header>
+
+    <div class="hero fade-in-element">
+      <div class="hero-bg">
+        <video autoplay loop muted playsinline>
+          <source src="img/marrakech-hero.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <h1>Discover Marrakech</h1>
+        <p style="font-size: 20px; margin-top: 10px">
+          The Red City of Magic, Spices, and Endless Energy.
+        </p>
+      </div>
+    </div>
+
+    <div class="filter-container fade-in-element">
+      <button class="filter-btn active" onclick="filterMedinas('all')">
+        All Highlights
+      </button>
+      <button class="filter-btn" onclick="filterMedinas('history')">
+        History
+      </button>
+      <button class="filter-btn" onclick="filterMedinas('market')">
+        Markets
+      </button>
+      <button class="filter-btn" onclick="filterMedinas('food')">
+        Gastronomy
+      </button>
+      <button class="filter-btn" onclick="filterMedinas('nature')">
+        Nature
+      </button>
+      <button class="filter-btn" onclick="filterMedinas('culture')">
+        Culture & Art
+      </button>
+    </div>
+
+    <div class="medinas-section" id="medinasContainer">
+      <div class="medina-card fade-in-element" data-category="history">
+        <div class="medina-img" onclick="openLightbox(this)">
+          <img src="img/koutoubia.jpg" alt="Koutoubia Mosque" />
+          <div class="medina-badge">Landmark</div>
+        </div>
+        <div class="medina-body">
+          <div class="city-label">Iconic Minaret</div>
+          <h2>Koutoubia Mosque</h2>
+          <p>
+            The ultimate symbol of Marrakech. This magnificent 12th-century
+            minaret towers over the city, serving as a stunning example of
+            Moorish architecture and a guiding compass for anyone wandering the
+            medina.
+          </p>
+        </div>
+      </div>
+
+      <div class="medina-card reverse fade-in-element" data-category="culture">
+        <div class="medina-img" onclick="openLightbox(this)">
+          <img src="img/jemaa-el-fna.jpg" alt="Jemaa el-Fnaa" />
+          <div class="medina-badge">Must Visit</div>
+        </div>
+        <div class="medina-body">
+          <div class="city-label">The Heartbeat</div>
+          <h2>Jemaa el-Fnaa</h2>
+          <p>
+            The most famous square in all of Africa. By day, it's filled with
+            snake charmers and juice stalls. By night, it transforms into a
+            massive open-air restaurant surrounded by storytellers, musicians,
+            and performers.
+          </p>
+        </div>
+      </div>
+
+      <div class="medina-card fade-in-element" data-category="food">
+        <div class="medina-img" onclick="openLightbox(this)">
+          <img src="img/marrakech-tanjia.webp" alt="Traditional Tanjia" />
+          <div class="medina-badge">Culinary</div>
+        </div>
+        <div class="medina-body">
+          <div class="city-label">Local Flavor</div>
+          <h2>The Authentic Tanjia</h2>
+          <p>
+            You cannot leave the Red City without trying its signature dish:
+            Tanjia. Traditionally prepared by men and slow-cooked overnight in
+            the ashes of the local hammam, the meat melts in your mouth with
+            rich cumin and saffron flavors.
+          </p>
+        </div>
+      </div>
+
+      <div class="medina-card reverse fade-in-element" data-category="history">
+        <div class="medina-img" onclick="openLightbox(this)">
+          <img src="img/bahia-palace.jpg" alt="Bahia Palace" />
+          <div class="medina-badge">Architecture</div>
+        </div>
+        <div class="medina-body">
+          <div class="city-label">Royal Elegance</div>
+          <h2>Bahia Palace</h2>
+          <p>
+            A masterpiece of Moroccan design. Walk through grand courtyards,
+            lush riad gardens, and rooms entirely covered in intricate zellij
+            mosaics and beautifully painted cedar ceilings.
+          </p>
+        </div>
+      </div>
+
+      <div class="medina-card fade-in-element" data-category="nature">
+        <div class="medina-img" onclick="openLightbox(this)">
+          <img src="img/majorelle.jpg" alt="Jardin Majorelle" />
+          <div class="medina-badge">Botanical Garden</div>
+        </div>
+        <div class="medina-body">
+          <div class="city-label">An Oasis of Blue</div>
+          <h2>Jardin Majorelle</h2>
+          <p>
+            Saved from destruction by Yves Saint Laurent, this stunning
+            botanical garden contrasts towering exotic plants with deep,
+            striking cobalt blue architecture. It is a tranquil, artistic escape
+            from the city streets.
+          </p>
+        </div>
+      </div>
+
+      <div class="medina-card reverse fade-in-element" data-category="market">
+        <div class="medina-img" onclick="openLightbox(this)">
+          <img src="img/souk.webp" alt="Marrakech Souks" />
+          <div class="medina-badge">Shopping</div>
+        </div>
+        <div class="medina-body">
+          <div class="city-label">The Labyrinth</div>
+          <h2>The Souks</h2>
+          <p>
+            Lose yourself in the endless, winding alleys of the old markets.
+            From towering pyramids of spices and hanging brass lanterns to
+            handwoven Berber carpets, the souks are a feast for every sense.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-cta fade-in-element">
+      <h2>Explore Marrakech With Us</h2>
+      <p>
+        From the energetic chaos of Jemaa el-Fnaa to the quiet beauty of the
+        Majorelle Gardens. Discover how our professional guides can help you
+        navigate the magic of the Red City.
+      </p>
+      <a href="about.html" class="about-btn">About Our Tours</a>
+    </div>
+
+    <div class="more-cities-section fade-in-element">
+      <h2>Explore More Destinations</h2>
+      <div class="city-grid">
+        <a href="fes.html" class="city-pill">Fès</a>
+        <a href="rabat.html" class="city-pill">Rabat</a>
+        <a href="marrakech.html" class="city-pill">Marrakech</a>
+        <a href="essaouira.html" class="city-pill">Essaouira</a>
+        <a href="agadir.html" class="city-pill">Agadir</a>
+        <a href="ifrane.html" class="city-pill">Ifrane</a>
+        <a href="chefchaouen.html" class="city-pill">Chefchaouen</a>
+        <a href="ouarzazate.html" class="city-pill">Ouarzazate</a>
+        <a href="merzouga.html" class="city-pill">Merzouga</a>
+      </div>
+    </div>
+
+    <footer></footer>
+
+    <script src="darkmode.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
