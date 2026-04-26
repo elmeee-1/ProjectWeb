@@ -19,7 +19,15 @@
           "
         >
           <a href="index.html" class="logo">
-            <img src="Logo.png" alt="Logo" style="height: 40px" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="spinning-plane"
+            >
+              <path
+                d="M21,16V14L13,9V3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V9L2,14V16L10,13.5V19L8,20.5V22L11.5,21L15,22V20.5L13,19V13.5L21,16Z"
+              />
+            </svg>
           </a>
 
           <li class="dropdown">
@@ -101,14 +109,14 @@
           Morocco is a North African country with more than its fair share of
           beautiful cities. These ancient settlements are steeped in history,
           filled with quintessential Amazigh and Arabic architecture mixes,
-          frenetic markets, and astoundingly panoramic scenery. They're a
+          frenetic markets, and astoundingly panoramic scenery. They’re a
           wonderful assault on the senses, where hospitable tradition brushes up
           against contemporary Morocco, all accompanied by residents that are
           genuinely welcoming.
         </p>
         <p>
-          Morocco has lots of major population centres, but it's not always
-          these bigger, more well-known cities that hold the 'most beautiful'
+          Morocco has lots of major population centres, but it’s not always
+          these bigger, more well-known cities that hold the ‘most beautiful’
           crown. There are many smaller towns that exude a unique charisma and
           complement their corresponding landscapes seamlessly.
         </p>
@@ -158,141 +166,103 @@
       </div>
     </section>
 
-<!-- Sliders -->
-<div id="home">
-  <div class="slider-track">
+    <section id="home">
+      <div class="slider-track" id="sliderTrack">
+        <div class="slide">
+          <div class="slide-label">
+            <h2 class="slide-city">Jamaa Lafna</h2>
+            <p class="slide-sub">★ 4.5 &nbsp;|&nbsp; Marrackech, Morocco</p>
+          </div>
+        </div>
 
-    <div class="slide">
-      <div class="slide-bg"></div>
-      <div class="slide-card">
-        <div class="card-image"></div>
-        <div class="slide-label">
-          <div class="slide-city">Marrakech - jamaa lafna</div>
-          <div class="slide-sub">The red city</div>
+        <div class="slide">
+          <div class="slide-label">
+            <h2 class="slide-city">Hassan tour</h2>
+            <p class="slide-sub">★ 4.2 &nbsp;|&nbsp; Rabat, Morocco</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-label">
+            <h2 class="slide-city">Medina</h2>
+            <p class="slide-sub">★ 4.0 &nbsp;|&nbsp; Essaouira, Morocco</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-label">
+            <h2 class="slide-city">université El Quaraouiyine</h2>
+            <p class="slide-sub">★ 4.5 &nbsp;|&nbsp; Fès, Morocco</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-label">
+            <h2 class="slide-city">Agadir Oufella</h2>
+            <p class="slide-sub">★ 4.8 &nbsp;|&nbsp; Agadir, Morocco</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-label">
+            <h2 class="slide-city">kasbah</h2>
+            <p class="slide-sub">★ 4.2 &nbsp;|&nbsp; Chefchaouen, Morocco</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-label">
+            <h2 class="slide-city">Michlifen</h2>
+            <p class="slide-sub">★ 4.8 &nbsp;|&nbsp; Ifrane, Morocco</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-label">
+            <h2 class="slide-city">Ait ben haddou kasbah</h2>
+            <p class="slide-sub">★ 4.8 &nbsp;|&nbsp; ouarzazate, Morocco</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-label">
+            <h2 class="slide-city">Desert Camps</h2>
+            <p class="slide-sub">★ 4.8 &nbsp;|&nbsp; Sahara desert, Morocco</p>
+          </div>
         </div>
       </div>
-    </div>
+      <button class="slider-arrow prev" id="prevBtn" aria-label="Previous">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path
+            d="M10 3L5 8l5 5"
+            stroke="#1a1a1a"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
 
-    <div class="slide">
-      <div class="slide-bg"></div>
-      <div class="slide-card">
-        <div class="card-image"></div>
-        <div class="slide-label">
-          <div class="slide-city">Rabat -hassan tour</div>
-          <div class="slide-sub">The capital</div>
-        </div>
+      <button class="slider-arrow next" id="nextBtn" aria-label="Next">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path
+            d="M6 3l5 5-5 5"
+            stroke="#1a1a1a"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+
+      <div class="slider-dots" id="sliderDots">
+        <button class="dot active" aria-label="Slide 1"></button>
+        <button class="dot" aria-label="Slide 2"></button>
+        <button class="dot" aria-label="Slide 3"></button>
+        <button class="dot" aria-label="Slide 4"></button>
+        <button class="dot" aria-label="Slide 5"></button>
+        <button class="dot" aria-label="Slide 6"></button>
+        <button class="dot" aria-label="Slide 7"></button>
+        <button class="dot" aria-label="Slide 8"></button>
+        <button class="dot" aria-label="Slide 9"></button>
       </div>
-    </div>
-
-    <div class="slide">
-      <div class="slide-bg"></div>
-      <div class="slide-card">
-        <div class="card-image"></div>
-        <div class="slide-label">
-          <div class="slide-city">Essaouira -medina</div>
-          <div class="slide-sub">Mogador</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="slide">
-      <div class="slide-bg"></div>
-      <div class="slide-card">
-        <div class="card-image"></div>
-        <div class="slide-label">
-          <div class="slide-city">Fez - EL Qarawiyine</div>
-          <div class="slide-sub">The oldest city</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="slide">
-      <div class="slide-bg"></div>
-      <div class="slide-card">
-        <div class="card-image"></div>
-        <div class="slide-label">
-          <div class="slide-city">Agadir - agadir oufella</div>
-          <div class="slide-sub">The modern city</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="slide">
-      <div class="slide-bg"></div>
-      <div class="slide-card">
-        <div class="card-image"></div>
-        <div class="slide-label">
-          <div class="slide-city">Chefchaouen - rif</div>
-          <div class="slide-sub">The blue city</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="slide">
-      <div class="slide-bg"></div>
-      <div class="slide-card">
-        <div class="card-image"></div>
-        <div class="slide-label">
-          <div class="slide-city">Ifran - Michlifen</div>
-          <div class="slide-sub">Atlas snow city</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="slide">
-      <div class="slide-bg"></div>
-      <div class="slide-card">
-        <div class="card-image"></div>
-        <div class="slide-label">
-          <div class="slide-city">Ouarzazate -kasbah</div>
-          <div class="slide-sub">Ait ben haddou kasbah</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="slide">
-      <div class="slide-bg"></div>
-      <div class="slide-card">
-        <div class="card-image"></div>
-        <div class="slide-label">
-          <div class="slide-city">Desert Dunes</div>
-          <div class="slide-sub">Moroccan Sahara</div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <button class="slider-arrow prev" id="prevBtn" aria-label="Previous">
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-      <path d="M10 3L5 8l5 5" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </button>
-
-  <button class="slider-arrow next" id="nextBtn" aria-label="Next">
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-      <path d="M6 3l5 5-5 5" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </button>
-
-  <div class="slider-dots" id="sliderDots">
-    <button class="dot active" aria-label="Slide 1"></button>
-    <button class="dot" aria-label="Slide 2"></button>
-    <button class="dot" aria-label="Slide 3"></button>
-    <button class="dot" aria-label="Slide 4"></button>
-    <button class="dot" aria-label="Slide 5"></button>
-    <button class="dot" aria-label="Slide 6"></button>
-    <button class="dot" aria-label="Slide 7"></button>
-    <button class="dot" aria-label="Slide 8"></button>
-    <button class="dot" aria-label="Slide 9"></button>
-  </div>
-</div>
-<!-- FIX 1: was </section> — #home is a <div>, not a <section> -->
-
+    </section>
     <script>
-      /* FIX 2: was getElementById("sliderTrack") — no such id exists.
-         The element has class="slider-track", so use querySelector.  */
-      const track = document.querySelector(".slider-track");
+      const track = document.getElementById("sliderTrack");
       const dots = document.querySelectorAll(".dot");
       const total = dots.length;
       let current = 0;
@@ -315,14 +285,19 @@
     </script>
 
     <div class="guide-box">
+      <div class="guide-image">
+        <img src="Capture d'écran 2026-04-17 132040.png" alt="Morocco Cities" />
+      </div>
       <div class="guide-content">
         <h3>IN THIS GUIDE</h3>
         <ul>
-          <li><a href="destinations.html">Morocco's Most Beautiful Cities</a></li>
-          <li><a href="destinations.html">Northern Half of Morocco</a></li>
-          <li><a href="destinations.html">Southern Half of Morocco</a></li>
-          <li><a href="What-to-do.html">How to Get Around Morocco</a></li>
-          <li><a href="about.html">Final Thoughts</a></li>
+          <li><a href="#most-beautiful">Morocco's Most Beautiful Cities</a></li>
+          <li><a href="#northern">Northern Half of Morocco</a></li>
+          <li><a href="#southern">Southern Half of Morocco</a></li>
+          <li><a href="#map">Map of the Most Beautiful Cities</a></li>
+          <li><a href="#getting-there">Getting to Morocco</a></li>
+          <li><a href="#getting-around">How to Get Around Morocco</a></li>
+          <li><a href="#final">Final Thoughts</a></li>
         </ul>
       </div>
     </div>
