@@ -179,3 +179,25 @@ body.dark-theme .dropdown-content a:hover {
   background-color: #333;
   color: #8b6a3b;
 }
+/* Animation */
+.spinning-plane {
+  width: 35px;
+  height: 35px;
+  fill: var(--dark);
+  animation: gentleFloat 4s ease-in-out infinite;
+}
+
+body.dark-theme .spinning-plane {
+  fill: var(--white);
+}
+@keyframes gentleFloat {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
