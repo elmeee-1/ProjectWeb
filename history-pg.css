@@ -187,8 +187,7 @@ max-width: 10vh;
     border-radius: 99px;
     }
  
-  .img-panel.old img { filter: sepia(0.6) brightness(0.75) contrast(1.5); }
- 
+  .img-panel.old img { filter: sepia(1.4) brightness(0.5) contrast(1);  }
   .divider-label {
     position: absolute;
     left: 50%; top: 50%;
@@ -208,13 +207,13 @@ max-width: 10vh;
   .desc-panel {
     position: absolute;
     bottom: 0; left: 0; right: 0; top: 50%;
-    padding: 1.5rem 5vw 2.2rem;
     background:rgba(0, 0, 0, 0.4) 40%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
   }
   .desc-text {
+    padding: 1.5rem 5vw 2.2rem;
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 11px;
