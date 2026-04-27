@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Request a Consultation — Discover Morocco</title>
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+
+    <link rel="stylesheet" href="generalCSS.css" />
+    <link rel="stylesheet" href="book.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Raleway:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <ul class="nav-links" style="margin: 0; padding: 0">
+        <nav
+          class="header"
+          style="
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+          "
+        >
+          <a href="index.html" class="logo">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="spinning-plane"
+              style="
+                width: 35px;
+                height: 35px;
+                fill: var(--dark);
+                transition: fill 0.3s;
+              "
+            >
+              <path
+                d="M21,16V14L13,9V3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V9L2,14V16L10,13.5V19L8,20.5V22L11.5,21L15,22V20.5L13,19V13.5L21,16Z"
+              />
+            </svg>
+          </a>
+          <li class="dropdown">
+            <a href="index.html">Home &#9662;</a>
+            <div class="dropdown-content"><a href="index.html">Home</a></div>
+          </li>
+          <li class="dropdown">
+            <a href="what-to-do.html">What to do &#9662;</a>
+            <div class="dropdown-content">
+              <a href="what-to-do.html">Adventure</a>
+              <a href="what-to-do.html">Culture & History</a>
+              <a href="what-to-do.html">Nature</a>
+              <a href="what-to-do.html">Beach</a>
+              <a href="what-to-do.html">Where to Stay</a>
+              <a href="what-to-do.html">Food & Drink</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="destinations.html">Destinations &#9662;</a>
+            <div class="dropdown-content">
+              <a href="marrakech.html">Marrakech</a>
+              <a href="essaouira.html">Essaouira</a>
+              <a href="rabat.html">Rabat</a>
+              <a href="fes.html">Fès</a>
+              <a href="agadir.html">Agadir</a>
+              <a href="ifrane.html">Ifrane</a>
+              <a href="ouarzazate.html">Ouarzazate</a>
+              <a href="chefchaouen.html">Chefchaouen</a>
+              <a href="sahara_desert.html">Sahara desert</a>
+            </div>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li>
+            <a href="book.html" style="text-decoration: none">
+              <button class="book-now">Book Now</button>
+            </a>
+          </li>
+          <button
+            id="themeToggle"
+            style="
+              background: none;
+              border: none;
+              cursor: pointer;
+              font-size: 20px;
+              margin-left: 10px;
+            "
+          >
+            🌙
+          </button>
+        </nav>
+      </ul>
+    </header>
+
+    <section class="book-hero">
+      <div class="book-hero-bg"></div>
+      <div class="container">
+        <div class="book-hero__inner">
+          <div class="book-hero__eyebrow">
+            <span class="u-label">Private Experiences</span>
+          </div>
+          <h1 class="book-hero__title">
+            Request a
+            <em>Consultation</em>
+          </h1>
+          <p class="book-hero__desc">
+            Every journey we craft is entirely bespoke. Share your vision and
+            our specialists will design an itinerary worthy of Morocco's depth —
+            from imperial medinas to Saharan solitudes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="book-form-section">
+      <div class="container">
+        <div class="book-form-layout">
+          <div>
+            <div class="form-header">
+              <p class="u-label" style="color: var(--green)">The Application</p>
+              <h2>Your details</h2>
+            </div>
+
+            <form class="book-form" id="bookForm" novalidate>
+              <div class="form-row">
+                <div class="field" id="field-name">
+                  <label class="field__label" for="name">Full Name</label>
+                  <input
+                    class="field__input"
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="e.g. Charlotte Moreau"
+                    required
+                  />
+                  <span class="field__error">Please enter your name.</span>
+                </div>
+                <div class="field" id="field-email">
+                  <label class="field__label" for="email">Email Address</label>
+                  <input
+                    class="field__input"
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    required
+                  />
+                  <span class="field__error">Please enter a valid email.</span>
+                </div>
+              </div>
+
+              <div class="form-separator"><span>Journey Details</span></div>
+
+              <div class="form-row">
+                <div class="field" id="field-arrival">
+                  <label class="field__label" for="arrival">Arrival Date</label>
+                  <input
+                    class="field__input"
+                    type="date"
+                    id="arrival"
+                    name="arrival"
+                    required
+                  />
+                  <span class="field__error"
+                    >Please select an arrival date.</span
+                  >
+                </div>
+                <div class="field" id="field-departure">
+                  <label class="field__label" for="departure"
+                    >Departure Date</label
+                  >
+                  <input
+                    class="field__input"
+                    type="date"
+                    id="departure"
+                    name="departure"
+                    required
+                  />
+                  <span class="field__error"
+                    >Please select a departure date.</span
+                  >
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="field" id="field-guests">
+                  <label class="field__label" for="guests"
+                    >Number of Guests</label
+                  >
+                  <input
+                    class="field__input"
+                    type="number"
+                    id="guests"
+                    name="guests"
+                    min="1"
+                    max="50"
+                    placeholder="2"
+                    required
+                  />
+                  <span class="field__error">Please enter guest count.</span>
+                </div>
+                <div class="field field--select" id="field-experience">
+                  <label class="field__label" for="experience"
+                    >Experience Type</label
+                  >
+                  <select
+                    class="field__select"
+                    id="experience"
+                    name="experience"
+                  >
+                    <option value="" disabled selected>Select a focus</option>
+                    <option value="cultural">Cultural Immersion</option>
+                    <option value="desert">Desert &amp; Sahara</option>
+                    <option value="coastal">Coastal Retreats</option>
+                    <option value="culinary">Culinary Journey</option>
+                    <option value="adventure">Adventure &amp; Trekking</option>
+                    <option value="bespoke">Fully Bespoke</option>
+                  </select>
+                  <span class="field__error"
+                    >Please select an experience type.</span
+                  >
+                </div>
+              </div>
+
+              <div class="form-separator"><span>Your Vision</span></div>
+
+              <div
+                class="field"
+                id="field-vision"
+                style="padding-bottom: 1.5rem"
+              >
+                <label class="field__label" for="vision"
+                  >Tell us about your vision</label
+                >
+                <textarea
+                  class="field__textarea"
+                  id="vision"
+                  name="vision"
+                  placeholder="Describe the atmosphere, the pace, the moments that matter to you..."
+                  required
+                ></textarea>
+                <span class="field__error"
+                  >Please share your vision with us.</span
+                >
+              </div>
+
+              <div class="form-footer" id="formFooter">
+                <p class="form-footer__note">
+                  We respond within 48 hours. All inquiries are handled in
+                  strict confidence.
+                </p>
+                <button class="btn-submit" type="submit" id="submitBtn">
+                  <span class="btn-text">
+                    <span>Send Inquiry</span>
+                    <svg
+                      viewBox="0 0 24 24"
+                      style="
+                        width: 14px;
+                        height: 14px;
+                        stroke: currentColor;
+                        fill: none;
+                        stroke-width: 1.5;
+                      "
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                      <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                  </span>
+                  <span
+                    class="btn-spinner"
+                    aria-hidden="true"
+                    style="display: none"
+                    >Loading...</span
+                  >
+                </button>
+              </div>
+            </form>
+
+            <div class="form-success" id="formSuccess">
+              <div class="form-success__icon">✓</div>
+              <h3>Your inquiry has been received.</h3>
+              <p>
+                A member of our local Moroccan team will reach out to you within
+                48 hours to begin designing your experience.
+              </p>
+            </div>
+          </div>
+
+          <aside class="book-sidebar">
+            <div class="sidebar-promise">
+              <h3>The Discover Morocco Promise</h3>
+              <p>
+                Every itinerary is hand-crafted by a specialist who has lived
+                and travelled the routes they recommend.
+              </p>
+            </div>
+
+            <ul class="sidebar-list">
+              <li>No templates. No packages. Pure bespoke.</li>
+              <li>Private guides fluent in your language.</li>
+              <li>24/7 concierge for the duration of your journey.</li>
+              <li>Exclusive access to riad and desert camp partnerships.</li>
+            </ul>
+
+            <div class="sidebar-divider"></div>
+
+            <div class="sidebar-contact">
+              <span>Prefer to call?</span>
+              <a href="tel:+212600000000">+212 600 000 000</a>
+              <a href="mailto:contact@discovermorocco.com"
+                >contact@discovermorocco.com</a
+              >
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="darkmode.js"></script>
+    <script src="book.js"></script>
+  </body>
+</html>
