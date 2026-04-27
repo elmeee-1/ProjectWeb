@@ -3,11 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog</title>
+    <title>About Us — Discover Morocco</title>
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+
+    <link rel="stylesheet" href="generalCSS.css" />
+    <link rel="stylesheet" href="about.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Raleway:wght@200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-      <ul class="nav-links">
+      <ul class="nav-links" style="margin: 0; padding: 0">
         <nav
           class="header"
           style="
@@ -21,6 +32,12 @@
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               class="spinning-plane"
+              style="
+                width: 35px;
+                height: 35px;
+                fill: var(--dark);
+                transition: fill 0.3s;
+              "
             >
               <path
                 d="M21,16V14L13,9V3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V9L2,14V16L10,13.5V19L8,20.5V22L11.5,21L15,22V20.5L13,19V13.5L21,16Z"
@@ -29,11 +46,8 @@
           </a>
           <li class="dropdown">
             <a href="index.html">Home &#9662;</a>
-            <div class="dropdown-content">
-              <a href="index.html">Home</a>
-            </div>
+            <div class="dropdown-content"><a href="index.html">Home</a></div>
           </li>
-
           <li class="dropdown">
             <a href="what-to-do.html">What to do &#9662;</a>
             <div class="dropdown-content">
@@ -45,7 +59,6 @@
               <a href="what-to-do.html">Food & Drink</a>
             </div>
           </li>
-
           <li class="dropdown">
             <a href="destinations.html">Destinations &#9662;</a>
             <div class="dropdown-content">
@@ -60,15 +73,12 @@
               <a href="sahara_desert.html">Sahara desert</a>
             </div>
           </li>
-
+          <li><a href="about.html">About</a></li>
           <li>
-            <a href="about.html">About</a>
+            <a href="book.html" style="text-decoration: none">
+              <button class="book-now">Book Now</button>
+            </a>
           </li>
-
-          <li>
-            <button class="book-now">Book Now</button>
-          </li>
-
           <button
             id="themeToggle"
             style="
@@ -84,67 +94,246 @@
         </nav>
       </ul>
     </header>
-    <!-- TITLE -->
-    <div class="hero-content">
-      <h1 class="hero-title">MOROCCO<br />TRAVEL BLOG</h1>
-    </div>
 
-    <!-- ── ARTICLES ── -->
-    <div class="section">
-      <p class="section-label">Discover</p>
-      <h2 class="section-title">Tales from the Kingdom</h2>
-      <div class="cards">
-        <article class="card">
-          <div class="card-thumb">
-            <div class="card-thumb-bg card-thumb-1"></div>
-            <span class="card-thumb-label">SAHARA</span>
+    <main>
+      <section class="about-hero">
+        <div class="hero-canvas">
+          <div class="hero-image-wrap">
+            <img
+              src="img/breathtaking-evening-scenery-museum-palazzo-orsini-italy.jpg"
+              alt="Authentic Moroccan Medina"
+            />
           </div>
-          <div class="card-body">
-            <h3 class="card-title">Nights in the Erg Chebbi Dunes</h3>
-            <p class="card-excerpt">
-              Sleeping under a canopy of stars in the Sahara, with camels
-              silhouetted against the setting sun — a journey unlike any other.
+          <div class="hero-identity">
+            <p class="hero-label fade-in-element">
+              The Official Guide · Morocco
             </p>
-            <a href="#" class="card-link">Read More</a>
+            <h1 class="hero-headline fade-in-element" data-delay="1">
+              Where the<br />kingdom<br /><em>comes alive.</em>
+            </h1>
+            <div class="hero-rule fade-in-element" data-delay="2"></div>
+            <p class="hero-sub fade-in-element" data-delay="3">
+              Curators of authentic journeys through the heart of Morocco.
+            </p>
           </div>
-        </article>
+        </div>
 
-        <article class="card">
-          <div class="card-thumb">
-            <div class="card-thumb-bg card-thumb-2"></div>
-            <span class="card-thumb-label">MARRAKECH</span>
+        <aside class="hero-aside">
+          <div class="stat-block fade-in-element" data-delay="1">
+            <div class="stat-number">9</div>
+            <div class="stat-label">Destinations Featured</div>
           </div>
-          <div class="card-body">
-            <h3 class="card-title">Lost in the Medina's Labyrinth</h3>
-            <p class="card-excerpt">
-              Every turn in the souks of Marrakech reveals a new world — spices,
-              leather, cedar wood, and the call to prayer echoing through
-              alleyways.
-            </p>
-            <a href="#" class="card-link">Read More</a>
+          <div class="stat-block fade-in-element" data-delay="2">
+            <div class="stat-number">5</div>
+            <div class="stat-label">Local Experts</div>
           </div>
-        </article>
+          <div class="stat-block fade-in-element" data-delay="3">
+            <div class="stat-number">
+              100<sup style="font-size: 0.5em; vertical-align: super">%</sup>
+            </div>
+            <div class="stat-label">Authentic Experiences</div>
+          </div>
+          <div class="stat-block fade-in-element" data-delay="4">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Travel Support</div>
+          </div>
+        </aside>
+      </section>
 
-        <article class="card">
-          <div class="card-thumb">
-            <div class="card-thumb-bg card-thumb-3"></div>
-            <span class="card-thumb-label">ATLAS MOUNTAINS</span>
+      <section class="philosophy" id="philosophy">
+        <div class="philosophy-left">
+          <div class="ornament fade-in-element">
+            <span></span><em>Our Mission</em><span></span>
           </div>
-          <div class="card-body">
-            <h3 class="card-title">Crossing the High Atlas on Foot</h3>
-            <p class="card-excerpt">
-              Berber villages cling to terracotta cliffs as a three-day trek
-              reveals the breathtaking solitude of Morocco's forgotten
-              highlands.
-            </p>
-            <a href="#" class="card-link">Read More</a>
-          </div>
-        </article>
+          <span class="section-eyebrow fade-in-element" data-delay="1"
+            >The Moroccan Promise</span
+          >
+          <h2 class="section-title fade-in-element" data-delay="2">
+            We don't just show you<br />Morocco. We let you<br /><em
+              >experience its soul.</em
+            >
+          </h2>
+        </div>
+
+        <div class="philosophy-body">
+          <p class="fade-in-element">
+            Our platform was born from a single conviction — that Morocco is not
+            a destination to be rushed through, but a rich culture to be
+            understood. We have spent years exploring the winding medinas,
+            serene deserts, and majestic Atlas mountains to bring you the best
+            this country has to offer.
+          </p>
+          <blockquote class="philosophy-pull fade-in-element" data-delay="1">
+            "The finest Moroccan itinerary is the one that takes you off the
+            beaten path and into the heart of the kingdom."
+          </blockquote>
+          <p class="fade-in-element" data-delay="1">
+            Every destination we feature is curated with care. We highlight the
+            authentic experiences: the local artisans, the traditional riads,
+            and the breathtaking landscapes that never appear in standard
+            tourist brochures.
+          </p>
+          <p class="fade-in-element" data-delay="2">
+            Whether you are looking to book an adventure in the Sahara, a
+            cultural deep-dive in Fès, or a coastal retreat in Essaouira, our
+            platform provides all the guidance you need.
+          </p>
+        </div>
+      </section>
+
+      <div class="manifesto-band">
+        <div class="manifesto-inner">
+          <p class="manifesto-quote fade-in-element">
+            "From the bustling souks of Marrakech to the absolute silence of the
+            Sahara desert under the stars — these are the Moroccan experiences
+            we specialize in."
+          </p>
+          <span class="manifesto-attr fade-in-element" data-delay="1"
+            >— Discover Morocco, Our Vision</span
+          >
+        </div>
       </div>
-    </div>
 
-    <div class="divider"></div>
+      <section class="experience" id="experience">
+        <div class="experience-header">
+          <div>
+            <span class="section-eyebrow fade-in-element">What We Offer</span>
+            <h2 class="section-title fade-in-element" data-delay="1">
+              Discover Our<br /><em>Moroccan Experiences</em>
+            </h2>
+          </div>
+          <p
+            class="fade-in-element"
+            data-delay="2"
+            style="
+              max-width: 32ch;
+              font-size: 0.82rem;
+              line-height: 1.75;
+              color: var(--mid);
+            "
+          >
+            Six ways to explore the country, tailored to show you the true
+            beauty and heritage of Morocco.
+          </p>
+        </div>
 
-    <footer>© MOROCCO TRAVEL BLOG &nbsp;·&nbsp; ALL RIGHTS RESERVED</footer>
+        <div class="exp-grid">
+          <article class="exp-card has-image fade-in-element" data-delay="1">
+            <img
+              class="exp-card-image"
+              src="img/kasbah.jpg"
+              alt="Kasbah architecture"
+            />
+            <div class="exp-card-inner">
+              <span class="card-num">01</span>
+              <div class="card-body">
+                <h3 class="card-title">Historic Riads & Kasbahs</h3>
+                <p class="card-text">
+                  Experience traditional Moroccan architecture and hospitality
+                  right in the heart of the old Medina.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="exp-card dark-card fade-in-element" data-delay="2">
+            <div class="exp-card-inner">
+              <span class="card-num">02</span>
+              <div class="card-body">
+                <h3 class="card-title">Authentic Medina Tours</h3>
+                <p class="card-text">
+                  Explore the labyrinthine streets of Fès and Marrakech with
+                  local guides who know every hidden gem.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="exp-card fade-in-element" data-delay="3">
+            <div class="exp-card-inner">
+              <span class="card-num">03</span>
+              <div class="card-body">
+                <h3 class="card-title">Sahara Desert Expeditions</h3>
+                <p class="card-text">
+                  Ride camels into the golden dunes of Erg Chebbi and sleep
+                  under the magnificent desert stars.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="exp-card fade-in-element" data-delay="1">
+            <div class="exp-card-inner">
+              <span class="card-num">04</span>
+              <div class="card-body">
+                <h3 class="card-title">High Atlas Treks</h3>
+                <p class="card-text">
+                  Hike through the breathtaking valleys and Berber villages of
+                  the majestic High Atlas mountain range.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="exp-card has-image fade-in-element" data-delay="2">
+            <img
+              class="exp-card-image"
+              src="img/aboutfood.webp"
+              alt="Moroccan Food"
+            />
+            <div class="exp-card-inner">
+              <span class="card-num">05</span>
+              <div class="card-body">
+                <h3 class="card-title">Moroccan Gastronomy</h3>
+                <p class="card-text">
+                  Taste the rich flavors of Morocco, from slow-cooked tagines to
+                  fresh mint tea and local street food.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="exp-card accent-card fade-in-element" data-delay="3">
+            <div class="exp-card-inner">
+              <span class="card-num">06</span>
+              <div class="card-body">
+                <h3 class="card-title">Coastal Escapes</h3>
+                <p class="card-text">
+                  Relax by the ocean, surf the waves in Essaouira, or enjoy the
+                  beautiful beaches of Agadir.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-section" id="contact">
+        <div class="cta-inner">
+          <h2 class="cta-headline fade-in-element">
+            Ready to book<br /><em>your Moroccan</em><br />adventure?
+          </h2>
+          <div class="cta-right">
+            <div class="ornament fade-in-element">
+              <span></span><em>Plan Your Trip</em><span></span>
+            </div>
+            <p class="cta-body fade-in-element" data-delay="1">
+              Whether you want to explore the bustling souks, relax by the
+              coast, or discover the magic of the Sahara, our platform makes it
+              easy to organize your perfect trip.
+            </p>
+            <div class="cta-actions fade-in-element" data-delay="2">
+              <a href="book.html" class="btn-primary"
+                ><span>Start Your Booking</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="darkmode.js"></script>
+    <script src="about.js"></script>
   </body>
 </html>
