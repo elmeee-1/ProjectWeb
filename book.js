@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  /* scroll annime */
+  /* scroll animation*/
   const fields = document.querySelectorAll(".field");
   const footer = document.getElementById("formFooter");
   const toReveal = [...fields, footer];
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     toReveal.forEach((el) => el && el.classList.add("visible"));
   }, 1000);
 
-  /* date */
+  /* la date  */
   const today = new Date().toISOString().split("T")[0];
   const arrivalInput = document.getElementById("arrival");
   const departureInput = document.getElementById("departure");
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* ── Form validation & Submit Animation ── */
+  /* submit  */
   const form = document.getElementById("bookForm");
   const submitBtn = document.getElementById("submitBtn");
   const successEl = document.getElementById("formSuccess");

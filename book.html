@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Request a Consultation — Discover Morocco</title>
+    <title>Book Your Journey — Majlis</title>
     <link rel="icon" type="image/svg+xml" href="logo.svg" />
 
     <link rel="stylesheet" href="generalCSS.css" />
@@ -18,50 +18,26 @@
   </head>
 
   <body>
-    <header>
-      <ul class="nav-links" style="margin: 0; padding: 0">
-        <nav
-          class="header"
-          style="
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-          "
-        >
-          <a href="index.html" class="logo">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              class="spinning-plane"
-              style="
-                width: 35px;
-                height: 35px;
-                fill: var(--dark);
-                transition: fill 0.3s;
-              "
-            >
-              <path
-                d="M21,16V14L13,9V3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V9L2,14V16L10,13.5V19L8,20.5V22L11.5,21L15,22V20.5L13,19V13.5L21,16Z"
-              />
-            </svg>
-          </a>
+    <header class="global-header">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            class="spinning-plane"
+          >
+            <path
+              d="M21,16V14L13,9V3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V9L2,14V16L10,13.5V19L8,20.5V22L11.5,21L15,22V20.5L13,19V13.5L21,16Z"
+            />
+          </svg>
+          <span class="logo-text">Majlis</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="what-to-do.html">What to do</a></li>
           <li class="dropdown">
-            <a href="index.html">Home &#9662;</a>
-            <div class="dropdown-content"><a href="index.html">Home</a></div>
-          </li>
-          <li class="dropdown">
-            <a href="what-to-do.html">What to do &#9662;</a>
-            <div class="dropdown-content">
-              <a href="what-to-do.html">Adventure</a>
-              <a href="what-to-do.html">Culture & History</a>
-              <a href="what-to-do.html">Nature</a>
-              <a href="what-to-do.html">Beach</a>
-              <a href="what-to-do.html">Where to Stay</a>
-              <a href="what-to-do.html">Food & Drink</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a href="destinations.html">Destinations &#9662;</a>
+            <a href="destinations.html">Destinations</a>
             <div class="dropdown-content">
               <a href="marrakech.html">Marrakech</a>
               <a href="essaouira.html">Essaouira</a>
@@ -75,25 +51,26 @@
             </div>
           </li>
           <li><a href="about.html">About</a></li>
-          <li>
-            <a href="book.html" style="text-decoration: none">
-              <button class="book-now">Book Now</button>
-            </a>
+          <li class="mobile-only-btn">
+            <a href="book.html" class="btn-nav-book">Book Now</a>
           </li>
+        </ul>
+
+        <div class="nav-controls">
+          <a href="book.html" class="btn-nav-book desktop-only-btn">Book Now</a>
           <button
             id="themeToggle"
-            style="
-              background: none;
-              border: none;
-              cursor: pointer;
-              font-size: 20px;
-              margin-left: 10px;
-            "
+            class="theme-toggle"
+            aria-label="Toggle Theme"
           >
             🌙
-          </button>
-        </nav>
-      </ul>
+          <button class="hamburger" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('nav-active'); this.classList.toggle('toggle');">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+        </div>
+      </nav>
     </header>
 
     <section class="book-hero">
@@ -104,8 +81,8 @@
             <span class="u-label">Private Experiences</span>
           </div>
           <h1 class="book-hero__title">
-            Request a
-            <em>Consultation</em>
+            Book your
+            <em>Journey</em>
           </h1>
           <p class="book-hero__desc">
             Every journey we craft is entirely bespoke. Share your vision and
@@ -121,7 +98,9 @@
         <div class="book-form-layout">
           <div>
             <div class="form-header">
-              <p class="u-label" style="color: var(--green)">The Application</p>
+              <p class="u-label" style="color: var(--green)">
+                The Majlis Application
+              </p>
               <h2>Your details</h2>
             </div>
 
@@ -284,15 +263,15 @@
               <div class="form-success__icon">✓</div>
               <h3>Your inquiry has been received.</h3>
               <p>
-                A member of our local Moroccan team will reach out to you within
-                48 hours to begin designing your experience.
+                A member of our curatorial team will reach out to you within 48
+                hours to begin designing your experience.
               </p>
             </div>
           </div>
 
           <aside class="book-sidebar">
             <div class="sidebar-promise">
-              <h3>The Discover Morocco Promise</h3>
+              <h3>The Majlis Promise</h3>
               <p>
                 Every itinerary is hand-crafted by a specialist who has lived
                 and travelled the routes they recommend.
@@ -311,9 +290,7 @@
             <div class="sidebar-contact">
               <span>Prefer to call?</span>
               <a href="tel:+212600000000">+212 600 000 000</a>
-              <a href="mailto:contact@discovermorocco.com"
-                >contact@discovermorocco.com</a
-              >
+              <a href="mailto:concierge@majlis.com">concierge@majlis.com</a>
             </div>
           </aside>
         </div>
