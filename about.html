@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us — Discover Morocco</title>
+    <title>About Us — Majlis</title>
     <link rel="icon" type="image/svg+xml" href="logo.svg" />
 
     <link rel="stylesheet" href="generalCSS.css" />
@@ -17,57 +17,32 @@
     />
   </head>
   <body>
-    <header>
-      <ul class="nav-links" style="margin: 0; padding: 0">
-        <nav
-          class="header"
-          style="
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-          "
-        >
-          <a href="index.html" class="logo">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              class="spinning-plane"
-              style="
-                width: 35px;
-                height: 35px;
-                fill: var(--dark);
-                transition: fill 0.3s;
-              "
-            >
-              <path
-                d="M21,16V14L13,9V3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V9L2,14V16L10,13.5V19L8,20.5V22L11.5,21L15,22V20.5L13,19V13.5L21,16Z"
-              />
-            </svg>
-          </a>
+    <header class="global-header">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            class="spinning-plane"
+          >
+            <path
+              d="M21,16V14L13,9V3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V9L2,14V16L10,13.5V19L8,20.5V22L11.5,21L15,22V20.5L13,19V13.5L21,16Z"
+            />
+          </svg>
+          <span class="logo-text">Majlis</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="what-to-do.html">What to do</a></li>
           <li class="dropdown">
-            <a href="index.html">Home &#9662;</a>
-            <div class="dropdown-content"><a href="index.html">Home</a></div>
-          </li>
-          <li class="dropdown">
-            <a href="what-to-do.html">What to do &#9662;</a>
-            <div class="dropdown-content">
-              <a href="what-to-do.html">Adventure</a>
-              <a href="what-to-do.html">Culture & History</a>
-              <a href="what-to-do.html">Nature</a>
-              <a href="what-to-do.html">Beach</a>
-              <a href="what-to-do.html">Where to Stay</a>
-              <a href="what-to-do.html">Food & Drink</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a href="destinations.html">Destinations &#9662;</a>
+            <a href="destinations.html">Destinations</a>
             <div class="dropdown-content">
               <a href="marrakech.html">Marrakech</a>
               <a href="essaouira.html">Essaouira</a>
               <a href="rabat.html">Rabat</a>
               <a href="fes.html">Fès</a>
               <a href="agadir.html">Agadir</a>
-              <a href="tanger.html">Tangier</a>
               <a href="ifrane.html">Ifrane</a>
               <a href="ouarzazate.html">Ouarzazate</a>
               <a href="chefchaouen.html">Chefchaouen</a>
@@ -75,25 +50,25 @@
             </div>
           </li>
           <li><a href="about.html">About</a></li>
-          <li>
-            <a href="book.html" style="text-decoration: none">
-              <button class="book-now">Book Now</button>
-            </a>
+          <li class="mobile-only-btn">
+            <a href="book.html" class="btn-nav-book">Book Now</a>
           </li>
+        </ul>
+
+        <div class="nav-controls">
+          <a href="book.html" class="btn-nav-book desktop-only-btn">Book Now</a>
           <button
             id="themeToggle"
-            style="
-              background: none;
-              border: none;
-              cursor: pointer;
-              font-size: 20px;
-              margin-left: 10px;
-            "
+            class="theme-toggle"
+            aria-label="Toggle Theme"
           >
             🌙
           </button>
-        </nav>
-      </ul>
+          <button class="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
     </header>
 
     <main>
@@ -106,15 +81,14 @@
             />
           </div>
           <div class="hero-identity">
-            <p class="hero-label fade-in-element">
-              The Official Guide · Morocco
-            </p>
+            <p class="hero-label fade-in-element">Majlis · Private Journeys</p>
             <h1 class="hero-headline fade-in-element" data-delay="1">
               Where the<br />kingdom<br /><em>comes alive.</em>
             </h1>
             <div class="hero-rule fade-in-element" data-delay="2"></div>
             <p class="hero-sub fade-in-element" data-delay="3">
-              Curators of authentic journeys through the heart of Morocco.
+              Curators of highly exclusive, authentic journeys through the heart
+              of Morocco.
             </p>
           </div>
         </div>
@@ -136,7 +110,7 @@
           </div>
           <div class="stat-block fade-in-element" data-delay="4">
             <div class="stat-number">24/7</div>
-            <div class="stat-label">Travel Support</div>
+            <div class="stat-label">Concierge Support</div>
           </div>
         </aside>
       </section>
@@ -144,40 +118,38 @@
       <section class="philosophy" id="philosophy">
         <div class="philosophy-left">
           <div class="ornament fade-in-element">
-            <span></span><em>Our Mission</em><span></span>
+            <span></span><em>Our Philosophy</em><span></span>
           </div>
           <span class="section-eyebrow fade-in-element" data-delay="1"
-            >The Moroccan Promise</span
+            >The Majlis Doctrine</span
           >
           <h2 class="section-title fade-in-element" data-delay="2">
-            We don't just show you<br />Morocco. We let you<br /><em
-              >experience its soul.</em
-            >
+            We do not sell<br />travel. We craft<br /><em>legacy.</em>
           </h2>
         </div>
 
         <div class="philosophy-body">
           <p class="fade-in-element">
-            Our platform was born from a single conviction — that Morocco is not
-            a destination to be rushed through, but a rich culture to be
-            understood. We have spent years exploring the winding medinas,
+            Majlis was born from a single conviction — that Morocco is not a
+            destination to be rushed through, but a rich culture to be
+            understood. We have spent years embedded within the winding medinas,
             serene deserts, and majestic Atlas mountains to bring you the best
             this country has to offer.
           </p>
           <blockquote class="philosophy-pull fade-in-element" data-delay="1">
-            "The finest Moroccan itinerary is the one that takes you off the
-            beaten path and into the heart of the kingdom."
+            "The finest itinerary is the one that cannot be photographed — only
+            carried home within you."
           </blockquote>
           <p class="fade-in-element" data-delay="1">
-            Every destination we feature is curated with care. We highlight the
-            authentic experiences: the local artisans, the traditional riads,
-            and the breathtaking landscapes that never appear in standard
-            tourist brochures.
+            Every journey we design is a private commission. We hold
+            relationships with the local artisans, traditional riad owners, and
+            Saharan guardians who never appear in any standard tourist
+            guidebook.
           </p>
           <p class="fade-in-element" data-delay="2">
             Whether you are looking to book an adventure in the Sahara, a
-            cultural deep-dive in Fès, or a coastal retreat in Essaouira, our
-            platform provides all the guidance you need.
+            cultural deep-dive in Fès, or a coastal retreat in Essaouira, the
+            Majlis team provides all the expertise you need.
           </p>
         </div>
       </section>
@@ -185,12 +157,12 @@
       <div class="manifesto-band">
         <div class="manifesto-inner">
           <p class="manifesto-quote fade-in-element">
-            "From the bustling souks of Marrakech to the absolute silence of the
-            Sahara desert under the stars — these are the Moroccan experiences
-            we specialize in."
+            "The riad at the end of the unnamed alley. The supper beneath stars
+            that predate the atlas. The silence of the Drâa Valley at first
+            light — these are the coordinates we specialize in."
           </p>
           <span class="manifesto-attr fade-in-element" data-delay="1"
-            >— Discover Morocco, Our Vision</span
+            >— Majlis, Founding Principles</span
           >
         </div>
       </div>
@@ -200,7 +172,7 @@
           <div>
             <span class="section-eyebrow fade-in-element">What We Offer</span>
             <h2 class="section-title fade-in-element" data-delay="1">
-              Discover Our<br /><em>Moroccan Experiences</em>
+              The Exclusive<br /><em>Collection</em>
             </h2>
           </div>
           <p
@@ -213,8 +185,8 @@
               color: var(--mid);
             "
           >
-            Six ways to explore the country, tailored to show you the true
-            beauty and heritage of Morocco.
+            Six domains of expertise, tailored to show you the true beauty and
+            heritage of Morocco.
           </p>
         </div>
 
@@ -228,10 +200,10 @@
             <div class="exp-card-inner">
               <span class="card-num">01</span>
               <div class="card-body">
-                <h3 class="card-title">Historic Riads & Kasbahs</h3>
+                <h3 class="card-title">Private Riad Commissions</h3>
                 <p class="card-text">
-                  Experience traditional Moroccan architecture and hospitality
-                  right in the heart of the old Medina.
+                  Experience historic Moroccan residences curated for your
+                  family alone.
                 </p>
               </div>
             </div>
@@ -241,10 +213,10 @@
             <div class="exp-card-inner">
               <span class="card-num">02</span>
               <div class="card-body">
-                <h3 class="card-title">Authentic Medina Tours</h3>
+                <h3 class="card-title">Artisan Ateliers</h3>
                 <p class="card-text">
-                  Explore the labyrinthine streets of Fès and Marrakech with
-                  local guides who know every hidden gem.
+                  Closed-door sessions with master craftsmen whose lineages span
+                  five centuries.
                 </p>
               </div>
             </div>
@@ -254,10 +226,10 @@
             <div class="exp-card-inner">
               <span class="card-num">03</span>
               <div class="card-body">
-                <h3 class="card-title">Sahara Desert Expeditions</h3>
+                <h3 class="card-title">Saharan Bivouacs</h3>
                 <p class="card-text">
-                  Ride camels into the golden dunes of Erg Chebbi and sleep
-                  under the magnificent desert stars.
+                  Nomadic camps in Erg Chebbi designed around complete celestial
+                  solitude.
                 </p>
               </div>
             </div>
@@ -269,8 +241,8 @@
               <div class="card-body">
                 <h3 class="card-title">High Atlas Treks</h3>
                 <p class="card-text">
-                  Hike through the breathtaking valleys and Berber villages of
-                  the majestic High Atlas mountain range.
+                  Private crossings of the High Atlas with expert Amazigh
+                  guides.
                 </p>
               </div>
             </div>
@@ -285,10 +257,10 @@
             <div class="exp-card-inner">
               <span class="card-num">05</span>
               <div class="card-body">
-                <h3 class="card-title">Moroccan Gastronomy</h3>
+                <h3 class="card-title">Table Royale</h3>
                 <p class="card-text">
-                  Taste the rich flavors of Morocco, from slow-cooked tagines to
-                  fresh mint tea and local street food.
+                  Supper clubs and rich gastronomy hosted by the families of
+                  Morocco's historic nobility.
                 </p>
               </div>
             </div>
@@ -298,10 +270,10 @@
             <div class="exp-card-inner">
               <span class="card-num">06</span>
               <div class="card-body">
-                <h3 class="card-title">Coastal Escapes</h3>
+                <h3 class="card-title">Bespoke Commission</h3>
                 <p class="card-text">
-                  Relax by the ocean, surf the waves in Essaouira, or enjoy the
-                  beautiful beaches of Agadir.
+                  Your vision, spoken aloud to us. We listen before we make a
+                  single proposal.
                 </p>
               </div>
             </div>
@@ -312,20 +284,19 @@
       <section class="cta-section" id="contact">
         <div class="cta-inner">
           <h2 class="cta-headline fade-in-element">
-            Ready to book<br /><em>your Moroccan</em><br />adventure?
+            Begin your<br /><em>private</em><br />consultation.
           </h2>
           <div class="cta-right">
             <div class="ornament fade-in-element">
-              <span></span><em>Plan Your Trip</em><span></span>
+              <span></span><em>Strictly by introduction</em><span></span>
             </div>
             <p class="cta-body fade-in-element" data-delay="1">
-              Whether you want to explore the bustling souks, relax by the
-              coast, or discover the magic of the Sahara, our platform makes it
-              easy to organize your perfect trip.
+              Every new relationship begins with a conversation to understand if
+              we are the right custodians for your time in Morocco.
             </p>
             <div class="cta-actions fade-in-element" data-delay="2">
-              <a href="book.html" class="btn-primary"
-                ><span>Start Your Booking</span></a
+              <a href="book.html" class="btn-primary" style="color: #ffffff"
+                ><span>Request a Consultation</span></a
               >
             </div>
           </div>

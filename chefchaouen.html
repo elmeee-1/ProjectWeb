@@ -387,85 +387,64 @@
       <img id="lightboxImage" src="" alt="Enlarged Image" />
     </div>
 
-    <header>
-      <ul class="nav-links" style="margin: 0; padding: 0">
-        <nav
-          class="header"
-          style="
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-          "
-        >
-          <a href="index.html" class="logo">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              class="spinning-plane"
-            >
-              <path
-                d="M21,16V14L13,9V3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V9L2,14V16L10,13.5V19L8,20.5V22L11.5,21L15,22V20.5L13,19V13.5L21,16Z"
-              />
-            </svg>
-          </a>
+    <header class="global-header">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            class="spinning-plane"
+          >
+            <path
+              d="M21,16V14L13,9V3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V9L2,14V16L10,13.5V19L8,20.5V22L11.5,21L15,22V20.5L13,19V13.5L21,16Z"
+            />
+          </svg>
+          <span class="logo-text">Majlis</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="what-to-do.html">What to do</a></li>
 
           <li class="dropdown">
-            <a href="index.html">Home &#9662;</a>
-            <div class="dropdown-content">
-              <a href="index.html">Home</a>
-            </div>
-          </li>
-
-          <li class="dropdown">
-            <a href="what-to-do.html">What to do &#9662;</a>
-            <div class="dropdown-content">
-              <a href="what-to-do.html">Adventure</a>
-              <a href="what-to-do.html">Culture & History</a>
-              <a href="what-to-do.html">Nature</a>
-              <a href="what-to-do.html">Beach</a>
-              <a href="what-to-do.html">Where to Stay</a>
-              <a href="what-to-do.html">Food & Drink</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a href="destinations.html">Destinations &#9662;</a>
+            <a href="destinations.html">Destinations</a>
             <div class="dropdown-content">
               <a href="marrakech.html">Marrakech</a>
               <a href="essaouira.html">Essaouira</a>
               <a href="rabat.html">Rabat</a>
               <a href="fes.html">Fès</a>
               <a href="agadir.html">Agadir</a>
-              <a href="tanger.html">Tangier</a>
               <a href="ifrane.html">Ifrane</a>
               <a href="ouarzazate.html">Ouarzazate</a>
               <a href="chefchaouen.html">Chefchaouen</a>
               <a href="sahara_desert.html">Sahara desert</a>
             </div>
           </li>
-          <li>
-            <a href="about.html">About</a>
-          </li>
 
-          <li>
-            <button class="book-now">Book Now</button>
-          </li>
+          <li><a href="about.html">About</a></li>
 
-          <li>
-            <button
-              id="themeToggle"
-              style="
-                background: none;
-                border: none;
-                cursor: pointer;
-                font-size: 20px;
-                margin-left: 10px;
-              "
-            >
-              🌙
-            </button>
+          <li class="mobile-only-btn">
+            <a href="book.html" class="btn-nav-book">Book Now</a>
           </li>
-        </nav>
-      </ul>
+        </ul>
+
+        <div class="nav-controls">
+          <a href="book.html" class="btn-nav-book desktop-only-btn">Book Now</a>
+          <button
+            id="themeToggle"
+            class="theme-toggle"
+            aria-label="Toggle Theme"
+          >
+            🌙
+          </button>
+
+          <button class="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
     </header>
 
     <div class="hero fade-in-element">

@@ -21,7 +21,7 @@
   --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* dark mode */
+/* dark mode*/
 body.dark-theme {
   --page-bg: #111010;
   --surface: #181614;
@@ -73,13 +73,13 @@ body {
   color: var(--gold);
 }
 
-/* hero */
+/* section d hero */
 .book-hero {
   position: relative;
   padding-block: clamp(8rem, 12vw, 11rem) clamp(3.5rem, 7vw, 6rem);
   overflow: hidden;
   z-index: 1;
-  background-color: #0a0a0a;
+  background-color: #0a0a0a; 
 }
 
 .book-hero-bg {
@@ -89,10 +89,9 @@ body {
   background-image: url("img/book-pattern.jpg");
   background-size: cover;
   background-position: center;
-  opacity: 0.3;
+  opacity: 0.3; /
 }
-of
-/* hero bottom */
+
 .book-hero::after {
   content: "";
   position: absolute;
@@ -152,7 +151,7 @@ of
   animation: fadeUp 0.7s 0.34s ease forwards;
 }
 
-/* section form*/
+/* section du form*/
 .book-form-section {
   position: relative;
   z-index: 1;
@@ -299,7 +298,7 @@ of
   background: var(--border);
 }
 
-/* ─submit button */
+/* button submit */
 .form-footer {
   display: flex;
   align-items: center;
@@ -376,7 +375,6 @@ of
   transform: translateX(4px);
 }
 
-/* Dark Mode*/
 body.dark-theme .btn-submit {
   background: transparent;
   border-color: var(--gold);
@@ -386,7 +384,7 @@ body.dark-theme .btn-submit:hover {
   color: #1a1a1a;
 }
 
-/* Success Box */
+/* Box */
 .form-success {
   display: none;
   flex-direction: column;
@@ -416,7 +414,7 @@ body.dark-theme .btn-submit:hover {
   font-weight: 300;
 }
 
-/* Sidebar */
+/* sidebar */
 .book-sidebar {
   display: flex;
   flex-direction: column;

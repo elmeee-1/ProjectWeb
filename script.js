@@ -49,3 +49,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const hiddenElements = document.querySelectorAll(".fade-in-element");
   hiddenElements.forEach((el) => observer.observe(el));
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("nav-active");
+      hamburger.classList.toggle("toggle");
+    });
+  }
+});
