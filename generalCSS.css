@@ -348,3 +348,25 @@ body.dark-theme .dropdown-content {
     transform: rotate(45deg) translate(-5px, -5px);
   }
 }
+
+.nav-links {
+  position: fixed;
+  top: 0;
+  right: -120%;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+  display: flex !important;
+}
+
+.nav-links.nav-active {
+  right: 0 !important;
+}
