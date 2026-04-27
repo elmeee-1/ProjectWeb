@@ -13,7 +13,6 @@ body.dark-theme {
   --page-bg: #111010;
   --text-color: #e8e2d9;
 
-  /* Header  Dark Mode */
   --nav-bg: rgba(17, 16, 16, 0.95);
   --nav-text: #e8e2d9;
   --nav-border: rgba(255, 255, 255, 0.05);
@@ -63,7 +62,7 @@ body {
   margin: 0 auto;
 }
 
-/* Logo & Animation */
+/* Logo & Animation ── */
 .logo {
   display: flex;
   align-items: center;
@@ -73,8 +72,8 @@ body {
 }
 
 .spinning-plane {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   fill: var(--nav-text);
   transition: fill 0.4s ease;
   animation: gentleFloat 4s ease-in-out infinite;
@@ -102,7 +101,7 @@ body {
   transition: color 0.4s ease;
 }
 
-/*  Navigation Links */
+/*  Navigation Links  */
 .nav-links {
   display: flex;
   list-style: none;
@@ -125,7 +124,7 @@ body {
   color: var(--gold);
 }
 
-/*  Dropdown  */
+/* ── Elegant Dropdown ── */
 .dropdown {
   position: relative;
   padding-block: 23px;
@@ -201,6 +200,7 @@ body.dark-theme .dropdown-content {
   justify-self: end;
 }
 
+/* Button */
 .btn-nav-book {
   display: inline-flex;
   align-items: center;
@@ -227,6 +227,7 @@ body.dark-theme .dropdown-content {
   text-decoration: none !important;
 }
 
+/* Theme */
 .theme-toggle {
   background: none;
   border: none;
@@ -240,7 +241,7 @@ body.dark-theme .dropdown-content {
   transform: scale(1.1);
 }
 
-/* Hamburger menu icon  pour mobile*/
+/* Hamburger Menu Icon */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -260,13 +261,12 @@ body.dark-theme .dropdown-content {
 .mobile-only-btn {
   display: none;
 }
-
+/* mobile responsive */
 @media (max-width: 900px) {
   .navbar {
     display: flex;
     justify-content: space-between;
   }
-
   .hamburger {
     display: flex;
   }
@@ -278,17 +278,16 @@ body.dark-theme .dropdown-content {
     margin-top: 30px;
     text-align: center;
   }
-
   .logo-text {
     display: none;
   }
 
-  /* sull screen menu*/
+  /* Full Screen  */
   .nav-links {
     position: fixed;
     top: 0;
-    right: -100%;
-    width: 100%;
+    right: -120%;
+    width: 100vw;
     height: 100vh;
     background-color: var(--nav-bg);
     backdrop-filter: blur(15px);
@@ -298,16 +297,18 @@ body.dark-theme .dropdown-content {
     align-items: center;
     gap: 1.5rem;
     transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 1500;
+    z-index: -1;
+    display: flex !important;
   }
+
   .nav-links.nav-active {
-    right: 0;
+    right: 0 !important;
   }
   .nav-links a {
     font-size: 1.2rem;
   }
 
-  /* Dropdown pour tel */
+  /* Dropdown adjustment for mobile */
   .dropdown {
     padding-block: 0;
     text-align: center;
@@ -347,26 +348,4 @@ body.dark-theme .dropdown-content {
   .hamburger.toggle span:nth-child(3) {
     transform: rotate(45deg) translate(-5px, -5px);
   }
-}
-
-.nav-links {
-  position: fixed;
-  top: 0;
-  right: -120%;
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--nav-bg);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: -1;
-  display: flex !important;
-}
-
-.nav-links.nav-active {
-  right: 0 !important;
 }
