@@ -167,3 +167,64 @@ body {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(6px); }
 }
+
+@media (max-width: 600px) {
+  .page-hero h1 {
+    font-size: 36px;
+    letter-spacing: -0.5px;
+  }
+
+  .page-hero p {
+    font-size: 18px;
+    padding: 0 16px;
+  }
+
+  .scroll-btn {
+    font-size: 14px;
+    padding: 10px 24px;
+  }
+
+ 
+  .dest-section {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .dest-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .dest-card {
+    height: 200px;
+  }
+
+  .card-city {
+    font-size: 20px;
+  }
+
+  .card-tag {
+    font-size: 12px;
+  }
+
+  .card-meta {
+    font-size: 10px;
+  }
+}
+  .hero-section {
+    height: 100svh;
+  }
+
+  .hero-bg video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .page-hero h1 {
+    font-size: 36px;
+  }
+
+  .page-hero p {
+    font-size: 18px;
+    padding: 0 16px;
+  }
