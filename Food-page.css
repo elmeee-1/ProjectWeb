@@ -256,25 +256,25 @@ body.dark-theme footer.cuis-footer {
 }
 
 /* North */
-#north .dish-card-1 .cuis-card-img { background-image: url('YOUR_TAGRA_IMAGE.jpg'); }
-#north .dish-card-2 .cuis-card-img { background-image: url('YOUR_NORTH_COUSCOUS_IMAGE.jpg'); }
-#north .dish-card-3 .cuis-card-img { background-image: url('YOUR_CHERMOULA_SARDINES_IMAGE.jpg'); }
+#north .dish-card-1 .cuis-card-img { background-image: url('/Picturs/tagra\ meal\ .jpg') }
+#north .dish-card-2 .cuis-card-img { background-image: url('/Picturs/north\ coscous.webp'); }
+#north .dish-card-3 .cuis-card-img { background-image: url('/Picturs/i139340sardines-chermoula.jpeg'); }
 /* Center */
-#center .dish-card-1 .cuis-card-img { background-image: url('YOUR_PASTILLA_IMAGE.jpg'); }
-#center .dish-card-2 .cuis-card-img { background-image: url('YOUR_PRUNE_TAGINE_IMAGE.jpg'); }
-#center .dish-card-3 .cuis-card-img { background-image: url('YOUR_RFISSA_IMAGE.jpg'); }
+#center .dish-card-1 .cuis-card-img { background-image: url('/Picturs/pastilla\ sweet.jpg'); }
+#center .dish-card-2 .cuis-card-img { background-image: url('/Picturs/tajine\ with\ amonds.webp') }
+#center .dish-card-3 .cuis-card-img { background-image: url('/Picturs/Moroccan-Chicken-Rfissa-1.jpg'); }
 /* Atlantic */
-#atlantic .dish-card-1 .cuis-card-img { background-image: url('YOUR_GRILLED_SARDINES_IMAGE.jpg'); }
-#atlantic .dish-card-2 .cuis-card-img { background-image: url('YOUR_CREVETTES_IMAGE.jpg'); }
-#atlantic .dish-card-3 .cuis-card-img { background-image: url('YOUR_TAKTOUKA_IMAGE.jpg'); }
+#atlantic .dish-card-1 .cuis-card-img { background-image: url('/Picturs/grilled\ sardines.jpg'); }
+#atlantic .dish-card-2 .cuis-card-img { background-image: url('/Picturs/Crevettes_pil_pil_1.jpg'); }
+#atlantic .dish-card-3 .cuis-card-img { background-image: url('/Picturs/taktouka.jpg'); }
 /* South */
-#south .dish-card-1 .cuis-card-img { background-image: url('YOUR_TANJIA_IMAGE.jpg'); }
-#south .dish-card-2 .cuis-card-img { background-image: url('YOUR_AMLOU_IMAGE.jpg'); }
-#south .dish-card-3 .cuis-card-img { background-image: url('YOUR_MECHOUI_IMAGE.jpg'); }
+#south .dish-card-1 .cuis-card-img { background-image: url('/Picturs/tanjia\ marrakech.jpg'); }
+#south .dish-card-2 .cuis-card-img { background-image: url('/Picturs/Amlu.png'); }
+#south .dish-card-3 .cuis-card-img { background-image: url('/Picturs/mechoui.jpg'); }
 /* East */
-#east .dish-card-1 .cuis-card-img { background-image: url('YOUR_BAKBOUKA_IMAGE.jpg'); }
-#east .dish-card-2 .cuis-card-img { background-image: url('YOUR_KARAN_IMAGE.jpg'); }
-#east .dish-card-3 .cuis-card-img { background-image: url('YOUR_BERKANE_IMAGE.jpg'); }
+#east .dish-card-1 .cuis-card-img { background-image: url('/Picturs/bakbouka-tripes-de-mouton-en-sauce-.jpg'); }
+#east .dish-card-2 .cuis-card-img { background-image: url('/Picturs/karan.jpg'); }
+#east .dish-card-3 .cuis-card-img { background-image: url('/Picturs/clemantinne.jpg'); }
 
 /* Fallback color per region if image missing */
 #north .cuis-card-img    { background-color: #1B5E8A; }
@@ -379,21 +379,26 @@ body.dark-theme footer.cuis-footer {
   padding: 5rem 2rem;
   color: #fff;
   overflow: hidden;
-
-  /* ── REPLACE THIS IMAGE ── */
-  background-image: url('YOUR_TEA_SECTION_IMAGE.jpg');
+  background-image: url('/Picturs/NORTH\ _tea.jpg');
   background-size: cover;
   background-position: center;
-  box-shadow: inset 0 0 0 2000px rgba(92, 53, 3, 0.65);
+  box-shadow: inset 0 0 0 2000px rgba(92, 53, 3, 0.35);
 }
 
 .tea-inner { max-width: 1000px; margin: 0 auto; position: relative; }
 
-.tea-heading { text-align: center; margin-bottom: 3rem; }
+.tea-heading { 
+  text-align: center;
+   margin-bottom: 3rem;
+line-height: 40px;
+   font-size: large;
+     color: #f5f5f5;
+     }
 
 .tea-heading h2 {
   font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 700;
+  color: #fff;
+  font-weight: 900;
   font-style: italic;
 }
 
@@ -412,10 +417,10 @@ body.dark-theme footer.cuis-footer {
 }
 
 .tea-card {
-  background: rgba(255,255,255,.07);
-  border: 1px solid rgba(212,147,10,.28);
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0,0,0,0.25);
   border-radius: 12px;
-  padding: 1.6rem;
+  padding: 1rem;
 }
 
 .tea-card h3 {
