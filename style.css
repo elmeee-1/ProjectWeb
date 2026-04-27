@@ -125,7 +125,7 @@ body.dark-theme .city-tag {
 }
 
 .morocco-info-section {
-  margin-top: 25px;
+  margin-top: 0;
   background-image: url(/Picturs/sliders.pic/Gemini\ section\ .png);
   background-size: cover;
   color: #fff;
@@ -137,6 +137,7 @@ body.dark-theme .city-tag {
 }
 
 .section-title {
+  margin-top: 20px;
   font-size: 24px;
   margin-bottom: 20px;
   font-weight: 700;
@@ -228,12 +229,16 @@ body.dark-theme .city-tag {
 
 .info-section {
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
   padding-bottom: 600px;
 }
 
 .cards {
   width: 100%;
+  margin-top: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-bottom: 50px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(0,300px));
   gap: 15px;
@@ -384,12 +389,42 @@ body.dark-theme .city-tag {
     padding-bottom: 200px;
   }
 }
+
+.scroll-btn {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.scroll-btn:hover {
+  background: white;
+  color: black;
+}
+.srcoll-btn-container{
+  margin-top: 40px;
+  z-index: 3;
+}
+
+.arrow {
+  display: inline-block;
+  animation: bounce 1s infinite;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
 #home {
   position: relative;
   width: 100%;
   height: 650px;
   overflow: hidden;
-  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .slider-track {
@@ -531,3 +566,4 @@ body.dark-theme .city-tag {
 
 .slide:nth-child(9) .slide-bg  { background-image: url(/Picturs/sliders.pic/Sahara\ slide.png); }
 .slide:nth-child(9) .card-image { background-image: url(/Picturs/sliders.pic/Sahara\ slide.png); }
+

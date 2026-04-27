@@ -1,5 +1,14 @@
-       
-       <header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moroccan Cuisine</title>
+<link rel="stylesheet" href="Food-page.css">
+<link rel="stylesheet" href="generalCSS.css">
+</head>
+<body>
+ <header>
       <ul class="nav-links">
         <nav
           class="header"
@@ -10,9 +19,16 @@
           "
         >
           <a href="index.html" class="logo">
-            <img src="/Picturs/Logo.png" alt="Logo" style="height: 40px" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="spinning-plane"
+            >
+              <path
+                d="M21,16V14L13,9V3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V9L2,14V16L10,13.5V19L8,20.5V22L11.5,21L15,22V20.5L13,19V13.5L21,16Z"
+              />
+            </svg>
           </a>
-
           <li class="dropdown">
             <a href="index.html">Home &#9662;</a>
             <div class="dropdown-content">
@@ -47,7 +63,6 @@
               <a href="sahara_desert.html">Sahara desert</a>
             </div>
           </li>
-
           <li>
             <a href="about.html">About</a>
           </li>
@@ -71,3 +86,348 @@
         </nav>
       </ul>
     </header>
+<!-- ─── HERO ─── -->
+<section class="cuis-hero">
+  <div class="cuis-hero-content">
+    <div class="cuis-hero-ornament"> 
+        Taste the Moroccan Cuisine
+    </div>
+    <h1>A Journey Through <span>Moroccan food</span></h1>
+    <p class="cuis-hero-sub">From Mediterranean waves to Saharan sands — a land written in saffron, preserved in argan, and sweetened with orange blossom.</p>
+    <div class="cuis-hero-divider"><span>Regions</span></div>
+    <div class="cuis-hero-pills">
+      <a href="#north"    class="region-pill">Tangier · Chefchaouen</a>
+      <a href="#center"   class="region-pill">Fes · Ifrne</a>
+      <a href="#atlantic" class="region-pill">Casablanca · Essaouira</a>
+      <a href="#south"    class="region-pill">Marrakech · Agadir</a>
+      <a href="#east"     class="region-pill">Ouarzazate· sahara</a>
+    </div>
+  </div>
+</section>
+
+<!-- REGION 1 — THE NORTH-->
+<section class="region-section" id="north">
+  <div class="region-banner">
+    <span class="region-tag-pill">Mediterranean Morocco</span>
+    <h2 class="region-name-heading">The North</h2>
+    <p class="region-desc">Andalusian elegance meets Mediterranean bounty — shaped by Arab, Berber, and Spanish hands.</p>
+    <p class="region-cities">Tangier · Tetouan · Rabat · Chefchaouen</p>
+  </div>
+
+  <div class="cuis-content-grid">
+    <div class="dishes-grid reveal">
+
+      <div class="cuis-card dish-card-1">
+        <div class="cuis-card-img">
+          <span class="cuis-card-badge">Star Dish</span>
+        </div>
+        <div class="cuis-card-body">
+          <div class="cuis-card-name">Tagra</div>
+          <p>A slow-baked clay pot fish tagine unique to the north — whole fish layered with tomatoes, peppers, preserved lemon, and chermoula. The clay seals in every thread of fragrance.</p>
+        </div>
+      </div>
+
+      <div class="cuis-card dish-card-2">
+        <div class="cuis-card-img">
+          <span class="cuis-card-badge">Northern Classic</span>
+        </div>
+        <div class="cuis-card-body">
+          <div class="cuis-card-name">Northern Couscous</div>
+          <p>Lighter broth, Andalusian spice profile — raisins, caramelized onions, and sweet tender lamb. Served every Friday without fail across the northern medinas.</p>
+        </div>
+      </div>
+
+      <div class="cuis-card dish-card-3">
+        <div class="cuis-card-img">
+          <span class="cuis-card-badge">Preserved Legacy</span>
+        </div>
+        <div class="cuis-card-body">
+          <div class="cuis-card-name">Chermoula Sardines</div>
+          <p>Fried sardines marinated in coriander, cumin, paprika, lemon, and garlic — eaten whole off the boats of Al Hoceima. Impossibly fresh, fiercely simple.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <aside class="ingr-sidebar reveal">
+      <div class="ingr-card">
+        <div class="ingr-title"> Key Ingredients</div>
+        <div class="ingr-item"><span class="ingr-icon">🌿</span><div><span class="ingr-name">Fresh Vegitables</span><span class="ingr-origin">Northern mountain valleys</span></div></div>
+        <div class="ingr-item"><span class="ingr-icon">🍋</span><div><span class="ingr-name">Preserved Lemons</span><span class="ingr-origin">Marinated in sea salt, 30 days</span></div></div>
+        <div class="ingr-item"><span class="ingr-icon">🐟</span><div><span class="ingr-name">Fresh Sardines</span><span class="ingr-origin">Atlantic &amp; Med coast, daily catch</span></div></div>
+        <div class="ingr-item"><span class="ingr-icon">🫒</span><div><span class="ingr-name">Picholine Olives</span><span class="ingr-origin">Rif mountain terraces</span></div></div>
+        <div class="ingr-item"><span class="ingr-icon">🌶️</span><div><span class="ingr-name">Sweet Red Pepper</span><span class="ingr-origin">Larache &amp; Asilah regions</span></div></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- REGION 2 — FES & MEKNES-->
+<section class="region-section" id="center">
+  <div class="region-banner">
+    <span class="region-tag-pill">Imperial Heritage</span>
+    <h2 class="region-name-heading">Fes & Rabat</h2>
+    <p class="region-desc">Royal courts, spice merchants, Andalusian refugees — centuries of sophistication layered into every dish.</p>
+    <p class="region-cities">Fes · Meknes · Ifrane · Rabat</p>
+  </div>
+
+  <div class="cuis-content-grid">
+    <div class="dishes-grid reveal">
+
+      <div class="cuis-card dish-card-1">
+        <div class="cuis-card-img"><span class="cuis-card-badge">Star Dish</span></div>
+        <div class="cuis-card-body">
+          <div class="cuis-card-name">Pastilla</div>
+          <p>Wafer-thin warqa pastry encasing saffron-spiced pigeon, almonds, and eggs — sealed with cinnamon and powdered sugar. Sweet, savoury, and otherworldly.</p>
+        </div>
+      </div>
+
+      <div class="cuis-card dish-card-2">
+        <div class="cuis-card-img"><span class="cuis-card-badge">Imperial Classic</span></div>
+        <div class="cuis-card-body">
+          <div class="cuis-card-name">Prune &amp; Almond Tagine</div>
+          <p>Slow-braised lamb with dried Tafilalt prunes, honey, ras el hanout, and toasted almonds. The sweetness of dried fruit against rich savory meat is transcendent.</p>
+        </div>
+      </div>
+
+      <div class="cuis-card dish-card-3">
+        <div class="cuis-card-img"><span class="cuis-card-badge">Preserved Legacy</span></div>
+        <div class="cuis-card-body">
+          <div class="cuis-card-name">Rfissa</div>
+          <p>Fenugreek-scented chicken and lentils served over shredded msemen bread, drenched in deep amber broth. Traditionally served to new mothers — warming and restorative.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <aside class="ingr-sidebar reveal">
+      <div class="ingr-card">
+        <div class="ingr-title">Key Ingredients</div>
+        <div class="ingr-item"><span class="ingr-icon">🌸</span><div><span class="ingr-name">Saffron</span><span class="ingr-origin">Taliouine — world's finest</span></div></div>
+        <div class="ingr-item"><span class="ingr-icon">🫒</span><div><span class="ingr-name">Meknes Olives</span><span class="ingr-origin">Morocco's olive capital</span></div></div>
+        <div class="ingr-item"><span class="ingr-icon">🌿</span><div><span class="ingr-name">Ras el Hanout</span><span class="ingr-origin">Up to 30 spices, Fes spice souks</span></div></div>
+        <div class="ingr-item"><span class="ingr-icon">🧃</span><div><span class="ingr-name">Rosewater</span><span class="ingr-origin">Kelaa des M'Gouna distilleries</span></div></div>
+        <div class="ingr-item"><span class="ingr-icon">🥜</span><div><span class="ingr-name">Almonds</span><span class="ingr-origin">Middle Atlas orchards</span></div></div>
+      </div>
+    </aside>
+  </div>
+</section>
+<!-- REGION 3 — ATLANTIC COAST-->
+<section class="region-section" id="atlantic">
+  <div class="region-banner">
+    <span class="region-tag-pill">Atlantic Morocco</span>
+    <h2 class="region-name-heading">The Atlantic Coast</h2>
+    <p class="region-desc">Where the ocean dictates the table — bright, citrus-forward, built on the freshest catch.</p>
+    <p class="region-cities">Casablanca · Essaouira · El Jadida · Safi</p>
+  </div>
+
+  <div class="cuis-content-grid">
+    <div class="dishes-grid reveal">
+
+      <div class="cuis-card dish-card-1">
+        <div class="cuis-card-img"><span class="cuis-card-badge">Star Dish</span></div>
+        <div class="cuis-card-body">
+          <div class="cuis-card-name">Grilled Sardines</div>
+          <p>Chargrilled over driftwood on the quayside, brushed with chermoula, served with harissa and crusty khobz. The definitive dish of the Essaouira medina at dusk.</p>
+        </div>
+      </div>
+
+      <div class="cuis-card dish-card-2">
+        <div class="cuis-card-img"><span class="cuis-card-badge">Atlantic Treasure</span></div>
+        <div class="cuis-card-body">
+          <div class="cuis-card-name">Crevettes à la Marocaine</div>
+          <p>King prawns sautéed in vivid tomato, harissa, cumin, and preserved lemon — mopped up with crusty bread along the Casablanca port promenade.</p>
+        </div>
+      </div>
+
+      <div class="cuis-card dish-card-3">
+        <div class="cuis-card-img"><span class="cuis-card-badge">Preserved Legacy</span></div>
+        <div class="cuis-card-body">
+          <div class="cuis-card-name">Taktouka</div>
+          <p>Roasted pepper and tomato salad, smoky from open flame, served warm alongside grilled fish. Simple, honest, deeply flavourful — a staple up and down the coast.</p>
+        </div>
+      </div>
+    </div>
+
+    <aside class="ingr-sidebar reveal">
+      <div class="ingr-card">
+        <div class="ingr-title"> Key Ingredients</div>
+        <div class="ingr-item"><span class="ingr-icon">🐟</span><div><span class="ingr-name">Atlantic Sardines</span><span class="ingr-origin">World's largest sardine fishery</span></div></div>
+        <div class="ingr-item"><span class="ingr-icon">🍅</span><div><span class="ingr-name"> Tomatoes</span><span class="ingr-origin">Year-round greenhouses, Agadir</span></div></div>
+        <div class="ingr-item"><span class="ingr-icon">🌶️</span><div><span class="ingr-name">Harissa Paste</span><span class="ingr-origin">Dried chili, garlic &amp; cumin blend</span></div></div>
+        <div class="ingr-item"><span class="ingr-icon">🧄</span><div><span class="ingr-name">Young Garlic</span><span class="ingr-origin">Doukkala plains</span></div></div>
+        <div class="ingr-item"><span class="ingr-icon">🧃</span><div><span class="ingr-name">Olive Oil (cooking)</span><span class="ingr-origin">Souss Valley, untoasted variety</span></div></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- REGION 4 — SOUTH & SOUSS -->
+<section class="region-section" id="south">
+  <div class="region-banner">
+    <span class="region-tag-pill">Souss · Atlas · Sahara</span>
+    <h2 class="region-name-heading">The Atlas  &amp; Souss</h2>
+    <p class="region-desc">Argan trees, souk spice mountains, and the legendary tanjia — Berber traditions cooked over embers since ancient times.</p>
+    <p class="region-cities">Marrakech · Agadir · Haouz · Sahara · Ouarzazate</p>
+  </div>
+
+  <div class="cuis-content-grid">
+    <div class="dishes-grid reveal">
+
+      <div class="cuis-card dish-card-1">
+        <div class="cuis-card-img"><span class="cuis-card-badge">Star Dish</span></div>
+        <div class="cuis-card-body">
+          <div class="cuis-card-name">Tanjia Marrakchia</div>
+          <p>Lamb packed into a clay amphora with preserved lemon, cumin, saffron, and smen — then cooked buried in hammam ashes for 12 hours. As old as the city itself.</p>
+        </div>
+      </div>
+
+      <div class="cuis-card dish-card-2">
+        <div class="cuis-card-img"><span class="cuis-card-badge">Berber Treasure</span></div>
+        <div class="cuis-card-body">
+          <div class="cuis-card-name">Amlou</div>
+          <p>Toasted almonds stone-ground with argan oil and raw honey — the Amazigh answer to nut butter. Eaten for breakfast with warm msemen. Rich, nutty, extraordinary.</p>
+        </div>
+      </div>
+
+      <div class="cuis-card dish-card-3">
+        <div class="cuis-card-img"><span class="cuis-card-badge">Preserved Legacy</span></div>
+        <div class="cuis-card-body">
+          <div class="cuis-card-name">Mechoui</div>
+          <p>A whole lamb slow-roasted in a sealed earthen pit over argan wood embers. The skin crisps to crackling; the meat falls at a touch. Cumin and salt are the only condiments needed.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <aside class="ingr-sidebar reveal">
+      <div class="ingr-card">
+        <div class="ingr-title">Key Ingredients</div>
+        <div class="ingr-item"><span class="ingr-icon">🌰</span><div><span class="ingr-name">Culinary Argan Oil</span><span class="ingr-origin">Souss Valley — UNESCO protected</span></div></div>
+        <div class="ingr-item"><span class="ingr-icon">🌸</span><div><span class="ingr-name">Taliouine Saffron</span><span class="ingr-origin">Highest quality in the world</span></div></div>
+        <div class="ingr-item"><span class="ingr-icon">🍯</span><div><span class="ingr-name">Honey</span><span class="ingr-origin">Ait Benhaddou highlands</span></div></div>
+        <div class="ingr-item"><span class="ingr-icon">🧈</span><div><span class="ingr-name">Smen (aged butter)</span><span class="ingr-origin">Fermented clay-pot, months-old</span></div></div>
+        <div class="ingr-item"><span class="ingr-icon">🧂</span><div><span class="ingr-name">Cumin &amp; Ras el Hanout</span><span class="ingr-origin">Djemaa el-Fna spice stalls</span></div></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- REGION 5 — THE EAST -->
+<section class="region-section" id="east">
+  <div class="region-banner">
+    <span class="region-tag-pill">Oriental Morocco</span>
+    <h2 class="region-name-heading">The East</h2>
+    <p class="region-desc">Frontier cooking where Moroccan and Algerian traditions intertwine — earthy, spiced, and deeply Amazigh.</p>
+    <p class="region-cities">Oujda · Agafay · Zagoura · Merzouga</p>
+  </div>
+
+  <div class="cuis-content-grid">
+    <div class="dishes-grid reveal">
+
+      <div class="cuis-card dish-card-1">
+        <div class="cuis-card-img"><span class="cuis-card-badge">Eastern Classic</span></div>
+        <div class="cuis-card-body">
+          <div class="cuis-card-name">Bakbouka</div>
+          <p>A hearty tripe and offal stew — braised with chickpeas, tomatoes, cumin, paprika, and onion — cooked long and low until deeply rich and warming.</p>
+        </div>
+      </div>
+
+      <div class="cuis-card dish-card-2">
+        <div class="cuis-card-img"><span class="cuis-card-badge">Oujda Specialty</span></div>
+        <div class="cuis-card-body">
+          <div class="cuis-card-name">Karan</div>
+          <p>Slow-braised sheep's head and trotters — a communal winter dish spiced with coriander seeds, ginger, and black pepper. Eaten during Eid celebrations in the east.</p>
+        </div>
+      </div>
+
+      <div class="cuis-card dish-card-3">
+        <div class="cuis-card-img"><span class="cuis-card-badge">East Pride</span></div>
+        <div class="cuis-card-body">
+          <div class="cuis-card-name">Berkane Clementines</div>
+          <p>Morocco's most celebrated citrus — PGI-protected and appearing in salads, tagines, and desserts across the region. An ingredient and an identity.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <aside class="ingr-sidebar reveal">
+      <div class="ingr-card">
+        <div class="ingr-title"> Key Ingredients</div>
+        <div class="ingr-item"><span class="ingr-icon">🍊</span><div><span class="ingr-name">Berkane Clementines</span><span class="ingr-origin">PGI-protected citrus groves</span></div></div>
+        <div class="ingr-item"><span class="ingr-icon">🧆</span><div><span class="ingr-name">Beldi Chickpeas</span><span class="ingr-origin">Eastern plateau farmland</span></div></div>
+        <div class="ingr-item"><span class="ingr-icon">🌶️</span><div><span class="ingr-name">Sweet Paprika</span><span class="ingr-origin">Dried in the mountain sun</span></div></div>
+        <div class="ingr-item"><span class="ingr-icon">🌿</span><div><span class="ingr-name">Coriander Seeds</span><span class="ingr-origin">Oriental souk dried spices</span></div></div>
+        <div class="ingr-item"><span class="ingr-icon">🌾</span><div><span class="ingr-name">Semolina</span><span class="ingr-origin">Angad plains, hard durum wheat</span></div></div>
+      </div>
+    </aside>
+  </div>
+</section>
+<!--  TEA RITUAL -->
+<section class="tea-section" id="tea">
+  <div class="tea-inner">
+    <div class="tea-heading reveal">
+      <span class="section-label">The Living Tradition</span>
+      <h2>The Moroccan Tea Ritual</h2>
+      <p>Not merely a drink — a ceremony of welcome, patience, and regional character.</p>
+    </div>
+
+    <div class="tea-grid">
+      <div class="tea-card reveal">
+        <h3>The Northern Tea</h3>
+        <p>In Tangier and Tetouan, tea reflects the Andalusian soul — lighter, aromatic, often blended with <strong>Sheeba</strong> (wormwood) alongside mint. The herbal bitterness comes forward.</p>
+        <ul>
+          <li>Chinese gunpowder green tea base</li>
+          <li>Fresh spearmint in moderate amounts</li>
+          <li>Sheeba (wormwood) — the defining Northern note</li>
+          <li>Served in tall glasses from a great height</li>
+        </ul>
+      </div>
+
+      <div class="tea-card reveal">
+        <h3>The Southern Tea</h3>
+        <p>South of the Atlas — rich with dense bundles of <strong>fresh mint</strong>, heavily sugared, served in three pours. The first glass is "bitter as death, strong as life, sweet as love."</p>
+        <ul>
+          <li>Strong gunpowder tea — long steep</li>
+          <li>Generous fresh mint, pressed hard into pot</li>
+          <li>Lump sugar — three generous cones minimum</li>
+          <li>Sometimes orange blossom water or verbena</li>
+        </ul>
+      </div>
+    </div>
+    
+      <div class="tea-card reveal">
+        <h3>The Ceremony Itself</h3>
+        <p>Preparation is never rushed. The <em>berrad</em> is warmed, the first pour discarded, the tea tasted and adjusted — then poured from a height to create foam. Refusing tea is refusing friendship.</p>
+        <ul>
+          <li>Always served three glasses — never one or two</li>
+          <li>Poured from height for aeration and foam</li>
+          <li>Accompanied by sellou, chebakia, or msemen</li>
+          <li>The host always pours — never the guest</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+<script>
+  const btn = document.getElementById('themeToggle');
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+    const isDark = document.body.classList.contains('dark-theme');
+    btn.textContent = isDark ? '☀️' : '🌙';
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

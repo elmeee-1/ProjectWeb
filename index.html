@@ -95,75 +95,8 @@
           From the blue streets of Chefchaouen to the golden dunes of Sahara
           desert. Explore the most beautiful cities in North Africa.
         </p>
-        <a href="destinations.html" class="hero-cta">Discover </a>
-      </div>
-    </section>
-
-    <section class="morocco-info-section">
-      <h2 class="section-title">
-        Before you start planning your trip, here is some useful information
-        about Morocco that you should know:
-      </h2>
-
-      <div class="intro-text">
-        <p>
-          Morocco is a North African country with more than its fair share of
-          beautiful cities. These ancient settlements are steeped in history,
-          filled with quintessential Amazigh and Arabic architecture mixes,
-          frenetic markets, and astoundingly panoramic scenery. They're a
-          wonderful assault on the senses, where hospitable tradition brushes up
-          against contemporary Morocco, all accompanied by residents that are
-          genuinely welcoming.
-        </p>
-        <p>
-          Morocco has lots of major population centres, but it's not always
-          these bigger, more well-known cities that hold the 'most beautiful'
-          crown. There are many smaller towns that exude a unique charisma and
-          complement their corresponding landscapes seamlessly.
-        </p>
-        <p>
-          Every city listed here has its own kind of photogenic magnetism,
-          whether you are looking for vast, epic landscapes, or tight,
-          atmospheric alleyways. We spent six weeks driving the length and
-          breadth of the country – documenting and photographing the cities we
-          visited. Below is our list of what we deem the most beautiful cities
-          in Morocco, with associated pictures. Some are well-known, others less
-          so – we hope you can find some inspiration here for your trip!
-        </p>
-      </div>
-
-      <div class="cards">
-        <a href="history.html" class="card-link">
-          <div class="card">
-            <img src="/Picturs/thumbnails/img1 hstry.jpg" alt="Art and History" />
-            <div>
-              <strong>Art and<br />History</strong>
-            </div>
-          </div>
-        </a>
-
-        <a href="food.html" class="card-link">
-          <div class="card">
-            <img src="/Picturs/thumbnails/img2.png" alt="Food" />
-            <div><strong>Food</strong></div>
-          </div>
-        </a>
-
-        <a href="events.html" class="card-link">
-          <div class="card">
-            <img src="/Picturs/thumbnails/img3.png" alt="Events and Celebrations" />
-            <div>
-              <strong>Events &<br />Celebrations</strong>
-            </div>
-          </div>
-        </a>
-
-        <a href="What-to-do.html" class="card-link">
-          <div class="card">
-            <img src="/Picturs/thumbnails/img4.png" alt="Activities" />
-            <div><strong>Activities</strong></div>
-          </div>
-        </a>
+        <button class="scroll-btn" onclick="document.querySelector('.morocco-info-section').scrollIntoView({behavior:'smooth'})">see more
+        </button>
       </div>
     </section>
 
@@ -269,9 +202,9 @@
         </div>
       </div>
     </div>
-
+    
   </div>
-
+  
   <button class="slider-arrow prev" id="prevBtn" aria-label="Previous">
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
       <path d="M10 3L5 8l5 5" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -297,6 +230,98 @@
   </div>
 </div>
 
+</div>
+    <section class="morocco-info-section">
+      <h2 class="section-title">
+        Before you start planning your trip, here is some useful information
+        about Morocco that you should know:
+      </h2>
+
+      <div class="intro-text">
+        <p>
+          Morocco is a North African country with more than its fair share of
+          beautiful cities. These ancient settlements are steeped in history,
+          filled with quintessential Amazigh and Arabic architecture mixes,
+          frenetic markets, and astoundingly panoramic scenery. They're a
+          wonderful assault on the senses, where hospitable tradition brushes up
+          against contemporary Morocco, all accompanied by residents that are
+          genuinely welcoming.
+        </p>
+        <p>
+          Morocco has lots of major population centres, but it's not always
+          these bigger, more well-known cities that hold the 'most beautiful'
+          crown. There are many smaller towns that exude a unique charisma and
+          complement their corresponding landscapes seamlessly.
+        </p>
+        <p>
+          Every city listed here has its own kind of photogenic magnetism,
+          whether you are looking for vast, epic landscapes, or tight,
+          atmospheric alleyways. We spent six weeks driving the length and
+          breadth of the country – documenting and photographing the cities we
+          visited. Below is our list of what we deem the most beautiful cities
+          in Morocco, with associated pictures. Some are well-known, others less
+          so – we hope you can find some inspiration here for your trip!
+        </p>
+      </div>
+        <button class="scroll-btn" onclick="document.querySelector('.cards').scrollIntoView({behavior:'smooth'})">
+            see more
+        </button>
+        
+      <div class="cards">
+        <a href="history.html" class="card-link">
+          <div class="card">
+            <img src="/Picturs/thumbnails/img1 hstry.jpg" alt="Art and History" />
+            <div>
+              <strong>Art and<br />History</strong>
+            </div>
+          </div>
+        </a>
+
+        <a href="food.html" class="card-link">
+          <div class="card">
+            <img src="/Picturs/thumbnails/img2.png" alt="Food" />
+            <div><strong>Food</strong></div>
+          </div>
+        </a>
+
+        <a href="events.html" class="card-link">
+          <div class="card">
+            <img src="/Picturs/thumbnails/img3.png" alt="Events and Celebrations" />
+            <div>
+              <strong>Events &<br />Celebrations</strong>
+            </div>
+          </div>
+        </a>
+
+        <a href="What-to-do.html" class="card-link">
+          <div class="card">
+            <img src="/Picturs/thumbnails/img4.png" alt="Activities" />
+            <div><strong>Activities</strong></div>
+          </div>
+        </a>
+
+      </div>
+      
+        <button class="scroll-btn" onclick="document.querySelector('#home').scrollIntoView({behavior:'smooth'})">
+            see more
+        </button>
+    </section>
+
+
+    <div class="guide-box">
+      <div class="guide-content">
+        <h3>IN THIS GUIDE</h3>
+        <ul>
+          <li><a href="destinations.html">Morocco's Most Beautiful Cities</a></li>
+          <li><a href="destinations.html">Northern Half of Morocco</a></li>
+          <li><a href="destinations.html">Southern Half of Morocco</a></li>
+          <li><a href="what-to-do.html">How to Get Around Morocco</a></li>
+          <li><a href="about.html">Final Thoughts</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="darkmode.js"></script>
     <script>
       const track = document.querySelector(".slider-track");
       const dots = document.querySelectorAll(".dot");
@@ -320,18 +345,5 @@
       }, 3000);
     </script>
 
-    <div class="guide-box">
-      <div class="guide-content">
-        <h3>IN THIS GUIDE</h3>
-        <ul>
-          <li><a href="destinations.html">Morocco's Most Beautiful Cities</a></li>
-          <li><a href="destinations.html">Northern Half of Morocco</a></li>
-          <li><a href="destinations.html">Southern Half of Morocco</a></li>
-          <li><a href="what-to-do.html">How to Get Around Morocco</a></li>
-          <li><a href="about.html">Final Thoughts</a></li>
-        </ul>
-      </div>
-    </div>
-    <script src="darkmode.js"></script>
   </body>
 </html>
