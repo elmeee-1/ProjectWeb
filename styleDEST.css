@@ -18,21 +18,21 @@
       position: relative;
       height: 300px;
       cursor: pointer;
-      transition: transform 0.25s, box-shadow 0.5s ;
+      box-shadow: 0 10px 80px rgba(0, 0, 0, .4);
     }
-    .dest-card:hover { transform: translateY(-7px); box-shadow: 0 10px 80px rgba(0, 0, 0, 1); }
-    :has(.dest-card:hover) .dest-card:not(:hover) { opacity: 0.82; }
+    .dest-card:hover { transform: translateY(-7px); box-shadow: 0 10px 80px rgb(255, 255, 255,0.4); }
+    :has(.dest-card:hover) .dest-card:not(:hover) {filter: brightness(0.5) blur(.7px); }
     
     
-    .dest-card:nth-child(1) { background-image:url(sliders.pic/slider1.png);background-position: 100%;  }
-    .dest-card:nth-child(2) { background-image: url(sliders.pic/slider3.png);background-position:100%;}
-    .dest-card:nth-child(3) { background-image: url(sliders.pic/slider2.png);background-position: 100%; }
-    .dest-card:nth-child(4) { background-image: url(sliders.pic/slider4.png);background-position: 100%; }
-    .dest-card:nth-child(5) { background-image: url(sliders.pic/slider5.png);background-position: 100%; }
-    .dest-card:nth-child(6) { background-image: url(sliders.pic/slider6.png);background-position: 100%; }
-    .dest-card:nth-child(7) { background-image: url(sliders.pic/slider7.png);background-position: 100%; }
-    .dest-card:nth-child(8) { background-image: url(sliders.pic/slider8.png);background-position: 100%; }
-    .dest-card:nth-child(9) { background-image: url(sliders.pic/slider9.png);background-position: 100%; }
+    .dest-card:nth-child(1) { background-image:url(/Picturs/sliders.pic/Marrackech\ slide.png);background-position: 100%;  }
+    .dest-card:nth-child(2) { background-image: url(/Picturs/sliders.pic/Essaouira\ slide.png);background-position:100%;}
+    .dest-card:nth-child(3) { background-image: url(/Picturs/sliders.pic/Rabat\ slide.png);background-position: 100%; }
+    .dest-card:nth-child(4) { background-image: url(/Picturs/sliders.pic/Fez\ slide.jpg);background-position: 100%; }
+    .dest-card:nth-child(5) { background-image: url(/Picturs/sliders.pic/Agadir\ slide.png);background-position: 100%; }
+    .dest-card:nth-child(6) { background-image: url(/Picturs/sliders.pic/Chefchaouen\ slide.png);background-position: 100%; }
+    .dest-card:nth-child(7) { background-image: url(/Picturs/sliders.pic/Ifran\ slide.png);background-position: 100%; }
+    .dest-card:nth-child(8) { background-image: url(/Picturs/sliders.pic/Ouarzazat\ slide.png);background-position: 100%; }
+    .dest-card:nth-child(9) { background-image: url(/Picturs/sliders.pic/Sahara\ slide.png);background-position: 100%; }
 
 .dest-card::before {
       content: '';
@@ -44,18 +44,7 @@
       content: '';
       position: absolute;
       inset: 0;
-    }
- 
-    .card-price-tag {
-      position: absolute;
-      top: 14px; right: 14px;
-      background: rgba(255,255,255,0.35);
-      border-radius: 999px;
-      padding: 4px 12px;
-      font-size: 12px;
-      font-weight: 500; color: black;
-    }
- 
+    } 
     .card-info {
       position: absolute;
       bottom: 0; left: 0; right: 0;
@@ -66,14 +55,15 @@
  
     .card-city {
       font-family: 'Playfair Display', serif;
-      font-size: 24px;
+      font-size: 30px;
       color: #fff;
       margin-bottom: 4px;
     }
  
     .card-tag {
-      font-size: 12px;
-      color: rgba(255,255,255,0.75);
+      font-size: 15px;
+      font-weight: bold;
+      color: rgba(255,255,255,.9);
       margin-bottom: 8px;
     }
  

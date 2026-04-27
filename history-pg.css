@@ -13,7 +13,7 @@
   justify-content: start;
   text-align: justify;
   color: #fff;
-  background-image: url(flag\ .jpg); 
+  background-image: url(/Picturs/flag\ .jpg); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -89,7 +89,7 @@ max-width: 10vh;
      display: flex; 
     flex-direction: column;
     align-items: center;
-    background-image: url(1000271030.jpg);
+    background-image: url(/Picturs/1000271030.jpg);
     background-attachment: fixed;    
 }
     .description-h2{
@@ -241,7 +241,7 @@ max-width: 10vh;
   #outro .bg-img {
     position: absolute;
     inset: 0;
-    background: url('/Outer\ background.jpg');
+    background: url('/Picturs//Outer\ background.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
