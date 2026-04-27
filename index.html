@@ -315,15 +315,86 @@
         goTo(current + 1);
       }, 3000);
     </script>
-    <div id="footer-placeholder"></div>
-
-<script>
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer-placeholder').innerHTML = data;
-    });
-</script>
-
+  
   </body>
+  <footer>
+
+
+<div id="footer">
+
+
+  <div id="bande-deco"></div>
+
+
+  <div id="footer-titre">
+    <h2>&#9670; MAROC  &#9670;</h2>
+  
+  </div>
+
+
+  <div id="footer-colonnes">
+    <table id="table-colonnes" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+
+        <td class="col">
+          <p class="col-titre">&#9670; Destinations</p>
+          <ul class="liste-footer">
+            <li><a href="#">&#9658; Marrakech &ndash; La ville ocre</a></li>
+            <li><a href="#">&#9658; F&egrave;s &ndash; La m&eacute;dina mill&eacute;naire</a></li>
+            <li><a href="#">&#9658; Chefchaouen &ndash; La ville bleue</a></li>
+            <li><a href="#">&#9658; Essaouira &ndash; La c&ocirc;te atlantique</a></li>
+            <li><a href="#">&#9658; Rabat &ndash; La capitale</a></li>
+          </ul>
+        </td>
+
+
+        <td class="separateur"></td>
+
+        <td class="col">
+          <p class="col-titre">&#9670; Contact</p>
+
+          <p class="contact-ligne">
+            <span class="contact-label">Adresse :</span><br>
+            FSSM, Marrakech &ndash; Maroc
+          </p>
+
+          <p class="contact-ligne">
+            <span class="contact-label">T&eacute;l&eacute;phone :</span><br>
+            +212 5 00 00 00 00
+          </p>
+
+          <p class="contact-ligne">
+            <span class="contact-label">Email :</span><br>
+            <a class="lien-email" href="mailto:contact@maroc.ma">
+              contact@maroc.ma
+            </a>
+          </p>
+      </tr>
+    </table>
+  </div>
+
+
+  <div id="reseaux">
+    <a href="#">Facebook</a>
+    <a href="#">Instagram</a>
+    <a href="#">YouTube</a>
+  </div>
+
+  
+  <div id="footer-bas">
+    <p>
+      &copy; 2025 Maroc Authentique &ndash; Tous droits r&eacute;serv&eacute;s
+      <span class="pipe">|</span>
+      <a href="#">Mentions l&eacute;gales</a>
+      <span class="pipe">|</span>
+      <a href="#">Politique de confidentialit&eacute;</a>
+      <span class="pipe">|</span>
+      <a href="#">Plan du site</a>
+    </p>
+  </div>
+
+</div>
+
+</footer>
+</html>
 </html>
