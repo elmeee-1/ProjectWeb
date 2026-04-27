@@ -1,4 +1,3 @@
-/* ── CSS Variables (Default Light Mode) ────────────────────────────────────── */
 :root {
   --gold: #b89a5e;
   --page-bg: #f5f2ee;
@@ -22,7 +21,7 @@
   --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ── Dark Mode Overrides ────────────────── */
+/* dark mode */
 body.dark-theme {
   --page-bg: #111010;
   --surface: #181614;
@@ -74,28 +73,26 @@ body {
   color: var(--gold);
 }
 
-/* ── HERO SECTION (WITH MOROCCAN TILE IMAGE) ── */
+/* hero */
 .book-hero {
   position: relative;
-  /* The padding-top here fills the space behind the header! */
   padding-block: clamp(8rem, 12vw, 11rem) clamp(3.5rem, 7vw, 6rem);
   overflow: hidden;
   z-index: 1;
-  background-color: #0a0a0a; /* Fallback dark color */
+  background-color: #0a0a0a;
 }
 
 .book-hero-bg {
   position: absolute;
   inset: 0;
   z-index: -1;
-  /* This links to your new Moroccan tile pattern image! */
   background-image: url("img/book-pattern.jpg");
   background-size: cover;
   background-position: center;
-  opacity: 0.3; /* Keeps it subtle so text is readable */
+  opacity: 0.3;
 }
-
-/* This creates a seamless fade at the bottom of the hero */
+of
+/* hero bottom */
 .book-hero::after {
   content: "";
   position: absolute;
@@ -155,7 +152,7 @@ body {
   animation: fadeUp 0.7s 0.34s ease forwards;
 }
 
-/* ── Form Section ── */
+/* section form*/
 .book-form-section {
   position: relative;
   z-index: 1;
@@ -302,7 +299,7 @@ body {
   background: var(--border);
 }
 
-/* ── Submit Button (FIXED FOR VISIBILITY IN BOTH MODES) ── */
+/* ─submit button */
 .form-footer {
   display: flex;
   align-items: center;
@@ -326,7 +323,7 @@ body {
   max-width: 28ch;
 }
 
-/* Light Mode Defaults: Solid Dark Background so it pops! */
+/* light mode */
 .btn-submit {
   position: relative;
   display: inline-flex;
@@ -379,7 +376,7 @@ body {
   transform: translateX(4px);
 }
 
-/* Dark Mode Overrides: Returns to Claude's elegant gold outline */
+/* Dark Mode*/
 body.dark-theme .btn-submit {
   background: transparent;
   border-color: var(--gold);
@@ -419,7 +416,7 @@ body.dark-theme .btn-submit:hover {
   font-weight: 300;
 }
 
-/* ── Sidebar ── */
+/* Sidebar */
 .book-sidebar {
   display: flex;
   flex-direction: column;

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  /* ── Scroll-reveal animations ──── */
+  /* scroll annime */
   const fields = document.querySelectorAll(".field");
   const footer = document.getElementById("formFooter");
   const toReveal = [...fields, footer];
@@ -17,12 +17,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   toReveal.forEach((el) => el && observer.observe(el));
 
-  /* Failsafe to make sure form fields appear even if user scrolls fast */
   setTimeout(() => {
     toReveal.forEach((el) => el && el.classList.add("visible"));
   }, 1000);
 
-  /* ── Date min-value: prevents booking in the past ── */
+  /* date */
   const today = new Date().toISOString().split("T")[0];
   const arrivalInput = document.getElementById("arrival");
   const departureInput = document.getElementById("departure");
