@@ -439,7 +439,16 @@
             🌙
           </button>
 
-          <button class="hamburger" aria-label="Toggle menu">
+          <button
+            class="hamburger"
+            aria-label="Toggle menu"
+            onclick="
+              document
+                .querySelector('.nav-links')
+                .classList.toggle('nav-active');
+              this.classList.toggle('toggle');
+            "
+          >
             <span></span>
             <span></span>
             <span></span>
