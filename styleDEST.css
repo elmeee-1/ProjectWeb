@@ -127,7 +127,7 @@ body {
     text-align: center;
     flex-direction: column;
     color:white;
-    animation: forwards 8s fadeup;
+    animation: forwards 13s fadeup;
     gap: 20px;
   }
   @keyframes fadeup {
