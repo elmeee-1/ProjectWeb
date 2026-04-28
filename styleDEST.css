@@ -5,7 +5,7 @@
  
     .dest-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
 
@@ -24,15 +24,16 @@
     :has(.dest-card:hover) .dest-card:not(:hover) {filter: brightness(0.5) blur(.7px); }
     
     
-    .dest-card:nth-child(1) { background-image:url(/Picturs/sliders.pic/Marrackech\ slide.png);background-position: 100%;  }
-    .dest-card:nth-child(2) { background-image: url(/Picturs/sliders.pic/Essaouira\ slide.png);background-position:100%;}
-    .dest-card:nth-child(3) { background-image: url(/Picturs/sliders.pic/Rabat\ slide.png);background-position: 100%; }
-    .dest-card:nth-child(4) { background-image: url(/Picturs/sliders.pic/Fez\ slide.jpg);background-position: 100%; }
-    .dest-card:nth-child(5) { background-image: url(/Picturs/sliders.pic/Agadir\ slide.png);background-position: 100%; }
-    .dest-card:nth-child(6) { background-image: url(/Picturs/sliders.pic/Chefchaouen\ slide.png);background-position: 100%; }
-    .dest-card:nth-child(7) { background-image: url(/Picturs/sliders.pic/Ifran\ slide.png);background-position: 100%; }
-    .dest-card:nth-child(8) { background-image: url(/Picturs/sliders.pic/Ouarzazat\ slide.png);background-position: 100%; }
-    .dest-card:nth-child(9) { background-image: url(/Picturs/sliders.pic/Sahara\ slide.png);background-position: 100%; }
+    .dest-card:nth-child(1) { background-image:url(/Picturs/sliders.pic/marrakech.slide.jpg);background-position: 100%;  }
+    .dest-card:nth-child(2) { background-image: url(/Picturs/sliders.pic/Essaouira.slide.jpg);background-position:100%;}
+    .dest-card:nth-child(3) { background-image: url(/Picturs/sliders.pic/rabat.slide.jpg);background-position: 100%; }
+    .dest-card:nth-child(4) { background-image: url(/Picturs/sliders.pic/fez.slide.png);background-position: 100%; }
+    .dest-card:nth-child(5) { background-image: url(/Picturs/sliders.pic/agadir.slide\ .png);background-position: 100%; }
+    .dest-card:nth-child(6) { background-image: url(/Picturs/sliders.pic/chefchaouen.slide.jpg);background-position: 100%; }
+    .dest-card:nth-child(7) { background-image: url(/Picturs/sliders.pic/ifrane.slide.jpg);background-position: 100%; }
+    .dest-card:nth-child(8) { background-image: url(/Picturs/sliders.pic/ouarzazat.slide.jpg);background-position: 100%; }
+    .dest-card:nth-child(9) { background-image: url(/Picturs/sliders.pic/sahara.slide.png);background-position: 100%; }
+    .dest-card:nth-child(10) { background-image: url(/Picturs/sliders.pic/tanger.slide.jpg);background-position: 100%; }
 
 .dest-card::before {
       content: '';
