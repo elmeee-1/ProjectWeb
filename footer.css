@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -17,41 +18,48 @@ body {
   width: 100%;
 }
 
+
+
 #bande-deco {
   background-color: #101010;
   height: 6px;
   width: 100%;
 }
 
+
+
 #footer-titre {
   text-align: center;
-  padding: 30px;
+  padding: 28px;
   border-bottom: 1px solid #E3DBCC;
 }
 
 #footer-titre h2 {
-  font-size: 22px;
+  font-size: 20px;
   color: #101010;
-  letter-spacing: 4px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
 }
 
 
 
 #footer-colonnes {
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
-  padding: 30px 0;
+  padding: 28px 0;
 }
 
 #table-colonnes {
   width: 100%;
 }
 
+
 .col {
   width: 50%;
   vertical-align: top;
-  padding: 0 20px;
+  padding: 0 24px;
 }
+
 
 .separateur {
   width: 1px;
@@ -62,10 +70,10 @@ body {
 
 
 .col-titre {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: bold;
   color: #101010;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-transform: uppercase;
   border-bottom: 2px solid #101010;
   padding-bottom: 10px;
@@ -79,7 +87,7 @@ body {
 }
 
 .liste-footer li {
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 
 .liste-footer li a {
@@ -93,16 +101,18 @@ body {
   text-decoration: underline;
 }
 
+
+
 .contact-ligne {
   font-size: 13px;
   color: #101010;
-  margin-bottom: 12px;
-  line-height: 20px;
+  margin-bottom: 14px;
+  line-height: 21px;
 }
 
 .contact-label {
-  color: #101010;
   font-weight: bold;
+  color: #101010;
 }
 
 .lien-email {
@@ -119,9 +129,10 @@ body {
 
 #reseaux {
   text-align: center;
-  padding: 20px;
+  padding: 18px;
   border-top: 1px solid #E3DBCC;
   border-bottom: 1px solid #E3DBCC;
+  background-color: #FDFCF8;
 }
 
 #reseaux a {
@@ -130,23 +141,23 @@ body {
   text-decoration: none;
   font-size: 12px;
   font-weight: bold;
-  border: 1px solid #101010;
-  padding: 6px 18px;
-  margin: 4px;
   letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 1px solid #101010;
+  padding: 6px 16px;
+  margin: 4px;
 }
 
 #reseaux a:hover {
   background-color: #101010;
-  color: #F3F0E9;
-  border-color: #101010;
+  color: #FDFCF8;
 }
 
 
 
 #footer-bas {
   text-align: center;
-  padding: 18px 20px;
+  padding: 16px 20px;
   background-color: #E3DBCC;
 }
 
@@ -168,6 +179,6 @@ body {
 
 
 .pipe {
-  color: #E3DBCC;
+  color: #101010;
   margin: 0 8px;
 }
