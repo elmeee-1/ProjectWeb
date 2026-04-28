@@ -540,30 +540,30 @@ body.dark-theme .city-tag {
 }
 
 /* Per-slide background images */
-.slide:nth-child(1) .slide-bg  { background-image: url(/Picturs/sliders.pic/Marrackech\ slide.png); }
-.slide:nth-child(1) .card-image { background-image: url(/Picturs/sliders.pic/Marrackech\ slide.png); }
+.slide:nth-child(1) .slide-bg  { background-image: url(/Picturs/sliders.pic/marrakech.slide.jpg); }
+.slide:nth-child(1) .card-image { background-image: url(/Picturs/sliders.pic/marrakech.slide.jpg); }
 
-.slide:nth-child(2) .slide-bg  { background-image: url(/Picturs/sliders.pic/Rabat\ slide.png); }
-.slide:nth-child(2) .card-image { background-image: url(/Picturs/sliders.pic/Rabat\ slide.png); }
+.slide:nth-child(2) .slide-bg  { background-image: url(/Picturs/sliders.pic/rabat.slide.jpg); }
+.slide:nth-child(2) .card-image { background-image: url(/Picturs/sliders.pic/rabat.slide.jpg); }
 
-.slide:nth-child(3) .slide-bg  { background-image: url(/Picturs/sliders.pic/Essaouira\ slide.png); }
-.slide:nth-child(3) .card-image { background-image: url(/Picturs/sliders.pic/Essaouira\ slide.png); }
+.slide:nth-child(3) .slide-bg  { background-image: url(/Picturs/sliders.pic/Essaouira.slide.jpg); }
+.slide:nth-child(3) .card-image { background-image: url(/Picturs/sliders.pic/Essaouira.slide.jpg); }
 
-.slide:nth-child(4) .slide-bg  { background-image: url(/Picturs/sliders.pic/Fez\ slide.jpg); }
-.slide:nth-child(4) .card-image { background-image: url(/Picturs/sliders.pic/Fez\ slide.jpg); }
+.slide:nth-child(4) .slide-bg  { background-image: url(/Picturs/sliders.pic/fez.slide.png); }
+.slide:nth-child(4) .card-image { background-image: url(/Picturs/sliders.pic/fez.slide.png); }
 
-.slide:nth-child(5) .slide-bg  { background-image: url(/Picturs/sliders.pic/Agadir\ slide.png); }
-.slide:nth-child(5) .card-image { background-image: url(/Picturs/sliders.pic/Agadir\ slide.png); }
+.slide:nth-child(5) .slide-bg  { background-image: url(/Picturs/sliders.pic/agadir.slide\ .png); }
+.slide:nth-child(5) .card-image { background-image: url(/Picturs/sliders.pic/agadir.slide\ .png); }
 
-.slide:nth-child(6) .slide-bg  { background-image: url(/Picturs/sliders.pic/Chefchaouen\ slide.png); }
-.slide:nth-child(6) .card-image { background-image: url(/Picturs/sliders.pic/Chefchaouen\ slide.png); }
+.slide:nth-child(6) .slide-bg  { background-image: url(/Picturs/sliders.pic/chefchaouen.slide.jpg); }
+.slide:nth-child(6) .card-image { background-image: url(/Picturs/sliders.pic/chefchaouen.slide.jpg); }
 
-.slide:nth-child(7) .slide-bg  { background-image: url(/Picturs/sliders.pic/Ifran\ slide.png); }
-.slide:nth-child(7) .card-image { background-image: url(/Picturs/sliders.pic/Ifran\ slide.png); }
+.slide:nth-child(7) .slide-bg  { background-image: url(/Picturs/sliders.pic/ifrane.slide.jpg); }
+.slide:nth-child(7) .card-image { background-image: url(/Picturs/sliders.pic/ifrane.slide.jpg); }
 
-.slide:nth-child(8) .slide-bg  { background-image: url(/Picturs/sliders.pic/Ouarzazat\ slide.png); }
-.slide:nth-child(8) .card-image { background-image: url(/Picturs/sliders.pic/Ouarzazat\ slide.png); }
+.slide:nth-child(8) .slide-bg  { background-image: url(/Picturs/sliders.pic/ouarzazat.slide.jpg); }
+.slide:nth-child(8) .card-image { background-image: url(/Picturs/sliders.pic/ouarzazat.slide.jpg); }
 
-.slide:nth-child(9) .slide-bg  { background-image: url(/Picturs/sliders.pic/Sahara\ slide.png); }
-.slide:nth-child(9) .card-image { background-image: url(/Picturs/sliders.pic/Sahara\ slide.png); }
+.slide:nth-child(9) .slide-bg  { background-image: url(/Picturs/sliders.pic/sahara.slide.png); }
+.slide:nth-child(9) .card-image { background-image: url(/Picturs/sliders.pic/sahara.slide.png); }
 
