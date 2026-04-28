@@ -1,0 +1,108 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What to do in Morroco</title>
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="style-what-to-do.css">
+     <link rel="stylesheet" href="generalCSS.css">
+
+</head> 
+
+<body>
+     <header class="global-header"> 
+  <nav class="navbar">
+    
+    <a href="index.html" class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="spinning-plane">
+        <path d="M21,16V14L13,9V3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V9L2,14V16L10,13.5V19L8,20.5V22L11.5,21L15,22V20.5L13,19V13.5L21,16Z" />
+      </svg>
+      <span class="logo-text">Majlis</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="what-to-do.html">What to do</a></li>
+      
+      <li class="dropdown">
+        <a href="destinations.html">Destinations</a>
+        <div class="dropdown-content">
+          <a href="marrakech.html">Marrakech</a>
+          <a href="essaouira.html">Essaouira</a>
+          <a href="rabat.html">Rabat</a>
+          <a href="fes.html">Fès</a>
+          <a href="agadir.html">Agadir</a>
+          <a href="ifrane.html">Ifrane</a>
+          <a href="ouarzazate.html">Ouarzazate</a>
+          <a href="chefchaouen.html">Chefchaouen</a>
+          <a href="sahara_desert.html">Sahara desert</a>
+        </div>
+      </li>
+      
+      <li><a href="about.html">About</a></li>
+      
+      <li class="mobile-only-btn">
+        <a href="book.html" class="btn-nav-book">Book Now</a>
+      </li>
+    </ul>
+
+    <div class="nav-controls">
+      <a href="book.html" class="btn-nav-book desktop-only-btn">Book Now</a>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">🌙</button>
+      
+      <button class="hamburger" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('nav-active'); this.classList.toggle('toggle');">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    
+  </nav>
+</header>
+      <body>
+        <section class="activities">
+            <h2>What to do in Morroco</h2>
+
+    <div class="card-container">
+
+        <div class="card">
+            <img src="Picturs/beach.png" alt="Beach">
+            <h2>Beach</h2>
+            <p><b>Enjoy the beautiful beaches </b></p>
+        <div class="city-list">
+                <a class="city-tag" href="agadir.html">Agadir</a>
+                <a class="city-tag" href="essaouira.html">Essaouira</a>
+                <a class="city-tag" href="tanger.html">Tanger</a>
+            </div>
+        </div>
+
+        <div class="card">
+             <img src="Picturs/Adventure.png" alt="Adventure">
+            
+            <h2>Adventure</h2>
+            <p><b>Explore Atlas mountains & desert trips</b></p>
+            <a class="city-tag" href="sahara_desert.html">Sahara desert</a><br><br>
+            <a class="city-tag" href="ouarzazate.html">Ouarzazate</a>
+        </div>
+
+        <div class="card">
+            <img src="Picturs/Culture.png" alt="Culture" width="100">
+            <h2>Culture</h2>
+            <p><b>Discover medinas, souks & monuments</b></p>
+            <a class="city-tag" href="marrakech.html">Marrakech</a><br><br>
+            <a class="city-tag" href="fes.html">Fes</a><br><br>
+            <a class="city-tag" href="rabat.html">Rabat</a>
+        </div>
+
+        <div class="card">
+            <img src="Picturs/Nature.png" alt="Nature">
+            <h2>Nature</h2>
+            <p><b>Enjoy mountains & landscapes</b></p>
+            <a class="city-tag" href="ifran.html">Ifrane</a><br><br>
+            <a class="city-tag" href="chefchaouen.html">Chefchaouen</a>
+        </div>
+</section>
+<script src="darkmode.js"></script>
+</body>
+</html>
