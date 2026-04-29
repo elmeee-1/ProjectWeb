@@ -1,146 +1,188 @@
-
 .dest-section {
-      padding: 2.5rem 3rem 4rem;
-    }
- 
-    .dest-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
+  padding: 2.5rem 3rem 4rem;
+}
 
- 
-    .dest-card {
-      background-size: cover;
-      background-repeat: no-repeat;
-      border-radius: 20px;
-      overflow: hidden;
-      position: relative;
-      height: 300px;
-      cursor: pointer;
-      box-shadow: 0 10px 80px rgba(0, 0, 0, .4);
-    }
-    .dest-card:hover { transform: translateY(-7px); box-shadow: 0 10px 80px rgb(255, 255, 255,0.4); }
-    :has(.dest-card:hover) .dest-card:not(:hover) {filter: brightness(0.5) blur(.7px); }
-    
-    
-    .dest-card:nth-child(1) { background-image:url(/Picturs/sliders.pic/marrakech.slide.jpg);background-position: 100%;  }
-    .dest-card:nth-child(2) { background-image: url(/Picturs/sliders.pic/Essaouira.slide.jpg);background-position:100%;}
-    .dest-card:nth-child(3) { background-image: url(/Picturs/sliders.pic/rabat.slide.jpg);background-position: 100%; }
-    .dest-card:nth-child(4) { background-image: url(/Picturs/sliders.pic/fez.slide.png);background-position: 100%; }
-    .dest-card:nth-child(5) { background-image: url(/Picturs/sliders.pic/agadir.slide\ .png);background-position: 100%; }
-    .dest-card:nth-child(6) { background-image: url(/Picturs/sliders.pic/chefchaouen.slide.jpg);background-position: 100%; }
-    .dest-card:nth-child(7) { background-image: url(/Picturs/sliders.pic/ifrane.slide.jpg);background-position: 100%; }
-    .dest-card:nth-child(8) { background-image: url(/Picturs/sliders.pic/ouarzazat.slide.jpg);background-position: 100%; }
-    .dest-card:nth-child(9) { background-image: url(/Picturs/sliders.pic/sahara.slide.png);background-position: 100%; }
-    .dest-card:nth-child(10) { background-image: url(/Picturs/sliders.pic/tanger.slide.jpg);background-position: 100%; }
+.dest-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.dest-card {
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  height: 300px;
+  cursor: pointer;
+  box-shadow: 0 10px 80px rgba(0, 0, 0, 0.4);
+}
+.dest-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 10px 80px rgb(255, 255, 255, 0.4);
+}
+:has(.dest-card:hover) .dest-card:not(:hover) {
+  filter: brightness(0.5) blur(0.7px);
+}
+
+.dest-card:nth-child(1) {
+  background-image: url("Picturs/sliders.pic/marrakech.slide.jpg");
+  background-position: 100%;
+}
+.dest-card:nth-child(2) {
+  background-image: url("Picturs/sliders.pic/Essaouira.slide.jpg");
+  background-position: 100%;
+}
+.dest-card:nth-child(3) {
+  background-image: url("Picturs/sliders.pic/rabat.slide.jpg");
+  background-position: 100%;
+}
+.dest-card:nth-child(4) {
+  background-image: url("Picturs/sliders.pic/fez.slide.png");
+  background-position: 100%;
+}
+.dest-card:nth-child(5) {
+  background-image: url("Picturs/sliders.pic/agadir.slide .png");
+  background-position: 100%;
+}
+.dest-card:nth-child(6) {
+  background-image: url("Picturs/sliders.pic/chefchaouen.slide.jpg");
+  background-position: 100%;
+}
+.dest-card:nth-child(7) {
+  background-image: url("Picturs/sliders.pic/ifrane.slide.jpg");
+  background-position: 100%;
+}
+.dest-card:nth-child(8) {
+  background-image: url("Picturs/sliders.pic/ouarzazat.slide.jpg");
+  background-position: 100%;
+}
+.dest-card:nth-child(9) {
+  background-image: url("Picturs/sliders.pic/sahara.slide.png");
+  background-position: 100%;
+}
+.dest-card:nth-child(10) {
+  background-image: url("Picturs/sliders.pic/tanger.slide.jpg");
+  background-position: 100%;
+}
 
 .dest-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-    }
-    
-    .dest-card::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-    } 
-    .card-info {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      color: black;
-      z-index: 1;
-      padding: 1.2rem 1.3rem;
-    }
- 
-    .card-city {
-      font-family: 'Playfair Display', serif;
-      font-size: 30px;
-      color: #fff;
-      margin-bottom: 4px;
-    }
- 
-    .card-tag {
-      font-size: 15px;
-      font-weight: bold;
-      color: rgba(255,255,255,.9);
-      margin-bottom: 8px;
-    }
- 
-    .card-meta {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 12px;
-      color: rgba(255,255,255,0.8);
-    }
-
-    .card-star { color: #f5c518; }
-    
-    .page-hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 80px;
-      letter-spacing: -1.5px;
-      color: var(--black);
-      margin-bottom: 10px;
-    }
-    .page-hero p {
-      font-family: 'Times New Roman', Times, serif;
-      display: block;
-      margin: 10px 0;
-      padding: 10px;
-      font-size: 40px;
-      color:white;
-      max-width: 900px;
-      margin-top: 10px;
-      text-align: center;
-    }
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #f7f3ef;
-    margin: 0;
+  content: "";
+  position: absolute;
+  inset: 0;
 }
-.hero-section{
+
+.dest-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: black;
+  z-index: 1;
+  padding: 1.2rem 1.3rem;
+}
+
+.card-city {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.card-tag {
+  font-size: 15px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 8px;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card-star {
+  color: #f5c518;
+}
+
+.page-hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 80px;
+  letter-spacing: -1.5px;
+  color: var(--black);
+  margin-bottom: 10px;
+}
+.page-hero p {
+  font-family: "Times New Roman", Times, serif;
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 40px;
+  color: white;
+  max-width: 900px;
+  margin-top: 10px;
+  text-align: center;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f7f3ef;
+  margin: 0;
+}
+.hero-section {
   position: relative;
-  width:100%;
-  height:100vh;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
 }
 .hero-bg video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+.page-hero {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+  animation: forwards 13s fadeup;
+  gap: 20px;
+}
+@keyframes fadeup {
+  0% {
+    opacity: 0;
   }
-  .page-hero {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    z-index: 2;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    color:white;
-    animation: forwards 13s fadeup;
-    gap: 20px;
+  50% {
+    opacity: 0;
   }
-  @keyframes fadeup {
-    0%{opacity: 0;}
-    50%{opacity:0;}
-    85%{opacity: 1;}
+  85% {
+    opacity: 1;
   }
-  .hero-overlay{
-    position: absolute;
+}
+.hero-overlay {
+  position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.4);
   z-index: 1;
-  }
+}
 .scroll-btn {
   background: transparent;
   border: 2px solid white;
@@ -155,7 +197,7 @@ body {
   background: white;
   color: black;
 }
-.srcoll-btn-container{
+.srcoll-btn-container {
   margin-top: 40px;
   z-index: 3;
 }
@@ -165,8 +207,13 @@ body {
   animation: bounce 1s infinite;
 }
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(6px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
 }
 
 @media (max-width: 600px) {
@@ -185,7 +232,6 @@ body {
     padding: 10px 24px;
   }
 
- 
   .dest-section {
     padding: 1.5rem 1rem 2rem;
   }
@@ -211,21 +257,21 @@ body {
     font-size: 10px;
   }
 }
-  .hero-section {
-    height: 100svh;
-  }
+.hero-section {
+  height: 100svh;
+}
 
-  .hero-bg video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.hero-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-  .page-hero h1 {
-    font-size: 36px;
-  }
+.page-hero h1 {
+  font-size: 36px;
+}
 
-  .page-hero p {
-    font-size: 18px;
-    padding: 0 16px;
-  }
+.page-hero p {
+  font-size: 18px;
+  padding: 0 16px;
+}
