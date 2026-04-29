@@ -1,55 +1,410 @@
-<header class="global-header">
-  <nav class="navbar">
-    <a href="index.html" class="logo">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        class="spinning-plane"
-      >
-        <path
-          d="M21,16V14L13,9V3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V9L2,14V16L10,13.5V19L8,20.5V22L11.5,21L15,22V20.5L13,19V13.5L21,16Z"
-        />
-      </svg>
-      <span class="logo-text">Majlis</span>
-    </a>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Morocco : Events</title>
+    <link rel="stylesheet" href="generalCSS.css" />
+    <link rel="stylesheet" href="events style .css" />
+  </head>
 
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="what-to-do.html">What to do</a></li>
+  <body>
+    <header class="global-header">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            class="spinning-plane"
+          >
+            <path
+              d="M21,16V14L13,9V3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V9L2,14V16L10,13.5V19L8,20.5V22L11.5,21L15,22V20.5L13,19V13.5L21,16Z"
+            />
+          </svg>
+          <span class="logo-text">Majlis</span>
+        </a>
 
-      <li class="dropdown">
-        <a href="destinations.html">Destinations</a>
-        <div class="dropdown-content">
-          <a href="marrakech.html">Marrakech</a>
-          <a href="essaouira.html">Essaouira</a>
-          <a href="rabat.html">Rabat</a>
-          <a href="fes.html">Fès</a>
-          <a href="agadir.html">Agadir</a>
-          <a href="ifrane.html">Ifrane</a>
-          <a href="ouarzazate.html">Ouarzazate</a>
-          <a href="chefchaouen.html">Chefchaouen</a>
-          <a href="sahara_desert.html">Sahara desert</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="what-to-do.html">What to do</a></li>
+          <li class="dropdown">
+            <a href="destinations.html">Destinations</a>
+            <div class="dropdown-content">
+              <a href="marrakech.html">Marrakech</a>
+              <a href="essaouira.html">Essaouira</a>
+              <a href="rabat.html">Rabat</a>
+              <a href="fes.html">Fès</a>
+              <a href="agadir.html">Agadir</a>
+              <a href="ifrane.html">Ifrane</a>
+              <a href="ouarzazate.html">Ouarzazate</a>
+              <a href="chefchaouen.html">Chefchaouen</a>
+              <a href="sahara_desert.html">Sahara desert</a>
+            </div>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li class="mobile-only-btn">
+            <a href="book.html" class="btn-nav-book">Book Now</a>
+          </li>
+        </ul>
+
+        <div class="nav-controls">
+          <a href="book.html" class="btn-nav-book desktop-only-btn">Book Now</a>
+          <button
+            id="themeToggle"
+            class="theme-toggle"
+            aria-label="Toggle Theme"
+          >
+            🌙
+          <button class="hamburger" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('nav-active'); this.classList.toggle('toggle');">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
         </div>
-      </li>
+      </nav>
+    </header>
 
-      <li><a href="about.html">About</a></li>
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
 
-      <li class="mobile-only-btn">
-        <a href="book.html" class="btn-nav-book">Book Now</a>
-      </li>
-    </ul>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Kingdom of Morocco</p>
+    <h1 class="hero-title">Festival &<br><em>Culture</em></h1>
+    <p class="hero-subtitle">Where ancient traditions meet vibrant celebrations<br>across the land of spice, music, and colour.</p>
+    <a href="#festivals" class="hero-cta">Explore the Culture</a>
+  </div>
 
-    <div class="nav-controls">
-      <a href="book.html" class="btn-nav-book desktop-only-btn">Book Now</a>
-      <button class="hamburger" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('nav-active'); this.classList.toggle('toggle');">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
+  <!-- NAV moved here as bottom bar -->
+  <nav class="hero-nav">
+    <a href="#festivals">Festival</a>
+    <a href="#calendar">Calendar</a>
+    <a href="#traditions">Tradition</a>
+    <a href="#arts">Art</a>
   </nav>
-</header>
+</section>
+<div class="zellige-border"></div>
+
+<!-- SECTION 1: FEATURED FESTIVALS -->
+ <section id="festivals">
+  <div class="container">
+    <div class="festivals-header">
+      <div>
+        <p class="section-label">01 — Festivals</p>
+        <h2 class="section-title">Iconic Moroccan<br><em>Celebrations</em></h2>
+      </div>
+      <p class="festivals-intro">
+        From the ancient medinas of Fez to the rose-covered valleys of the Dades,
+        Morocco's festivals are a living tapestry of Amazigh, Arab, Andalusian, and Saharan heritage.
+      </p>
+    </div>
+
+    <div class="slider-wrap">
+      <button class="slider-btn prev">&#8592;</button>
+
+      <div class="festival-grid">
+
+        <div class="fest-card fc1">
+          <div class="fest-card-bg"></div>
+          <div class="fest-card-content">
+            <div class="fest-month">June · Fez</div>
+            <div class="fest-name">Fez Festival of World Sacred Music</div>
+            <div class="fest-location">Fez al-Bali, UNESCO Heritage City</div>
+            <div class="fest-desc">Nine days of transcendence — Sufi masters, Buddhist monks, and gospel choirs in ancient medina courtyards.</div>
+          </div>
+        </div>
+
+        <div class="fest-card fc2">
+          <div class="fest-card-bg"></div>
+          <div class="fest-card-content">
+            <div class="fest-month">May · Kelaat M'Gouna</div>
+            <div class="fest-name">Rose Festival</div>
+            <div class="fest-location">Dadès Valley, High Atlas</div>
+            <div class="fest-desc">Three days of rose-water, parades, and Berber music celebrating the harvest of Damask roses.</div>
+          </div>
+        </div>
+
+        <div class="fest-card fc3">
+          <div class="fest-card-bg"></div>
+          <div class="fest-card-content">
+            <div class="fest-month">June · Essaouira</div>
+            <div class="fest-name">Gnaoua World Music Festival</div>
+            <div class="fest-location">Essaouira, Atlantic Coast</div>
+            <div class="fest-desc">Ancient Gnaoua trance rituals fuse with jazz and blues on the windswept Atlantic stage.</div>
+          </div>
+        </div>
+
+        <div class="fest-card fc4">
+          <div class="fest-card-bg"></div>
+          <div class="fest-card-content">
+            <div class="fest-month">April · Marrakech</div>
+            <div class="fest-name">Popular Arts Festival</div>
+            <div class="fest-location">Jemaa el-Fnaa, Marrakech</div>
+            <div class="fest-desc">Acrobats, storytellers, snake charmers, and folk musicians from every corner of Morocco.</div>
+          </div>
+        </div>
+
+        <div class="fest-card fc5">
+          <div class="fest-card-bg"></div>
+          <div class="fest-card-content">
+            <div class="fest-month">September · Imilchil</div>
+            <div class="fest-name">Imilchil Marriage Festival</div>
+            <div class="fest-location">High Atlas, Béni Mellal-Khénifra</div>
+            <div class="fest-desc">A centuries-old Aït Haddidou tribal moussem — one of Morocco's most intimate traditions.</div>
+          </div>
+        </div>
+
+        <div class="fest-card fc6">
+          <div class="fest-card-bg"></div>
+          <div class="fest-card-content">
+            <div class="fest-month">November · M'Hamid el-Ghizlane</div>
+            <div class="fest-name">Taragalte Nomad Festival</div>
+            <div class="fest-location">Sahara Desert, Drâa-Tafilalet</div>
+            <div class="fest-desc">World musicians and desert nomads share music and poetry at the edge of the great dunes.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="slider-btn next">&#8594;</button>
+    </div>
+
+  </div>
+</section>
+<div class="zellige-border"></div>
+
+<!-- SECTION 2: CULTURAL CALENDAR -->
+<section id="calendar" >
+  <div class="container">
+    <div class="calendar-header">
+      <div>
+        <p class="section-label">02 — Calendar</p>
+        <h2 class="section-title">Annual Calendar <em>Cultural</em></h2>
+      </div>
+      <p class="section-desc">A year-round journey through Morocco's rich festival landscape — plan your immersion.</p>
+    </div>
+  
+  <div class="calendar-grid reveal">
+      <div class="cal-item">
+        <div class="cal-month-tag">February</div>
+        <div class="cal-info">
+          <div class="cal-type">🎪 Traditional Fair</div>
+          <div class="cal-event-name">Almond Blossom Festival</div>
+          <div class="cal-detail">The valleys of Tafraoute burst into pink and white as almond trees blossom, drawing thousands to this Souss-Massa celebration of spring's arrival and Amazigh culture.</div>
+        </div>
+      </div>
+
+      <div class="cal-item">
+        <div class="cal-month-tag">April</div>
+        <div class="cal-info">
+          <div class="cal-type">🎨 Arts & Heritage</div>
+          <div class="cal-event-name">Marrakech Popular Arts Festival</div>
+          <div class="cal-detail">The UNESCO-listed Jemaa el-Fnaa square transforms into an open stage for acrobats, storytellers, musicians, and artisans from across the country.</div>
+        </div>
+      </div>
+
+    <div class="cal-item">
+      <div class="cal-month-tag">August</div>
+        <div class="cal-info">
+            <div class="cal-type">🏇 Heritage & Sport</div>
+            <div class="cal-event-name">Moussem Moulay Abdellah Amghar - Tbourida</div>
+           <div class="cal-detail">Thousands gather in El Jadida for one of Morocco's largest Fantasia gatherings: a thunderous charge of adorned horsemen, firing muskets in perfect unison in a centuries-old warrior display.</div>
+        </div>
+     </div>
+
+      <div class="cal-item">
+        <div class="cal-month-tag">October</div>
+        <div class="cal-info">
+          <div class="cal-type">🎬 Film & Media</div>
+          <div class="cal-event-name">Marrakech International Film Festival</div>
+          <div class="cal-detail">One of Africa's most glamorous film events, attracting global cinema royalty to the Red City for screenings, premieres, and retrospectives.</div>
+        </div>
+      </div>
+
+      <div class="cal-item">
+        <div class="cal-month-tag">November</div>
+        <div class="cal-info">
+          <div class="cal-type">🌴 Cultural Ritual</div>
+          <div class="cal-event-name">Erfoud Date Festival</div>
+          <div class="cal-detail">At the gateway to the Sahara, the Tafilalet oasis celebrates the date harvest with camel parades, folkloric performances, and markets overflowing with Medjool treasures.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: REGIONAL TRADITIONS -->
+<section id="traditions">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">03 — Traditions</p>
+      <h2 class="section-title">Living Regional <em>Traditions</em></h2>
+    </div>
+
+    <!-- Tradition 1 -->
+    <div class="traditions-layout reveal">
+      <div class="tradition-visual">
+        <div class="visual-inner v1">🎶</div>
+        <div class="corner-label">Gnaoua · Spiritual Music</div>
+      </div>
+      <div>
+        <span class="tradition-tag">Southern Heritage</span>
+        <h3 class="tradition-title">The Gnaoua Spiritual Brotherhood</h3>
+        <p class="tradition-text">
+          Rooted in the Sub-Saharan diaspora, the Gnaoua are masters of trance music — their lila ceremonies invoke ancestral spirits through hypnotic rhythms of the guembri bass lute, qraqeb iron castanets, and collective chant. Recognised by UNESCO as Intangible Cultural Heritage in 2019.
+        </p>
+        <div class="tradition-facts">
+          <div class="fact"><span class="fact-num">1000+</span><span class="fact-label">Years of tradition</span></div>
+          <div class="fact"><span class="fact-num">3</span><span class="fact-label">Ritual nights</span></div>
+          <div class="fact"><span class="fact-num">7</span><span class="fact-label">Musical modes</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ornament-divider">❖ ❖ ❖</div>
+
+    <!-- Tradition 2 -->
+    <div class="traditions-layout reverse reveal">
+      <div class="tradition-visual">
+        <div class="visual-inner v2">🏺</div>
+        <div class="corner-label">Amazigh · Berber Culture</div>
+      </div>
+      <div>
+        <span class="tradition-tag">Amazigh Heritage</span>
+        <h3 class="tradition-title">Yennayer — The Amazigh New Year</h3>
+        <p class="tradition-text">
+          Celebrated on January 13th, Yennayer marks the Amazigh agricultural new year — a festival of family gatherings, ritual meals of couscous and dried fruit, and prayers for fertility of the land. Officially recognised as a national holiday in Morocco since 2023.
+        </p>
+        <div class="tradition-facts">
+          <div class="fact"><span class="fact-num">2974</span><span class="fact-label">Amazigh year (2024)</span></div>
+          <div class="fact"><span class="fact-num">Jan 13</span><span class="fact-label">Celebration date</span></div>
+          <div class="fact"><span class="fact-num">33%</span><span class="fact-label">Population Amazigh</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ornament-divider">❖ ❖ ❖</div>
+
+    <!-- Tradition 3 -->
+    <div class="traditions-layout reveal">
+      <div class="tradition-visual">
+        <div class="visual-inner v3">🐎</div>
+        <div class="corner-label">Fantasia · Tbourida</div>
+      </div>
+      <div>
+        <span class="tradition-tag">Royal Equestrian Art</span>
+        <h3 class="tradition-title">Tbourida — The Fantasia Ceremony</h3>
+        <p class="tradition-text">
+          A thundering display of horsemanship where teams of riders charge in perfect formation and fire their flintlock rifles in unison at full gallop. Rooted in medieval military exercises, Tbourida is performed at moussems across Morocco and was inscribed on UNESCO's list in 2021.
+        </p>
+        <div class="tradition-facts">
+          <div class="fact"><span class="fact-num">600+</span><span class="fact-label">Years of history</span></div>
+          <div class="fact"><span class="fact-num">16</span><span class="fact-label">Riders per troupe</span></div>
+          <div class="fact"><span class="fact-num">UNESCO</span><span class="fact-label">2021 Inscription</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: MUSIC & ARTS -->
+<section id="arts">
+<section id="arts" >
+  <div class="container">
+    <div class="reval">
+      <div>
+        <p class="section-label">05 — Art & Music</p>
+        <h2 class="section-title"> Art &<br><em>Music</em></h2>
+      </div>
+      <p class="section-desc">Morocco's creative soul pours through music festivals, craft fairs, and visual arts events that bridge centuries of tradition with contemporary expression.</p>
+    </div>
+  
+  <!-- Marquee -->
+  <div class="arts-marquee-wrap reveal">
+    <div class="arts-marquee">
+      <span class="marquee-item">Gnaoua Music <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Malhoun Poetry <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Andalusian Classical <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Chaabi Folk <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Zellige Tilework <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Berber Weaving <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Tadelakt Plaster <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Henna Art <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Gnaoua Music <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Malhoun Poetry <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Andalusian Classical <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Chaabi Folk <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Zellige Tilework <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Berber Weaving <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Tadelakt Plaster <span class="marquee-dot">✦</span></span>
+      <span class="marquee-item">Henna Art <span class="marquee-dot">✦</span></span>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="arts-grid reveal">
+      <div class="art-card">
+        <div class="art-num">01</div>
+        <div class="art-title">Mawazine Festival</div>
+        <div class="art-type">🎤 Music · Rabat · May</div>
+        <div class="art-desc">One of the world's largest music festivals, drawing over 2.5 million visitors to Rabat for a week of international headliners alongside Moroccan artists on 10 stages.</div>
+      </div>
+
+      <div class="art-card">
+        <div class="art-num">02</div>
+        <div class="art-title">Atlas Electronic</div>
+        <div class="art-type">🎧 Electronic · Marrakech · October</div>
+        <div class="art-desc">A groundbreaking festival fusing electronic music with traditional Moroccan sounds in the riads and rooftops of the medina — a marriage of the ancient and the future.</div>
+      </div>
+
+      <div class="art-card">
+        <div class="art-num">03</div>
+        <div class="art-title">Marrakech Biennale</div>
+        <div class="art-type">🖼️ Visual Arts · Marrakech · Biennial</div>
+        <div class="art-desc">Africa's leading contemporary arts event transforms Marrakech's palaces, gardens, and public spaces into immersive galleries showcasing artists from across the globe.</div>
+      </div>
+
+      <div class="art-card">
+        <div class="art-num">04</div>
+        <div class="art-title">Andaloussiyat Music Festival</div>
+        <div class="art-type">🎻 Classical · Fès · October</div>
+        <div class="art-desc">A celebration of the exquisite Andalusian classical music tradition — melodic suites called nubas — performed in candlelit Fassian palaces and gardens.</div>
+      </div>
+
+      <div class="art-card">
+        <div class="art-num">05</div>
+        <div class="art-title">Taragalte Nomad Festival</div>
+        <div class="art-type">🌙 World Music · M'Hamid el-Ghizlane · November</div>
+        <div class="art-desc">At the edge of the Sahara desert, this unique festival celebrates nomadic culture and world music under an infinite canopy of desert stars.</div>
+      </div>
+
+      <div class="art-card">
+        <div class="art-num">06</div>
+        <div class="art-title">Asilah Arts Festival</div>
+        <div class="art-type">🎨 Visual Arts · Asilah · August</div>
+        <div class="art-desc">Since 1978, this Atlantic coastal town transforms its whitewashed medina walls into giant open-air canvases, with muralists, poets, and musicians from across the Arab world.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: CTA -->
+<section id="cta">
+  <div class="container">
+    <div class="reveal">
+      <p class="cta-label">Don't miss a celebration</p>
+      <h2 class="cta-title">Stay Connected to<br>Morocco's Cultural Pulse</h2>
+      <p class="cta-sub">Receive festival updates, cultural event guides, and hidden celebrations direct to your inbox.</p>
+      <div class="cta-form">
+        <input type="email" placeholder="your@email.com" />
+        <button type="button">Subscribe</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="events.js"></script>
+    <script src="darkmode.js"></script>
+</body>
+</html>

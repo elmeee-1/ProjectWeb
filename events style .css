@@ -1,0 +1,685 @@
+* { margin: 0; padding: 0; font-family:'Times New Roman', Times, serif;}
+html { scroll-behavior: smooth; }
+
+body {
+  background: #FAF5EC;
+  color: #1C1A17;
+  overflow-x: hidden;
+}
+
+body.dark-theme {
+  background: #121212 !important;
+  color: #f5f5f5 !important;
+}
+body.dark-theme section { background: #121212 ; }
+body.dark-theme .section-title,
+body.dark-theme .hero-title { color: #ffffff !important; }
+body.dark-theme .section-desc,
+body.dark-theme .festivals-intro,
+body.dark-theme .tradition-text { color: #cccccc !important; }
+body.dark-theme .navbar { background: rgba(0,0,0,0.95) !important; }
+body.dark-theme .festivals-intro { border-color: #cccccc; }
+
+/* HERO */
+#hero {
+  position: relative;
+  height: 110vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background-image: url('/Picturs/moroccan_festivals.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.65);
+}
+
+.hero-content {
+  text-align: center;
+  padding: 2rem;
+  animation: fadeUp 1.2s ease ;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.5em;
+  color:#D4A847;
+  text-transform: uppercase;
+}
+.hero-title {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 0.9;
+  color: #F2E2C4;
+  letter-spacing: 0.2em;
+  margin: 1rem;
+  font-style: italic;
+}
+.hero-title em {
+  font-size: 90px;
+  font-weight: 800;
+  font-style: italic;
+  color: #D4A847;
+
+}
+.hero-subtitle {
+  font-size: 24px;
+  font-weight: 300;
+  color: rgba(242,226,196,0.75);
+  letter-spacing: 0.04em;
+  margin-bottom: 2rem;
+}
+
+ .hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 1.6rem;
+  background-color: #D4A847;
+  color: #1a1a1a !important;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: none;
+  text-decoration: none !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(184, 154, 94, 0.45);
+  background-color: #c9ad76;
+  text-decoration: none !important;
+}
+
+.hero-nav {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  z-index: 10;
+}
+
+.hero-nav a {
+  font-size: 0.68rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(242,226,196,0.6);
+  text-decoration: none;
+  padding: 1rem 3rem;
+  border: 1px solid rgba(212,168,71,0.5);
+  transition: all 0.3s;
+  background: rgba(28,26,23,0.6);
+  backdrop-filter: blur(8px);
+}
+
+.hero-nav a:hover {
+  color: #F2E2C4;
+  background: rgba(212,168,71,0.3);
+  scale:calc(0.94)
+}
+
+/* SECTION 1: FEATURED FESTIVALS - SLIDER */
+
+.festivals-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(193,68,14,0.2);
+  position: relative;
+}
+
+.festivals-intro {
+  font-size: 1.15rem;
+  font-weight: 300;
+  line-height: 1.9;
+  color: #555;
+  max-width: 500px;
+  border: 1px solid #121212;
+  padding: 40px;
+  text-indent: 40px;
+  border-radius: 90px;
+  transition: 0.7s;
+}
+
+.festivals-intro:hover {
+  border-radius: 20px;
+  background-color: #F2E2C4;
+  color: #121212;
+  border-color: transparent;
+}
+.slider-wrap {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 60px; /* space for buttons */
+  box-sizing: border-box;
+}
+
+.festival-grid {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  transition: transform 0.5s ease;
+}
+/* ── Cards ── */
+
+.fest-card {
+  position: relative;
+  width: 400px;
+  height: 520px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+}
+
+.fest-card.prev,
+.fest-card.next {
+  opacity: 0.6;
+  transform: scale(0.9);
+}
+
+.fest-card.active {
+  opacity: 1;
+  transform: scale(1.08);
+  z-index: 2;
+}
+
+.fest-card-bg {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+}
+
+.fc1 .fest-card-bg { background-image: url(/Picturs/thumbnails/fez-festival.jpg);filter: brightness(2); }
+.fc2 .fest-card-bg { background-image: url(/Picturs/thumbnails/rose-festival.jpg);}
+.fc3 .fest-card-bg { background-image: url(/Picturs/thumbnails/essaouira\ festival.jpg); }
+.fc4 .fest-card-bg { background-image: url(/Picturs/thumbnails/Jemaa-El-Fna-Square-Marrakech-Morocco-2-1024x568-1.jpg); filter: brightness(2);}
+.fc5 .fest-card-bg { background-image: url(/Picturs/thumbnails/imilchil_festival.jpg); }
+.fc6 .fest-card-bg { background-image: url(/Picturs/thumbnails/taragalt_festival.jpg);}
+
+.fest-card-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.1) 40%);
+}
+.fest-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.8rem 1.5rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.fest-month {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #D4A847;
+}
+
+.fest-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #F2E2C4;
+  line-height: 1.25;
+}
+
+.fest-location {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: rgba(242,226,196,0.55);
+  text-transform: uppercase;
+}
+
+.fest-desc {
+  font-size: 0.83rem;
+  line-height: 1.65;
+  color: rgba(242,226,196,0.8);
+  font-weight: 300;
+  margin-top: 0.3rem;
+}
+
+/* ── BUTTONS ── */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: 1px transparent;
+  color:#121212;
+  border-radius: 100%;
+  background-color:rgba(0, 0, 0, 0.5);
+  font-size: 1.1rem;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-btn:hover {
+  background-color:rgba(0, 0, 0, .7);
+   scale: calc(0.9);
+   color:#FAF5EC;
+   }
+.slider-btn.prev  { left: 8px; }
+.slider-btn.next  { right: 8px; }
+
+/* SECTION 2: CULTURAL CALENDAR */
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(193,68,14,0.2);
+  position: relative;
+}
+
+ .section-title { color: #121212 ; }
+.section-label { color: #121212;
+    font-family: Cinzel, serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem; 
+  }
+.section-desc {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #555;
+  border: 1px solid #121212;
+  padding: 43px;
+  border-radius: 90px;
+  transition: 0.7s;   
+}
+
+.section-desc:hover {
+  border-radius: 20px;
+  background-color: #F2E2C4;
+  color: #121212;
+  border-color: transparent;
+}
+/* grid */
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 4px;
+  margin-top: 4rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.cal-item > * {
+  position: relative;
+  z-index: 1;
+}
+.cal-item {
+  position: relative;
+  min-height: 350px; 
+  display: flex;
+  gap: 2rem;
+  align-items: flex-end;
+  justify-content: flex-end;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 2.5rem;
+  background-color:rgba(0, 0, 0, 0.2); /* fallback while image loads */
+}
+
+.cal-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.3); /* darker by default */
+  transition: filter 0.4s ease, transform 0.7s ease-out;
+  z-index: 0;
+}
+
+.cal-item:hover::before {
+  filter: brightness(0.8); /* brightens on hover */
+}
+
+/* Smooth scale back on the container */
+.cal-item::before {
+  transform: scale(1);
+}
+
+.cal-item:hover::before {
+  transform: scale(1.1);
+}
+
+.cal-info {
+  padding-bottom: 0.5rem;
+  width: 100%;
+}
+
+.cal-event-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  margin-bottom: 0.4rem;
+  color: #ffffff;
+}
+
+.cal-type {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.cal-detail {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+}
+.cal-month-tag {
+  background:rgba(212,168,71,0.5);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  bottom: 80%;
+}
+
+.cal-item:nth-child(1)::before { background-image: url('Picturs/blossom-festival.jpg'); }
+.cal-item:nth-child(2)::before { background-image: url('Picturs/Marrakech-National-Festival-of-Popular-Arts.jpg'); }
+.cal-item:nth-child(3)::before { background-image: url('Picturs/imilchil-marriage-festival.jpg'); }
+.cal-item:nth-child(4)::before { background-image: url('Picturs/marrackech-festival-de-film.jpg'); }
+.cal-item:nth-child(5)::before { background-image: url('Picturs/exposant-moussem-des-dattes-erfoud.jpg'); }
+
+/* SECTION 3: REGIONAL TRADITIONS */
+
+#traditions { background: var(--sand); }
+.traditions-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  margin-top: 4rem;
+}
+.traditions-layout.reverse { direction: rtl; }
+.traditions-layout.reverse > * { direction: ltr; }
+.tradition-visual {
+  position: relative;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+}
+.tradition-visual .visual-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8rem;
+  position: relative;
+}
+.v1 { background: linear-gradient(135deg, #C1440E, #D4A847); }
+.v2 { background: linear-gradient(135deg, #1A3A5C, #4A7C6F); }
+.v3 { background: linear-gradient(135deg, #3D2B1F, #8B2500); }
+.tradition-visual .corner-label {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+}
+.tradition-tag {
+  display: inline-block;
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--terracotta);
+  text-transform: uppercase;
+  border: 1px solid var(--terracotta);
+  padding: 0.3rem 0.8rem;
+  margin-bottom: 1.2rem;
+}
+.tradition-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1.2rem;
+  color: var(--charcoal);
+}
+.tradition-text {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #555;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+.tradition-facts { display: flex; gap: 2rem; }
+.fact { text-align: center; }
+.fact-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--terracotta);
+  display: block;
+}
+.fact-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #888;
+}
+
+/* SECTION 5: MUSIC & ARTS */
+
+section { padding: 7rem 0; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 2.5rem; }
+.section-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 0.8rem;
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--charcoal);
+  margin-bottom: 1.5rem;
+}
+.section-title em { font-style: italic; color: var(--terracotta); }
+.section-desc {
+  font-size: 1.15rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #555;
+  max-width: 600px;
+}
+
+#arts { background: var(--cream); }
+.arts-marquee-wrap {
+  overflow: hidden;
+  border-top: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+  padding: 1rem 0;
+  margin: 3rem 0;
+  background: var(--charcoal);
+}
+.arts-marquee {
+  display: flex;
+  gap: 3rem;
+  white-space: nowrap;
+  animation: marquee 25s linear infinite;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-item {
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.marquee-dot { color: var(--terracotta); }
+.arts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+.art-card {
+  position: relative;
+  padding: 2.5rem;
+  border: 1px solid rgba(28,26,23,0.12);
+  transition: all 0.3s;
+  overflow: hidden;
+}
+.art-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background: var(--terracotta);
+  transition: height 0.4s ease;
+}
+.art-card:hover::before { height: 100%; }
+.art-card:hover {
+  border-color: var(--terracotta);
+  transform: translateX(4px);
+}
+.art-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: rgba(193,68,14,0.1);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.art-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  color: var(--charcoal);
+  margin-bottom: 0.5rem;
+}
+.art-type {
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  color: var(--terracotta);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.art-desc {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #666;
+  font-weight: 300;
+}
+
+/* SECTION 6: NEWSLETTER */
+#cta {
+  background: var(--terracotta);
+  padding: 6rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.cta-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1.2rem;
+  line-height: 1.2;
+}
+.cta-sub {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.75);
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+}
+.cta-form {
+  display: flex;
+  max-width: 480px;
+  margin: 0 auto;
+  gap: 0;
+  position: relative;
+  z-index: 1;
+}
+.cta-form input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  border: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(255,255,255,0.95);
+  color: var(--charcoal);
+}
+.cta-form button {
+  padding: 1rem 1.8rem;
+  background: var(--charcoal);
+  color: var(--gold);
+  border: none;
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.cta-form button:hover { background: #c9ad76; }
