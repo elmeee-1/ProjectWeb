@@ -456,7 +456,7 @@
 
     <div class="hero fade-in-element">
       <div class="hero-bg">
-        <video autoplay loop muted playsinline>
+        <video autoplay loop muted playsinline preload="auto">
           <source src="img/tanger-hero.mp4" type="video/mp4" />
         </video>
         <div class="hero-overlay"></div>
@@ -493,7 +493,11 @@
     <div class="medinas-section" id="medinasContainer">
       <div class="medina-card fade-in-element" data-category="history">
         <div class="medina-img" onclick="openLightbox(this)">
-          <img src="img/tanger-kasbah.jpg" alt="Tangier Kasbah" />
+          <img
+            src="img/tanger-kasbah.jpg"
+            alt="Tangier Kasbah"
+            loading="lazy"
+          />
           <div class="medina-badge">Landmark</div>
         </div>
         <div class="medina-body">
