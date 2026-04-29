@@ -24,7 +24,6 @@ function openLightbox(element) {
 }
 
 function closeLightbox() {
-  document.getElementById("imageLightbox").classList.remove("active");
   const lightbox = document.getElementById("imageLightbox");
   if (lightbox) {
     lightbox.addEventListener("click", function (e) {
