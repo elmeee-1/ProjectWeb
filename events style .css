@@ -209,8 +209,8 @@ body.dark-theme .festivals-intro,body.dark-theme .section-desc , body.dark-theme
 
 .fc1 .fest-card-bg { background-image: url(/Picturs/thumbnails/fez-festival.jpg);filter: brightness(2); }
 .fc2 .fest-card-bg { background-image: url(/Picturs/thumbnails/rose-festival.jpg);}
-.fc3 .fest-card-bg { background-image: url(/Picturs/thumbnails/essaouira\ festival.jpg); }
-.fc4 .fest-card-bg { background-image: url(/Picturs/thumbnails/Jemaa-El-Fna-Square-Marrakech-Morocco-2-1024x568-1.jpg); filter: brightness(2);}
+.fc3 .fest-card-bg { background-image: url(/Picturs/thumbnails/essaouira-festival.jpg); }
+.fc4 .fest-card-bg { background-image: url(/Picturs/thumbnails/jemaa-el-fna-squar.jpg); filter: brightness(2);}
 .fc5 .fest-card-bg { background-image: url(/Picturs/thumbnails/imilchil_festival.jpg); }
 .fc6 .fest-card-bg { background-image: url(/Picturs/thumbnails/taragalt_festival.jpg);}
 
@@ -653,7 +653,7 @@ section { padding: 7rem 0; }
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url(Picturs/Meknes-Morocco.jpg);
+  background-image: url(Picturs/meknes-morocco.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

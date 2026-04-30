@@ -71,7 +71,7 @@ body.dark-theme footer.cuis-footer {
   justify-content: center;
   text-align: center;
   color: #fff;
-  background-image: url(/Picturs/Morocco\ food\ slide\ 1.jpeg);
+  background-image: url(/Picturs/morocco-food-slide1.jpe);
   background-size: cover;
   background-position: center;
   box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.7);
@@ -283,40 +283,40 @@ body.dark-theme footer.cuis-footer {
 
 /* North */
 #north .dish-card-1 .cuis-card-img {
-  background-image: url("/Picturs/tagra\ meal\ .jpg");
+  background-image: url("/Picturs/tagra-meal\ .jpg");
 }
 #north .dish-card-2 .cuis-card-img {
-  background-image: url("/Picturs/north\ coscous.webp");
+  background-image: url("/Picturs/north-coscous.jpg");
 }
 #north .dish-card-3 .cuis-card-img {
-  background-image: url("/Picturs/i139340sardines-chermoula.jpeg");
+  background-image: url("/Picturs/i139340sardines-chermoula.jpg");
 }
 /* Center */
 #center .dish-card-1 .cuis-card-img {
-  background-image: url("/Picturs/pastilla\ sweet.jpg");
+  background-image: url("/Picturs/pastilla-sweet.jpg");
 }
 #center .dish-card-2 .cuis-card-img {
-  background-image: url("/Picturs/tajine\ with\ amonds.webp");
+  background-image: url("/Picturs/tajine-with-amonds.jpg");
 }
 #center .dish-card-3 .cuis-card-img {
-  background-image: url("/Picturs/Moroccan-Chicken-Rfissa-1.jpg");
+  background-image: url("/Picturs/moroccan-chicken-rfissa-1.jpg");
 }
 /* Atlantic */
 #atlantic .dish-card-1 .cuis-card-img {
-  background-image: url("/Picturs/grilled\ sardines.jpg");
+  background-image: url("/Picturs/grilled-sardines.jpg");
 }
 #atlantic .dish-card-2 .cuis-card-img {
-  background-image: url("/Picturs/Crevettes_pil_pil_1.jpg");
+  background-image: url("/Picturs/crevettes_pil_pil_1.jpg");
 }
 #atlantic .dish-card-3 .cuis-card-img {
   background-image: url("/Picturs/taktouka.jpg");
 }
 /* South */
 #south .dish-card-1 .cuis-card-img {
-  background-image: url("/Picturs/tanjia\ marrakech.jpg");
+  background-image: url("/Picturs/tanjia-marrakech.jpg");
 }
 #south .dish-card-2 .cuis-card-img {
-  background-image: url("/Picturs/Amlu.png");
+  background-image: url("/Picturs/amlu.jpg");
 }
 #south .dish-card-3 .cuis-card-img {
   background-image: url("/Picturs/mechoui.jpg");
@@ -449,7 +449,7 @@ body.dark-theme footer.cuis-footer {
   padding: 5rem 2rem;
   color: #fff;
   overflow: hidden;
-  background-image: url("/Picturs/NORTH\ _tea.jpg");
+  background-image: url("/Picturs/north\ _tea.jpg");
   background-size: cover;
   background-position: center;
   box-shadow: inset 0 0 0 2000px rgba(92, 53, 3, 0.35);
