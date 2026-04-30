@@ -1,7 +1,7 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family:'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
 }
 
 body.dark-theme {
@@ -45,7 +45,7 @@ body.dark-theme .city-tag {
   justify-content: center;
   text-align: center;
   color: #fff;
-  background-image: url('https://images.unsplash.com/photo-1539020140153-e479b8c22e70?q=80&w=2070&auto=format&fit=crop'); 
+  background-image: url("https://images.unsplash.com/photo-1539020140153-e479b8c22e70?q=80&w=2070&auto=format&fit=crop");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -54,9 +54,12 @@ body.dark-theme .city-tag {
 }
 
 .hero-section::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-size: cover;
   background-position: center;
   z-index: -1;
@@ -77,12 +80,12 @@ body.dark-theme .city-tag {
   margin-bottom: 1rem;
   line-height: 1;
   font-style: italic;
-  text-shadow: 0px 2px 8px rgba(0,0,0,0.5);
+  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
   letter-spacing: 1px;
 }
 
 .hero-subtitle {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: clamp(1rem, 1.5vw, 1.25rem);
   font-weight: 200;
   margin-bottom: 2.5rem;
@@ -126,7 +129,6 @@ body.dark-theme .city-tag {
 
 .morocco-info-section {
   margin-top: 0;
-  background-image: url(/Picturs/sliders.pic/Gemini\ section\ .png);
   background-size: cover;
   color: #fff;
   padding: 60px 20px;
@@ -143,7 +145,7 @@ body.dark-theme .city-tag {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #ffffff; 
+  color: #ffffff;
   text-align: left;
   display: flex;
   align-items: center;
@@ -159,10 +161,10 @@ body.dark-theme .city-tag {
   font-size: 1.25rem;
   line-height: 1.6;
   margin-bottom: 80px;
-  color: #fff; 
+  color: #fff;
 }
 .intro-text p {
-  width: calc(100%/3);
+  width: calc(100% / 3);
 }
 
 @media (max-width: 768px) {
@@ -240,7 +242,7 @@ body.dark-theme .city-tag {
   padding-bottom: 100px;
   margin-bottom: 50px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0,300px));
+  grid-template-columns: repeat(auto-fit, minmax(0, 300px));
   gap: 15px;
   justify-content: space-evenly;
 }
@@ -272,7 +274,7 @@ body.dark-theme .city-tag {
   font-weight: 800;
   color: white;
   z-index: 10;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
 }
 
 .card:hover {
@@ -283,7 +285,7 @@ body.dark-theme .city-tag {
   scale: 0.9;
 }
 
-@media (max-width:1024px) {
+@media (max-width: 1024px) {
   #home {
     height: clamp(250px, 50vw, 400px);
     margin: 1rem auto;
@@ -306,7 +308,8 @@ body.dark-theme .city-tag {
     padding: 8px 10px;
     gap: 4px;
   }
-  .header a, .book-now {
+  .header a,
+  .book-now {
     white-space: nowrap;
     font-size: 11px;
   }
@@ -337,7 +340,7 @@ body.dark-theme .city-tag {
     width: 100%;
   }
   .cards {
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
     margin: 0 auto;
   }
@@ -372,7 +375,7 @@ body.dark-theme .city-tag {
     font-size: 11px;
   }
   .cards {
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
   .card {
@@ -404,7 +407,7 @@ body.dark-theme .city-tag {
   background: white;
   color: black;
 }
-.srcoll-btn-container{
+.srcoll-btn-container {
   margin-top: 40px;
   z-index: 3;
 }
@@ -414,8 +417,13 @@ body.dark-theme .city-tag {
   animation: bounce 1s infinite;
 }
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(6px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
 }
 
 #home {
@@ -461,7 +469,7 @@ body.dark-theme .city-tag {
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(255, 255, 255, 0.7);
 }
-.slide-card:hover{
+.slide-card:hover {
   scale: calc(1.1);
 }
 .card-image {
@@ -480,13 +488,13 @@ body.dark-theme .city-tag {
   letter-spacing: -1px;
   margin-bottom: 2px;
   color: #fff;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
 }
 
 .slide-sub {
   font-size: 14px;
   font-weight: 500;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255, 255, 255, 0.6);
   letter-spacing: 3px;
   text-decoration: none;
 }
@@ -499,19 +507,23 @@ body.dark-theme .city-tag {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.15) ;
-  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .slider-arrow:hover {
-  background: rgba(255,255,255,0.25) transparent;
+  background: rgba(255, 255, 255, 0.25) transparent;
   transform: translateY(-50%) scale(1.08);
 }
-.slider-arrow.prev { left: 1.2rem; }
-.slider-arrow.next { right: 1.2rem; }
+.slider-arrow.prev {
+  left: 1.2rem;
+}
+.slider-arrow.next {
+  right: 1.2rem;
+}
 
 .slider-dots {
   position: absolute;
@@ -528,7 +540,7 @@ body.dark-theme .city-tag {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.3) transparent;
+  background: rgba(255, 255, 255, 0.3) transparent;
   border: none;
   cursor: pointer;
   padding: 0;
@@ -540,30 +552,65 @@ body.dark-theme .city-tag {
 }
 
 /* Per-slide background images */
-.slide:nth-child(1) .slide-bg  { background-image: url(/Picturs/sliders.pic/marrakech.slide.jpg); }
-.slide:nth-child(1) .card-image { background-image: url(/Picturs/sliders.pic/marrakech.slide.jpg); }
+.slide:nth-child(1) .slide-bg {
+  background-image: url("Picturs/sliders.pic/marrakech.slide.jpg");
+}
+.slide:nth-child(1) .card-image {
+  background-image: url("Picturs/sliders.pic/marrakech.slide.jpg");
+}
 
-.slide:nth-child(2) .slide-bg  { background-image: url(/Picturs/sliders.pic/rabat.slide.jpg); }
-.slide:nth-child(2) .card-image { background-image: url(/Picturs/sliders.pic/rabat.slide.jpg); }
+.slide:nth-child(2) .slide-bg {
+  background-image: url("Picturs/sliders.pic/rabat.slide.jpg");
+}
+.slide:nth-child(2) .card-image {
+  background-image: url("Picturs/sliders.pic/rabat.slide.jpg");
+}
 
-.slide:nth-child(3) .slide-bg  { background-image: url(/Picturs/sliders.pic/Essaouira.slide.jpg); }
-.slide:nth-child(3) .card-image { background-image: url(/Picturs/sliders.pic/Essaouira.slide.jpg); }
+.slide:nth-child(3) .slide-bg {
+  background-image: url("Picturs/sliders.pic/Essaouira.slide.jpg");
+}
+.slide:nth-child(3) .card-image {
+  background-image: url("Picturs/sliders.pic/Essaouira.slide.jpg");
+}
 
-.slide:nth-child(4) .slide-bg  { background-image: url(/Picturs/sliders.pic/fez.slide.png); }
-.slide:nth-child(4) .card-image { background-image: url(/Picturs/sliders.pic/fez.slide.png); }
+.slide:nth-child(4) .slide-bg {
+  background-image: url("Picturs/sliders.pic/fez.slide.png");
+}
+.slide:nth-child(4) .card-image {
+  background-image: url("Picturs/sliders.pic/fez.slide.png");
+}
 
-.slide:nth-child(5) .slide-bg  { background-image: url(/Picturs/sliders.pic/agadir.slide\ .png); }
-.slide:nth-child(5) .card-image { background-image: url(/Picturs/sliders.pic/agadir.slide\ .png); }
+.slide:nth-child(5) .slide-bg {
+  background-image: url("Picturs/sliders.pic/agadir.slide .png");
+}
+.slide:nth-child(5) .card-image {
+  background-image: url("Picturs/sliders.pic/agadir.slide .png");
+}
 
-.slide:nth-child(6) .slide-bg  { background-image: url(/Picturs/sliders.pic/chefchaouen.slide.jpg); }
-.slide:nth-child(6) .card-image { background-image: url(/Picturs/sliders.pic/chefchaouen.slide.jpg); }
+.slide:nth-child(6) .slide-bg {
+  background-image: url("Picturs/sliders.pic/chefchaouen.slide.jpg");
+}
+.slide:nth-child(6) .card-image {
+  background-image: url("Picturs/sliders.pic/chefchaouen.slide.jpg");
+}
 
-.slide:nth-child(7) .slide-bg  { background-image: url(/Picturs/sliders.pic/ifrane.slide.jpg); }
-.slide:nth-child(7) .card-image { background-image: url(/Picturs/sliders.pic/ifrane.slide.jpg); }
+.slide:nth-child(7) .slide-bg {
+  background-image: url("Picturs/sliders.pic/ifrane.slide.jpg");
+}
+.slide:nth-child(7) .card-image {
+  background-image: url("Picturs/sliders.pic/ifrane.slide.jpg");
+}
 
-.slide:nth-child(8) .slide-bg  { background-image: url(/Picturs/sliders.pic/ouarzazat.slide.jpg); }
-.slide:nth-child(8) .card-image { background-image: url(/Picturs/sliders.pic/ouarzazat.slide.jpg); }
+.slide:nth-child(8) .slide-bg {
+  background-image: url("Picturs/sliders.pic/ouarzazat.slide.jpg");
+}
+.slide:nth-child(8) .card-image {
+  background-image: url("Picturs/sliders.pic/ouarzazat.slide.jpg");
+}
 
-.slide:nth-child(9) .slide-bg  { background-image: url(/Picturs/sliders.pic/sahara.slide.png); }
-.slide:nth-child(9) .card-image { background-image: url(/Picturs/sliders.pic/sahara.slide.png); }
-
+.slide:nth-child(9) .slide-bg {
+  background-image: url("Picturs/sliders.pic/sahara.slide.png");
+}
+.slide:nth-child(9) .card-image {
+  background-image: url("Picturs/sliders.pic/sahara.slide.png");
+}

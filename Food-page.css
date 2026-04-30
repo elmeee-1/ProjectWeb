@@ -1,14 +1,17 @@
-*{ margin: 0;
+* {
+  margin: 0;
   padding: 0;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-     background-color: #fff;
-      color: #121212; 
-      overflow-x: hidden; 
+  background-color: #fff;
+  color: #121212;
+  overflow-x: hidden;
 }
 body.dark-theme #north,
 body.dark-theme #center,
@@ -19,10 +22,10 @@ body.dark-theme .fusion-section {
   background-color: #121212 !important;
 }
 
-body.dark-theme .ingr-card,  
+body.dark-theme .ingr-card,
 body.dark-theme .guide-box {
   background-color: #1e1e1e !important;
-  border-color: #ffffff ;
+  border-color: #ffffff;
 }
 body.dark-theme .cuis-card {
   background-color: #121212;
@@ -71,7 +74,7 @@ body.dark-theme footer.cuis-footer {
   background-image: url(/Picturs/Morocco\ food\ slide\ 1.jpeg);
   background-size: cover;
   background-position: center;
-  box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.7);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.7);
   overflow: hidden;
 }
 
@@ -85,12 +88,15 @@ body.dark-theme footer.cuis-footer {
 }
 
 @keyframes fadeInUp {
-  to { opacity: 1; transform: translateY(0); }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .cuis-hero-ornament {
   font-size: 2.3rem;
-  color:  #f0b429;
+  color: #f0b429;
   opacity: 0.8;
   margin-bottom: 1rem;
   line-height: 1;
@@ -101,11 +107,12 @@ body.dark-theme footer.cuis-footer {
   font-style: italic;
   line-height: 1.4;
   letter-spacing: 2px;
-  text-shadow: 0 2px 12px rgba(0,0,0,1);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 1);
 }
 
-.cuis-hero h1 span {   font-size: 2.3rem;
-  color:  #f0b429;
+.cuis-hero h1 span {
+  font-size: 2.3rem;
+  color: #f0b429;
   opacity: 0.8;
   margin-bottom: 1rem;
 }
@@ -128,12 +135,15 @@ body.dark-theme footer.cuis-footer {
 }
 .cuis-hero-divider::before,
 .cuis-hero-divider::after {
-  content: '';
+  content: "";
   flex: 1;
   height: 1px;
-  background: rgba(212,147,10,.6);
+  background: rgba(212, 147, 10, 0.6);
 }
-.cuis-hero-divider span { color: #f0b429; font-size: 1.3rem; }
+.cuis-hero-divider span {
+  color: #f0b429;
+  font-size: 1.3rem;
+}
 
 .cuis-hero-pills {
   margin-top: 1.8rem;
@@ -145,18 +155,20 @@ body.dark-theme footer.cuis-footer {
 
 .region-pill {
   padding: 0.6rem 1rem;
-  border: 1px solid rgba(212,147,10,0.5);
+  border: 1px solid rgba(212, 147, 10, 0.5);
   border-radius: 999px;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 0.8rem;
   text-transform: uppercase;
   text-decoration: none;
-  transition: background 1s, color 1s;
+  transition:
+    background 1s,
+    color 1s;
 }
 .region-pill:hover {
-  background: rgba(212,147,10,.22);
+  background: rgba(212, 147, 10, 0.22);
   color: #f0b429;
-  scale:calc(1.1);
+  scale: calc(1.1);
 }
 
 /* ─── REGION BANNER ─── */
@@ -171,19 +183,29 @@ body.dark-theme footer.cuis-footer {
   color: #fff;
 }
 
-#north   .region-banner {   box-shadow: inset 0 0 0 2000px rgba(15,37,71,0.72); }
-#center  .region-banner {   box-shadow: inset 0 0 0 2000px rgba(44,20,0,0.72); }
-#atlantic .region-banner {  box-shadow: inset 0 0 0 2000px rgba(10,54,48,0.72); }
-#south   .region-banner {   box-shadow: inset 0 0 0 2000px rgba(80,28,0,0.72); }
-#east    .region-banner {   box-shadow: inset 0 0 0 2000px rgba(40,30,0,0.72); }
+#north .region-banner {
+  box-shadow: inset 0 0 0 2000px rgba(15, 37, 71, 0.72);
+}
+#center .region-banner {
+  box-shadow: inset 0 0 0 2000px rgba(44, 20, 0, 0.72);
+}
+#atlantic .region-banner {
+  box-shadow: inset 0 0 0 2000px rgba(10, 54, 48, 0.72);
+}
+#south .region-banner {
+  box-shadow: inset 0 0 0 2000px rgba(80, 28, 0, 0.72);
+}
+#east .region-banner {
+  box-shadow: inset 0 0 0 2000px rgba(40, 30, 0, 0.72);
+}
 
 .region-tag-pill {
   display: inline-block;
   font-size: 0.75rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  background: rgba(212,147,10,0.5);
-  padding: .3rem .9rem;
+  background: rgba(212, 147, 10, 0.5);
+  padding: 0.3rem 0.9rem;
   border-radius: 2px;
   margin-bottom: 0.9rem;
 }
@@ -199,7 +221,7 @@ body.dark-theme footer.cuis-footer {
 .region-desc {
   font-size: 1.05rem;
   font-style: italic;
-  margin-top: .7rem;
+  margin-top: 0.7rem;
   opacity: 0.78;
   max-width: 520px;
   line-height: 1.65;
@@ -219,12 +241,14 @@ body.dark-theme footer.cuis-footer {
   grid-template-columns: 1fr 300px;
   gap: 2rem;
   max-width: 1200px;
-  margin: 0 ;
-  padding: 3rem ;
+  margin: 0;
+  padding: 3rem;
 }
 
 @media (max-width: 900px) {
-  .cuis-content-grid { grid-template-columns: 1fr; }
+  .cuis-content-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .dishes-grid {
@@ -236,13 +260,15 @@ body.dark-theme footer.cuis-footer {
   border-radius: 24px;
   overflow: hidden;
   background: #fff;
-  box-shadow: 0 4px 20px rgba(0,0,0,1);
-  transition: box-shadow .3s, transform .3s;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+  transition:
+    box-shadow 0.3s,
+    transform 0.3s;
   cursor: default;
 }
 
 .cuis-card:hover {
-  box-shadow: 0 10px 16px rgb(255, 255, 255 ,0.7);
+  box-shadow: 0 10px 16px rgb(255, 255, 255, 0.7);
   transform: translateY(-4px);
 }
 
@@ -256,38 +282,78 @@ body.dark-theme footer.cuis-footer {
 }
 
 /* North */
-#north .dish-card-1 .cuis-card-img { background-image: url('/Picturs/tagra\ meal\ .jpg') }
-#north .dish-card-2 .cuis-card-img { background-image: url('/Picturs/north\ coscous.webp'); }
-#north .dish-card-3 .cuis-card-img { background-image: url('/Picturs/i139340sardines-chermoula.jpeg'); }
+#north .dish-card-1 .cuis-card-img {
+  background-image: url("/Picturs/tagra\ meal\ .jpg");
+}
+#north .dish-card-2 .cuis-card-img {
+  background-image: url("/Picturs/north\ coscous.webp");
+}
+#north .dish-card-3 .cuis-card-img {
+  background-image: url("/Picturs/i139340sardines-chermoula.jpeg");
+}
 /* Center */
-#center .dish-card-1 .cuis-card-img { background-image: url('/Picturs/pastilla\ sweet.jpg'); }
-#center .dish-card-2 .cuis-card-img { background-image: url('/Picturs/tajine\ with\ amonds.webp') }
-#center .dish-card-3 .cuis-card-img { background-image: url('/Picturs/Moroccan-Chicken-Rfissa-1.jpg'); }
+#center .dish-card-1 .cuis-card-img {
+  background-image: url("/Picturs/pastilla\ sweet.jpg");
+}
+#center .dish-card-2 .cuis-card-img {
+  background-image: url("/Picturs/tajine\ with\ amonds.webp");
+}
+#center .dish-card-3 .cuis-card-img {
+  background-image: url("/Picturs/Moroccan-Chicken-Rfissa-1.jpg");
+}
 /* Atlantic */
-#atlantic .dish-card-1 .cuis-card-img { background-image: url('/Picturs/grilled\ sardines.jpg'); }
-#atlantic .dish-card-2 .cuis-card-img { background-image: url('/Picturs/Crevettes_pil_pil_1.jpg'); }
-#atlantic .dish-card-3 .cuis-card-img { background-image: url('/Picturs/taktouka.jpg'); }
+#atlantic .dish-card-1 .cuis-card-img {
+  background-image: url("/Picturs/grilled\ sardines.jpg");
+}
+#atlantic .dish-card-2 .cuis-card-img {
+  background-image: url("/Picturs/Crevettes_pil_pil_1.jpg");
+}
+#atlantic .dish-card-3 .cuis-card-img {
+  background-image: url("/Picturs/taktouka.jpg");
+}
 /* South */
-#south .dish-card-1 .cuis-card-img { background-image: url('/Picturs/tanjia\ marrakech.jpg'); }
-#south .dish-card-2 .cuis-card-img { background-image: url('/Picturs/Amlu.png'); }
-#south .dish-card-3 .cuis-card-img { background-image: url('/Picturs/mechoui.jpg'); }
+#south .dish-card-1 .cuis-card-img {
+  background-image: url("/Picturs/tanjia\ marrakech.jpg");
+}
+#south .dish-card-2 .cuis-card-img {
+  background-image: url("/Picturs/Amlu.png");
+}
+#south .dish-card-3 .cuis-card-img {
+  background-image: url("/Picturs/mechoui.jpg");
+}
 /* East */
-#east .dish-card-1 .cuis-card-img { background-image: url('/Picturs/bakbouka-tripes-de-mouton-en-sauce-.jpg'); }
-#east .dish-card-2 .cuis-card-img { background-image: url('/Picturs/karan.jpg'); }
-#east .dish-card-3 .cuis-card-img { background-image: url('/Picturs/clemantinne.jpg'); }
+#east .dish-card-1 .cuis-card-img {
+  background-image: url("/Picturs/bakbouka-tripes-de-mouton-en-sauce-.jpg");
+}
+#east .dish-card-2 .cuis-card-img {
+  background-image: url("/Picturs/karan.jpg");
+}
+#east .dish-card-3 .cuis-card-img {
+  background-image: url("/Picturs/clemantinne.jpg");
+}
 
 /* Fallback color per region if image missing */
-#north .cuis-card-img    { background-color: #1B5E8A; }
-#center .cuis-card-img   { background-color: #7B3F00; }
-#atlantic .cuis-card-img { background-color: #0E7A6A; }
-#south .cuis-card-img    { background-color: #A83000; }
-#east .cuis-card-img     { background-color: #7A5500; }
+#north .cuis-card-img {
+  background-color: #1b5e8a;
+}
+#center .cuis-card-img {
+  background-color: #7b3f00;
+}
+#atlantic .cuis-card-img {
+  background-color: #0e7a6a;
+}
+#south .cuis-card-img {
+  background-color: #a83000;
+}
+#east .cuis-card-img {
+  background-color: #7a5500;
+}
 
 .cuis-card-img::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.65) , transparent 55%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent 55%);
 }
 
 .cuis-card-badge {
@@ -316,7 +382,6 @@ body.dark-theme footer.cuis-footer {
   line-height: 1.2;
 }
 
-
 .cuis-card p {
   margin-top: 0.5rem;
   font-size: 0.72rem;
@@ -341,7 +406,7 @@ body.dark-theme footer.cuis-footer {
 .ingr-title {
   font-size: 1.05rem;
   font-weight: 700;
-  letter-spacing: .03em;
+  letter-spacing: 0.03em;
   color: #07086d;
   padding-bottom: 0.8rem;
   margin-bottom: 0.8rem;
@@ -352,14 +417,19 @@ body.dark-theme footer.cuis-footer {
   display: flex;
   align-items: flex-start;
   gap: 0.55rem;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   border-bottom: 1px dashed #e0e0e0;
   font-size: 0.92rem;
 }
 
-.ingr-item:last-child { border-bottom: none; }
+.ingr-item:last-child {
+  border-bottom: none;
+}
 
-.ingr-icon { font-size: 1.1rem; flex-shrink: 0; }
+.ingr-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
 
 .ingr-name {
   font-weight: 600;
@@ -369,7 +439,7 @@ body.dark-theme footer.cuis-footer {
 }
 
 .ingr-origin {
-  font-size: .8rem;
+  font-size: 0.8rem;
   color: #777;
   font-style: italic;
 }
@@ -379,21 +449,25 @@ body.dark-theme footer.cuis-footer {
   padding: 5rem 2rem;
   color: #fff;
   overflow: hidden;
-  background-image: url('/Picturs/NORTH\ _tea.jpg');
+  background-image: url("/Picturs/NORTH\ _tea.jpg");
   background-size: cover;
   background-position: center;
   box-shadow: inset 0 0 0 2000px rgba(92, 53, 3, 0.35);
 }
 
-.tea-inner { max-width: 1000px; margin: 0 auto; position: relative; }
+.tea-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
 
-.tea-heading { 
+.tea-heading {
   text-align: center;
-   margin-bottom: 3rem;
-line-height: 40px;
-   font-size: large;
-     color: #f5f5f5;
-     }
+  margin-bottom: 3rem;
+  line-height: 40px;
+  font-size: large;
+  color: #f5f5f5;
+}
 
 .tea-heading h2 {
   font-size: clamp(2rem, 4vw, 3rem);
@@ -418,7 +492,7 @@ line-height: 40px;
 
 .tea-card {
   background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(0,0,0,0.25);
+  border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 12px;
   padding: 1rem;
 }
@@ -426,42 +500,57 @@ line-height: 40px;
 .tea-card h3 {
   font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.05rem;
 }
 
 .tea-card p {
   font-size: 0.7rem;
   line-height: 1.75;
-  color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .tea-card ul {
   list-style: none;
-  margin-top: .8rem;
+  margin-top: 0.8rem;
   display: flex;
   flex-direction: column;
-  gap:0.35rem;
+  gap: 0.35rem;
 }
 
 .tea-card ul li {
   font-size: 0.72rem;
-  color: rgba(255,255,255,.65);
+  color: rgba(255, 255, 255, 0.65);
   padding-left: 1rem;
   position: relative;
   line-height: 1.5;
 }
 
-
 /* ─── MOBILE ─── */
 @media (max-width: 768px) {
-  nav.header { flex-direction: column; width: 100%; }
-  .nav-links { flex-wrap: wrap; justify-content: center; }
-  .cuis-content-grid { padding: 1.5rem 1rem 3rem; }
-  .region-banner { height: 260px; }
-  .guide-box { margin: 15px; }
+  nav.header {
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cuis-content-grid {
+    padding: 1.5rem 1rem 3rem;
+  }
+  .region-banner {
+    height: 260px;
+  }
+  .guide-box {
+    margin: 15px;
+  }
 }
 
 @media (max-width: 480px) {
-  .dishes-grid { grid-template-columns: 1fr; }
-  .cuis-hero h1 { font-size: 2.2rem; }
+  .dishes-grid {
+    grid-template-columns: 1fr;
+  }
+  .cuis-hero h1 {
+    font-size: 2.2rem;
+  }
 }

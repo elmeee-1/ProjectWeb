@@ -79,7 +79,7 @@ body {
   padding-block: clamp(8rem, 12vw, 11rem) clamp(3.5rem, 7vw, 6rem);
   overflow: hidden;
   z-index: 1;
-  background-color: #0a0a0a; 
+  background-color: #0a0a0a;
 }
 
 .book-hero-bg {
@@ -89,7 +89,7 @@ body {
   background-image: url("img/book-pattern.jpg");
   background-size: cover;
   background-position: center;
-  opacity: 0.3; /
+  opacity: 0.3;
 }
 
 .book-hero::after {

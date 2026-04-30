@@ -1,73 +1,61 @@
-
+Markdown
 <div align="center">
 
-# 🌍 ProjectWeb
+# 🇲🇦 Majlis — Guide Touristique du Maroc
 
-A web project developed by a group of students from the **Faculty of Science Semlalia**.
+🌍 **[VOIR LA DÉMO EN LIGNE](https://elmeee-1.github.io/ProjectWeb/)** 🌍
 
-
-## 📋 Description
-
-ProjectWeb is a multi-page website built with HTML and CSS, showcasing destinations and travel content. The project includes a homepage, destinations page, and a blog section.
+*Un projet web immersif développé par un groupe d'étudiants de la **Faculté des Sciences Semlalia (FSSM)**.*
 
 </div>
 
---------------(TOPIC)-------------  :
-# 🇲🇦 ProjectWeb — Guide Touristique du Maroc
-
-A tourist guide website for Morocco, developed by a group of students from the **Faculty of Science Semlalia**.
-
 ## 📋 Description
+**Majlis** (anciennement ProjectWeb) est un site web statique interactif servant de guide touristique premium pour le Maroc. L'objectif de ce projet est de faire découvrir les plus belles destinations, la richesse historique et la gastronomie du pays à travers une interface utilisateur moderne, ergonomique et entièrement responsive.
 
-ProjectWeb is a multi-page website that serves as a **tourist guide for Morocco**, helping visitors discover the most beautiful destinations, landscapes, and culture the country has to offer. Built with HTML and CSS as part of our web development studies.
+### 🛠️ Technologies Utilisées :
+<div align="center">
+  
+![HTML5](https://img.shields.io/badge/HTML5-e34c26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-264de4?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-f7df1e?style=for-the-badge&logo=javascript&logoColor=black)
+![Git](https://img.shields.io/badge/Git-f05032?style=for-the-badge&logo=git&logoColor=white)
 
-## 🗺️ Features
+</div>
 
-- 🏙️ Discover Moroccan destinations
-- 📖    Travel blog with tips and highlights
-- 📍     map of Morocco
-- ℹ️ About the project and the team
+## ✨ Fonctionnalités Principales (UI/UX)
+Ce projet va au-delà d'un simple site HTML/CSS en intégrant des fonctionnalités JavaScript avancées :
+- 🌗 **Mode Sombre (Dark Mode) :** Bouton de bascule avec sauvegarde des préférences utilisateur (`localStorage`).
+- 📱 **Design 100% Responsive :** Menu "burger" interactif et grilles flexibles s'adaptant aux mobiles et tablettes.
+- 🖼️ **Galerie Interactive (Lightbox) :** Affichage immersif des images en plein écran.
+- 🎛️ **Filtrage Dynamique :** Tri des destinations touristiques en temps réel sans rechargement de page.
+- 🎞️ **Médias Optimisés :** Intégration de vidéos en arrière-plan (`playsinline`) et chargement différé des images (`lazy loading`) pour des performances maximales.
 
-
-
-
-### 🛠️ Langages Utiliseé :
----
-![HTML](https://img.shields.io/badge/HTML5-e34c26?style=flat-square&logo=html5&logoColor=white)
-|
-![CSS](https://img.shields.io/badge/CSS3-264de4?style=flat-square&logo=css3&logoColor=white)
-|
-![JavaScript](https://img.shields.io/badge/JavaScript-f7df1e?style=flat-square&logo=javascript&logoColor=black)
-|
-![Git](https://img.shields.io/badge/Git-f05032?style=flat-square&logo=git&logoColor=white) 
-
-| 
----
-## 📁 Project Structure: 
+## 📁 Structure du Projet
+```text
 ProjectWeb/
-├── index.html          # Homepage
-├── Destinations.html   # Destinations page
-├── About.html          # About page
-├── style.css           # Main stylesheet
-├── styleDEST.css       # Destinations stylesheet
-├── generalCSS.css      # Shared styles
-└── versions/           # Previous versions archive
-
-## 👨‍💻 Team
-
-Developed by a group of students — contributions tracked via Git.
-------
-
-## 🚀 How to Run
-
-1. Clone the repository:
-```bash
-   git clone https://github.com/elmeee-1/ProjectWeb.git
+├── index.html               # Page d'accueil avec carrousel interactif
+├── destinations.html        # Page principale des destinations
+├── about.html               # Philosophie de l'agence et présentation
+├── book.html                # Formulaire de réservation interactif
+├── [villes].html            # +10 pages détaillées (Marrakech, Fès, Sahara, etc.)
+├── CSS/
+│   ├── style.css            # Styles principaux
+│   ├── styleDEST.css        # Styles spécifiques aux destinations
+│   └── generalCSS.css       # Variables globales et charte graphique
+├── JS/
+│   └── script.js            # Logique du mode sombre, lightbox et interactions
+└── Picturs/                 # Médias optimisés (images, vidéos, thumbnails)
 ```
-2. Open `index.html` in your browser.
+🚀 Comment Lancer le Projet Localement
+Clonez ce dépôt sur votre machine :
 
-## 📌 Status
+Bash
+git clone [https://github.com/elmeee-1/ProjectWeb.git](https://github.com/elmeee-1/ProjectWeb.git)
+Ouvrez le dossier dans votre éditeur de code (ex: VS Code).
 
-🟡 In progress — actively developed by the team
+Ouvrez le fichier index.html dans votre navigateur (ou utilisez l'extension Live Server).
 
+📌 Statut du Projet
+🟢 Terminé — Validé et prêt pour la présentation finale.
 
+Développé avec passion pour le module de Développement Web.
