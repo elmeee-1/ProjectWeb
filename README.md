@@ -46,9 +46,10 @@ ProjectWeb/
 │   └── script.js            # Logique du mode sombre, lightbox et interactions
 └── Picturs/                 # Médias optimisés (images, vidéos, thumbnails)
 ```
-🚀 Lancer le projet localement
+## 🚀 Lancer le projet localement
 1. Cloner le dépôt
-bash : git clone https://github.com/elmeee-1/ProjectWeb.git
+bash :
+`` git clone https://github.com/elmeee-1/ProjectWeb.git
 
 Ouvrez le dossier dans votre éditeur de code (ex: VS Code).
 
