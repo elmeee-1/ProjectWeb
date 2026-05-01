@@ -616,3 +616,31 @@ body.dark-theme .city-tag {
 .slide:nth-child(9) .card-image {
   background-image: url("Picturs/sliders.pic/sahara-slide.jpg");
 }
+.hero-nav-link {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  background:none ;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.hero-nav-link:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  background: #f0b429;
+}
+.hero-nav {
+  margin-top: 1.8rem;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  border: 2px solid rgba(212, 147, 10, 0.6); 
+  padding: 15px 20px; 
+  border-radius: 40px;
+}

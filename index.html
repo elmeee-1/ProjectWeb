@@ -66,14 +66,20 @@
           From the blue streets of Chefchaouen to the golden dunes of Sahara
           desert. Explore the most beautiful cities in North Africa.
         </p>
-        <button class="scroll-btn" onclick="document.querySelector('.morocco-info-section').scrollIntoView({behavior:'smooth'})">see more
-        </button>
+         <div class="hero-divider"></div>
+    <div class="hero-nav">
+      <a href="#medenas"    class="hero-nav-link">morocco's cities</a>
+      <a href="#infos-morocco" class="hero-nav-link">About morocoo</a>
+      <a href="#discorve"   class="hero-nav-link">Explore morocoo</a>
+      
+    </div>
+  </div>
       </div>
     </section>
 
 <!-- Sliders -->
 <div id="home">
-  <div class="slider-track">
+  <div class="slider-track" id="medenas">
 
     <div class="slide">
       <div class="slide-bg"></div>
@@ -202,7 +208,7 @@
 </div>
 
 </div>
-    <section class="morocco-info-section">
+    <section class="morocco-info-section" id="infos-morocco">
       <h2 class="section-title">
         Before you start planning your trip, here is some useful information
         about Morocco that you should know:
@@ -234,11 +240,9 @@
           so – we hope you can find some inspiration here for your trip!
         </p>
       </div>
-        <button class="scroll-btn" onclick="document.querySelector('.cards').scrollIntoView({behavior:'smooth'})">
-            see more
-        </button>
+
         
-      <div class="cards">
+      <div class="cards" id="discorve">
         <a href="history.html" class="card-link">
           <div class="card">
             <img src="Picturs/thumbnails/img1-hstry.jpg" alt="Art and History" />
@@ -272,10 +276,7 @@
         </a>
       </div>
       </div>
-      
-        <button class="scroll-btn" onclick="document.querySelector('#home').scrollIntoView({behavior:'smooth'})">
-            see more
-        </button>
+    
     </section>
 
 
