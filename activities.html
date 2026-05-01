@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+<title>Activities in Morocco — Majlis</title>
+<link rel="stylesheet" href="activities-style.css">
+<link rel="stylesheet" href="generalCSS.css">
+<link rel="stylesheet" href="footer.css">
+</head>
+<body>
+ <header class="global-header">
+  <nav class="navbar">
+    
+    <a href="index.html" class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="spinning-plane">
+        <path d="M21,16V14L13,9V3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V9L2,14V16L10,13.5V19L8,20.5V22L11.5,21L15,22V20.5L13,19V13.5L21,16Z" />
+      </svg>
+      <span class="logo-text">Majlis</span>
+    </a>
+
+    <ul class="nav-links">
+      <li class="dropdown"><a href="index.html">Home</a>
+       <div class="dropdown-content">
+        <a href="history.html">History</a>
+        <a href="food.html">Food</a>
+        <a href="events.html">Events</a>
+        <a href="activities.html">Activities</a>
+       </div>
+      </li>
+
+      <li><a href="what-to-do.html">What to do</a></li>
+      
+      <li class="dropdown">
+        <a href="destinations.html">Destinations</a>
+        <div class="dropdown-content">
+          <a href="marrakech.html">Marrakech</a>
+          <a href="essaouira.html">Essaouira</a>
+          <a href="rabat.html">Rabat</a>
+          <a href="tanger.html">Tanger</a>
+          <a href="fes.html">Fès</a>
+          <a href="agadir.html">Agadir</a>
+          <a href="ifrane.html">Ifrane</a>
+          <a href="ouarzazate.html">Ouarzazate</a>
+          <a href="chefchaouen.html">Chefchaouen</a>
+          <a href="sahara_desert.html">Sahara desert</a>
+        </div>
+      </li>
+      
+      <li><a href="about.html">About</a></li>
+      
+      <li class="mobile-only-btn">
+        <a href="book.html" class="btn-nav-book">Book Now</a>
+      </li>
+    </ul>
+
+    <div class="nav-controls">
+      <a href="book.html" class="btn-nav-book desktop-only-btn">Book Now</a>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">🌙</button>
+      
+    <button class="hamburger" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('nav-active'); this.classList.toggle('toggle');">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div> </nav>
+  </nav>
+</header>
+  
+<section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="hero-eyebrow"> Discover · Decide · Try</div>
+    <h1>Activities<br>in <em>Morocco</em></h1>
+    <p>From the misty Rif mountains of the North to the golden dunes of the South,
+        <br> and the sparkling Atlantic shores — Morocco offers adventures for every traveller.</p>
+    <div class="section-pills">
+      <a href="#north" class="pill pill-north">North</a>
+      <a href="#south" class="pill pill-south"> South </a>
+      <a href="#beaches" class="pill pill-beach">Beaches </a>
+    </div>
+  </div>
+</section>
+
+<section class="section-block" id="north">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag tag-north"> 01 — Northern Morocco</div>
+      <h2>North Morocco<br>Activities</h2>
+      <p>The north blends Andalusian heritage, Rif Mountain wilderness, and ancient medinas. A region of striking contrasts — blue cities, cedar forests, and Atlantic cliffs.</p>
+    </div>
+
+    <div class="cards-grid">
+
+      <div class="act-card">
+        <div class="card-thumb card-thumb-north">
+        </div>
+        <div class="card-body">
+          <div class="card-title">Walking Tour — Chefchaouen</div>
+          <div class="card-location"> Chefchaouen, Rif Mountains</div>
+          <div class="card-desc">Wander the iconic blue-painted alleyways of the medina, visit the Kasbah museum, and hike up to the Spanish mosque for a panoramic view of the blue city.</div>
+          <div class="card-footer">
+            <div>
+              <div class="price-tag price-north">150 MAD <small>/ person</small></div>
+              <div style="font-size:.7rem;color:var(--muted);margin-top:.15rem">~3–4 hours</div>
+            </div>
+            <span class="badge-diff badge-easy">Easy</span>
+          </div>
+          <button class="btn-reserve btn-north">Reserve a Spot</button>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="card-thumb card-thumb-north">
+        </div>
+        <div class="card-body">
+          <div class="card-title">Cedar Forest Hike — Azrou</div>
+          <div class="card-location"> Azrou, Middle Atlas</div>
+          <div class="card-desc">Trek through ancient cedar forests where Barbary macaques roam freely. Guides lead you through trails with stunning Atlas mountain views and wildlife encounters.</div>
+          <div class="card-footer">
+            <div>
+              <div class="price-tag price-north">200 MAD <small>/ person</small></div>
+              <div style="font-size:.7rem;color:var(--muted);margin-top:.15rem">~5–6 hours</div>
+            </div>
+            <span class="badge-diff badge-medium">Moderate</span>
+          </div>
+          <button class="btn-reserve btn-north">Reserve a Spot</button>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="card-thumb card-thumb-north">
+        </div>
+        <div class="card-body">
+          <div class="card-title">Fès Medina Guided Tour</div>
+          <div class="card-location"> Fès el-Bali, Fès</div>
+          <div class="card-desc">Explore the world's largest car-free urban area. Visit the Chouara Tannery, Al-Qarawiyyin Mosque (oldest university), and hidden fondouks with a certified local guide.</div>
+          <div class="card-footer">
+            <div>
+              <div class="price-tag price-north">350 MAD <small>/ person</small></div>
+              <div style="font-size:.7rem;color:var(--muted);margin-top:.15rem">~4 hours</div>
+            </div>
+            <span class="badge-diff badge-easy">Easy</span>
+          </div>
+          <button class="btn-reserve btn-north">Reserve a Spot</button>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="card-thumb card-thumb-north">
+        </div>
+        <div class="card-body">
+          <div class="card-title">Snorkeling & Boat Tour</div>
+          <div class="card-location">Al Hoceima National Park</div>
+          <div class="card-desc">Discover crystal-clear Mediterranean waters aboard a local fishing boat. Snorkel among colourful reefs and isolated coves accessible only by sea.</div>
+          <div class="card-footer">
+            <div>
+              <div class="price-tag price-north">400 MAD <small>/ person</small></div>
+              <div style="font-size:.7rem;color:var(--muted);margin-top:.15rem">~3 hours</div>
+            </div>
+            <span class="badge-diff badge-easy">Easy</span>
+          </div>
+          <button class="btn-reserve btn-north">Reserve a Spot</button>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="card-thumb card-thumb-north">
+        </div>
+        <div class="card-body">
+          <div class="card-title">Surfing Lessons</div>
+          <div class="card-location"> Moulay Bousselham, Atlantic</div>
+          <div class="card-desc">Beginner-friendly surf lessons on the Atlantic coast just north of Rabat. Boards and wetsuits included. Small groups of max 6 students per instructor.</div>
+          <div class="card-footer">
+            <div>
+              <div class="price-tag price-north">500 MAD <small>/ person</small></div>
+              <div style="font-size:.7rem;color:var(--muted);margin-top:.15rem">~2 hours</div>
+            </div>
+            <span class="badge-diff badge-medium">Moderate</span>
+          </div>
+          <button class="btn-reserve btn-north">Reserve a Spot</button>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="card-thumb card-thumb-north">
+        </div>
+        <div class="card-body">
+          <div class="card-title">Skiing — Michlifen Resort</div>
+          <div class="card-location"> Ifrane, Middle Atlas</div>
+          <div class="card-desc">Morocco's premier ski resort sits at 2,000 m elevation. Ski or snowboard on groomed pistes from December to March. Rentals and lessons available on site.</div>
+          <div class="card-footer">
+            <div>
+              <div class="price-tag price-north">500 MAD <small>/ day</small></div>
+              <div style="font-size:.7rem;color:var(--muted);margin-top:.15rem">Full day pass</div>
+            </div>
+            <span class="badge-diff badge-medium">Moderate</span>
+          </div>
+          <button class="btn-reserve btn-north">Reserve a Spot</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section-block" id="south">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag tag-south">02 — Southern Morocco</div>
+      <h2>South Morocco<br>Activities</h2>
+      <p>The south is where the Sahara begins. Vast ergs, ancient kasbahs, starlit camps, and camel caravans await in one of the world's most dramatic landscapes.</p>
+    </div>
+
+    <div class="cards-grid">
+
+      <div class="act-card">
+        <div class="card-thumb card-thumb-south">
+        </div>
+        <div class="card-body">
+          <div class="card-title">Camel Trek — Erg Chebbi</div>
+          <div class="card-location"> Merzouga, Sahara Desert</div>
+          <div class="card-desc">Ride across the legendary orange dunes of Erg Chebbi at sunset. The package includes a guided camel trek, Berber camp dinner, traditional music, and overnight stay under the stars.</div>
+          <div class="card-footer">
+            <div>
+              <div class="price-tag price-south">500 MAD <small>/ person</small></div>
+              <div style="font-size:.7rem;color:var(--muted);margin-top:.15rem">Sunset + overnight</div>
+            </div>
+            <span class="badge-diff badge-easy">Easy</span>
+          </div>
+          <button class="btn-reserve btn-south">Reserve a Spot</button>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="card-thumb card-thumb-south">
+        </div>
+        <div class="card-body">
+          <div class="card-title">Aït Ben Haddou Kasbah Tour</div>
+          <div class="card-location"> Ouarzazate, Drâa Valley</div>
+          <div class="card-desc">Explore the UNESCO World Heritage ksar of Aït Ben Haddou with a local historian. Climb to the granary at the top for sweeping valley views, and visit film studios nearby.</div>
+          <div class="card-footer">
+            <div>
+              <div class="price-tag price-south">300 MAD <small>/ person</small></div>
+              <div style="font-size:.7rem;color:var(--muted);margin-top:.15rem">~2–3 hours</div>
+            </div>
+            <span class="badge-diff badge-easy">Easy</span>
+          </div>
+          <button class="btn-reserve btn-south">Reserve a Spot</button>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="card-thumb card-thumb-south">
+        </div>
+        <div class="card-body">
+          <div class="card-title">4×4 Desert Safari</div>
+          <div class="card-location"> Zagora & Erg Chigaga</div>
+          <div class="card-desc">Blast across remote desert tracks in a 4×4 Land Rover with an expert driver-guide. Reach the remote Erg Chigaga dunes, far from the tourist trail, for an authentic experience.</div>
+          <div class="card-footer">
+            <div>
+              <div class="price-tag price-south">1500 MAD <small>/ vehicle</small></div>
+              <div style="font-size:.7rem;color:var(--muted);margin-top:.15rem">Full day · 4 seats</div>
+            </div>
+            <span class="badge-diff badge-medium">Moderate</span>
+          </div>
+          <button class="btn-reserve btn-south">Reserve a Spot</button>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="card-thumb card-thumb-south">
+        <div class="card-thumb-pattern"></div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Stargazing Night — Sahara</div>
+          <div class="card-location"> Merzouga Desert Camp</div>
+          <div class="card-desc">One of the darkest skies on Earth. An astrophysicist guide leads a 2-hour session with high-powered telescopes. Spot the Milky Way, nebulae, and planets with the naked eye.</div>
+          <div class="card-footer">
+            <div>
+              <div class="price-tag price-south">400 MAD <small>/ person</small></div>
+              <div style="font-size:.7rem;color:var(--muted);margin-top:.15rem">~2 hours · night</div>
+            </div>
+            <span class="badge-diff badge-easy">Easy</span>
+          </div>
+          <button class="btn-reserve btn-south">Reserve a Spot</button>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="card-thumb card-thumb-south">
+        </div>
+        <div class="card-body">
+          <div class="card-title">Toubkal Summit Trek</div>
+          <div class="card-location"> Toubkal, High Atlas</div>
+          <div class="card-desc">Summit North Africa's highest peak at 4,167 m. A 2-day guided ascent from Imlil village with mule support for luggage. Includes mountain hut accommodation at base camp.</div>
+          <div class="card-footer">
+            <div>
+              <div class="price-tag price-south">1800 MAD <small>/ person</small></div>
+              <div style="font-size:.7rem;color:var(--muted);margin-top:.15rem">2 days · all-inclusive</div>
+            </div>
+            <span class="badge-diff badge-hard">Challenging</span>
+          </div>
+          <button class="btn-reserve btn-south">Reserve a Spot</button>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="card-thumb card-thumb-south">
+        </div>
+        <div class="card-body">
+          <div class="card-title">Argan Oil Farm Visit</div>
+          <div class="card-location"> Agadir – Sous-Massa</div>
+          <div class="card-desc">Tour a family-run argan cooperative. Watch Berber women hand-crack argan nuts using traditional stone mills and discover the full production process — finishing with tastings and shopping.</div>
+          <div class="card-footer">
+            <div>
+              <div class="price-tag price-south">Free <small>(with purchase)</small></div>
+              <div style="font-size:.7rem;color:var(--muted);margin-top:.15rem">~1 hour</div>
+            </div>
+            <span class="badge-diff badge-easy">Easy</span>
+          </div>
+          <button class="btn-reserve btn-south">Reserve a Spot</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section-block" id="beaches">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag tag-beach">03 — Moroccan Beaches</div>
+      <h2>Beach Activities<br>&amp; Coastal Escapes</h2>
+      <p>Morocco is bordered by two seas — the Atlantic and the Mediterranean. From wild surf breaks to calm turquoise coves, its coastline is one of Africa's most diverse.</p>
+    </div>
+
+    <div class="cards-grid">
+      <div class="act-card">
+        <div class="card-thumb card-thumb-beach">
+        </div>
+        <div class="card-body">
+          <div class="card-title">Surfing Capital — Taghazout</div>
+          <div class="card-location"> Taghazout, near Agadir</div>
+          <div class="card-desc">Morocco's surf mecca. World-class point breaks like Anchor Point and Killer Point attract pros and beginners alike. Week-long surf camps include lessons, board rental, and accommodation.</div>
+          <div class="card-footer">
+            <div>
+              <div class="price-tag price-beach">600 MAD <small>/ day</small></div>
+              <div style="font-size:.7rem;color:var(--muted);margin-top:.15rem">Lesson + board</div>
+            </div>
+            <span class="badge-diff badge-medium">Moderate</span>
+          </div>
+          <button class="btn-reserve btn-beach">Reserve a Spot</button>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="card-thumb card-thumb-beach">
+        </div>
+        <div class="card-body">
+          <div class="card-title">Kitesurfing — Dakhla</div>
+          <div class="card-location"> Dakhla Lagoon, Western Sahara</div>
+          <div class="card-desc">Dakhla's shallow lagoon and consistent trade winds make it one of the world's top kitesurfing spots. IKO-certified instructors run courses from beginner to advanced.</div>
+          <div class="card-footer">
+            <div>
+              <div class="price-tag price-beach">900 MAD <small>/ session</small></div>
+              <div style="font-size:.7rem;color:var(--muted);margin-top:.15rem">3-hour session</div>
+            </div>
+            <span class="badge-diff badge-medium">Moderate</span>
+          </div>
+          <button class="btn-reserve btn-beach">Reserve a Spot</button>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="card-thumb card-thumb-beach">
+        </div>
+        <div class="card-body">
+          <div class="card-title">Sailing Day Trip — Essaouira</div>
+          <div class="card-location"> Port of Essaouira</div>
+          <div class="card-desc">Sail along the Atlantic coast from the historic port of Mogador. Spot dolphins, sea turtles, and purple islands (Île Purpuraire). Includes lunch on board and snorkelling stop.</div>
+          <div class="card-footer">
+            <div>
+              <div class="price-tag price-beach">750 MAD <small>/ person</small></div>
+              <div style="font-size:.7rem;color:var(--muted);margin-top:.15rem">Full day · lunch incl.</div>
+            </div>
+            <span class="badge-diff badge-easy">Easy</span>
+          </div>
+          <button class="btn-reserve btn-beach">Reserve a Spot</button>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="card-thumb card-thumb-beach">
+        </div>
+        <div class="card-body">
+          <div class="card-title">Diving — Mediterranean Coast</div>
+          <div class="card-location"> Al Hoceima / M'Diq</div>
+          <div class="card-desc">Explore underwater caves, Posidonia meadows, and vivid marine life in the protected waters of Al Hoceima National Park. PADI-certified dive centres available locally.</div>
+          <div class="card-footer">
+            <div>
+              <div class="price-tag price-beach">550 MAD <small>/ dive</small></div>
+              <div style="font-size:.7rem;color:var(--muted);margin-top:.15rem">Equipment included</div>
+            </div>
+            <span class="badge-diff badge-medium">Moderate</span>
+          </div>
+          <button class="btn-reserve btn-beach">Reserve a Spot</button>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="card-thumb card-thumb-beach">
+        </div>
+        <div class="card-body">
+          <div class="card-title">Beach Volleyball + Hammam</div>
+          <div class="card-location"> Agadir Beach, Souss Bay</div>
+          <div class="card-desc">Join a beach volleyball tournament on Agadir's 10 km beach, then unwind in a traditional hammam — a steam bath followed by kessa scrub and argan oil massage.</div>
+          <div class="card-footer">
+            <div>
+              <div class="price-tag price-beach">250 MAD <small>/ person</small></div>
+              <div style="font-size:.7rem;color:var(--muted);margin-top:.15rem">Half day combo</div>
+            </div>
+            <span class="badge-diff badge-easy">Easy</span>
+          </div>
+          <button class="btn-reserve btn-beach">Reserve a Spot</button>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="card-thumb card-thumb-beach">
+        </div>
+        <div class="card-body">
+          <div class="card-title">Sunset Horseback Ride</div>
+          <div class="card-location"> Sidi Kaouki Beach, Essaouira</div>
+          <div class="card-desc">Gallop along one of Morocco's wildest Atlantic beaches at golden hour. Experienced stable provides well-trained horses for all levels, with a guide leading the 90-minute coastal ride.</div>
+          <div class="card-footer">
+            <div>
+              <div class="price-tag price-beach">480 MAD <small>/ person</small></div>
+              <div style="font-size:.7rem;color:var(--muted);margin-top:.15rem">~90 minutes</div>
+            </div>
+            <span class="badge-diff badge-easy">Easy</span>
+          </div>
+          <button class="btn-reserve btn-beach">Reserve a Spot</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<footer>
+
+<div id="footer">
+  <div id="bande-deco"></div>
+  <div id="footer-titre">
+    <h2>&#9670; MOROCCO &#9670;</h2>  
+  </div>
+  <div id="footer-colonnes">
+    <table id="table-colonnes">
+      <tr>
+        <td class="col">
+          <p class="col-titre">&#9670; Destinations</p>
+          <ul class="liste-footer">
+            <li><a href="marrakech.html">&#9658; Marrakech &ndash; The Red City</a></li>
+            <li><a href="fes.html">&#9658; Fes &ndash; The Ancient Medina</a></li>
+            <li><a href="tanger.html">&#9658; Tanger &ndash; The Bride of the North</a></li>
+            <li><a href="chefchaouen.html">&#9658; Chefchaouen &ndash; The Blue City</a></li>
+            <li><a href="essaouira.html">&#9658; Essaouira &ndash; The Atlantic Coast</a></li>
+            <li><a href="rabat.html">&#9658; Rabat &ndash; The Capital</a></li>
+            <li><a href="ouarzazate.html">&#9658; Ouarzazate &ndash; The Door of Desert</a></li>
+            <li><a href="sahara_desert.html">&#9658; Sahara Desert &ndash; Merzouga Dunes</a></li>
+            <li><a href="Ifrane.html">&#9658; Ifrane &ndash; The Little Switzerland</a></li>
+            <li><a href="agadir.html">&#9658; Agadir &ndash; The Beach City</a></li>
+          </ul>
+        </td>
+        <td class="separateur"></td>
+        <td class="col">
+          <p class="col-titre">&#9670; Contact</p>
+          <p class="contact-ligne">
+            <span class="contact-label">Address :</span><br>
+            FSSM, Marrakech &ndash; Maroc
+          </p>
+
+          <p class="contact-ligne">
+            <span class="contact-label">Phone :</span><br>
+            +212 7 71 27 88 82
+          </p>
+
+          <p class="contact-ligne">
+            <span class="contact-label">Email :</span><br>
+            <a class="lien-email" href="mailto:contact@maroc.ma">
+              e.elmellouki6998@uca.ac.ma
+            </a>
+          </p>
+      </tr>
+    </table>
+  </div>
+
+
+  <div id="reseaux">
+    <a href="index.html">HOME</a>
+    <a href="what-to-do.html">What to do</a>
+    <a href="destinations.html">Distinations</a>
+    <a href="about.html">About</a>
+    <a href="book.html">Book now</a>
+  </div>
+
+  <div id="footer-bas">
+    <p>
+      &copy; 2025 Morocco Authentic &ndash; All rights reserved
+      <span class="pipe">|</span>
+      <a href="index.html#guide-box">Site Map</a>
+    </p>
+  </div>
+</div>
+</footer>
+</html>
+
+<script>
+  // Animate cards on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.act-card').forEach((card, i) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(28px)';
+    card.style.transition = `opacity .45s ease ${(i % 3) * 0.1}s, transform .45s ease ${(i % 3) * 0.1}s, box-shadow .22s, border-color .22s`;
+    observer.observe(card);
+  });
+</script>
+<script src="darkmode.js"></script>
+</body>
+</html>

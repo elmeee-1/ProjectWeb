@@ -19,11 +19,11 @@
   box-shadow: 0 10px 80px rgba(0, 0, 0, 0.4);
 }
 .dest-card:hover {
-  transform: translateY(-7px);
+  transform: translateY(-3px);
   box-shadow: 0 10px 80px rgb(255, 255, 255, 0.4);
 }
 :has(.dest-card:hover) .dest-card:not(:hover) {
-  filter: brightness(0.5) blur(0.7px);
+  filter: brightness(0.5) opacity(0.8);
 }
 
 .dest-card:nth-child(1) {

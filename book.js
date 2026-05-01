@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     toReveal.forEach((el) => el && el.classList.add("visible"));
   }, 1000);
 
+
   /* la date  */
   const today = new Date().toISOString().split("T")[0];
   const arrivalInput = document.getElementById("arrival");
@@ -34,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
       departureInput.min = this.value || today;
     });
   }
+
 
   /* submit  */
   const form = document.getElementById("bookForm");
@@ -93,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
         form.style.display = "none";
         successEl.classList.add("visible");
         successEl.scrollIntoView({ behavior: "smooth", block: "center" });
-      }, 1500);
+      }, 1000);
     });
   }
 });

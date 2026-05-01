@@ -3,7 +3,6 @@
   --green: #006233;
   --page-bg: #f5f2ee;
   --text-color: #1a1a1a;
-
   --nav-bg: rgba(255, 255, 255, 0.95);
   --nav-text: #1a1a1a;
   --nav-border: rgba(0, 0, 0, 0.05);
@@ -12,7 +11,6 @@
 body.dark-theme {
   --page-bg: #111010;
   --text-color: #e8e2d9;
-
   --nav-bg: rgba(17, 16, 16, 0.95);
   --nav-text: #e8e2d9;
   --nav-border: rgba(255, 255, 255, 0.05);

@@ -19,6 +19,7 @@ function openLightbox(element) {
   const imgSrc = element.querySelector("img").src;
   const lightbox = document.getElementById("imageLightbox");
   const lightboxImg = document.getElementById("lightboxImage");
+
   if (lightbox && lightboxImg) {
     lightboxImg.src = imgSrc;
     lightbox.classList.add("active");
@@ -27,6 +28,7 @@ function openLightbox(element) {
 
 function closeLightbox() {
   const lightbox = document.getElementById("imageLightbox");
+ 
   if (lightbox) {
     lightbox.classList.remove("active");
   }
@@ -36,6 +38,7 @@ function closeLightbox() {
 const lightbox = document.getElementById("imageLightbox");
 if (lightbox) {
   lightbox.addEventListener("click", function (e) {
+   
     if (e.target === this) closeLightbox();
   });
 }
@@ -44,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
+        
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
           observer.unobserve(entry.target);

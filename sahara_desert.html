@@ -388,65 +388,65 @@
       <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
       <img id="lightboxImage" src="" alt="Enlarged Image" />
     </div>
-    <header class="global-header">
-      <nav class="navbar">
-        <a href="index.html" class="logo">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            class="spinning-plane"
-          >
-            <path
-              d="M21,16V14L13,9V3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V9L2,14V16L10,13.5V19L8,20.5V22L11.5,21L15,22V20.5L13,19V13.5L21,16Z"
-            />
-          </svg>
-          <span class="logo-text">Majlis</span>
-        </a>
+    
+  <header class="global-header">
+    <nav class="navbar">
+    
+    <a href="index.html" class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="spinning-plane">
+        <path d="M21,16V14L13,9V3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V9L2,14V16L10,13.5V19L8,20.5V22L11.5,21L15,22V20.5L13,19V13.5L21,16Z" />
+      </svg>
+      <span class="logo-text">Majlis</span>
+    </a>
 
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="what-to-do.html">What to do</a></li>
+    <ul class="nav-links">
+      <li class="dropdown"><a href="index.html">Home</a>
+       <div class="dropdown-content">
+        <a href="history.html">History</a>
+        <a href="food.html">Food</a>
+        <a href="events.html">Events</a>
+        <a href="activities.html">Activities</a>
+      </div>
+      </li>
 
-          <li class="dropdown">
-            <a href="destinations.html">Destinations</a>
-            <div class="dropdown-content">
-              <a href="marrakech.html">Marrakech</a>
-              <a href="essaouira.html">Essaouira</a>
-              <a href="rabat.html">Rabat</a>
-              <a href="fes.html">Fès</a>
-              <a href="agadir.html">Agadir</a>
-              <a href="ifrane.html">Ifrane</a>
-              <a href="ouarzazate.html">Ouarzazate</a>
-              <a href="chefchaouen.html">Chefchaouen</a>
-              <a href="sahara_desert.html">Sahara desert</a>
-            </div>
-          </li>
-
-          <li><a href="about.html">About</a></li>
-
-          <li class="mobile-only-btn">
-            <a href="book.html" class="btn-nav-book">Book Now</a>
-          </li>
-        </ul>
-
-        <div class="nav-controls">
-          <a href="book.html" class="btn-nav-book desktop-only-btn">Book Now</a>
-          <button
-            id="themeToggle"
-            class="theme-toggle"
-            aria-label="Toggle Theme"
-          >
-            🌙
-          </button>
-
-       <button class="hamburger" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+      <li><a href="what-to-do.html">What to do</a></li>
+      
+      <li class="dropdown">
+        <a href="destinations.html">Destinations</a>
+        <div class="dropdown-content">
+          <a href="marrakech.html">Marrakech</a>
+          <a href="essaouira.html">Essaouira</a>
+          <a href="rabat.html">Rabat</a>
+          <a href="tanger.html">Tanger</a>
+          <a href="fes.html">Fès</a>
+          <a href="agadir.html">Agadir</a>
+          <a href="ifrane.html">Ifrane</a>
+          <a href="ouarzazate.html">Ouarzazate</a>
+          <a href="chefchaouen.html">Chefchaouen</a>
+          <a href="sahara_desert.html">Sahara desert</a>
         </div>
-      </nav>
-    </header>
+      </li>
+      
+      <li><a href="about.html">About</a></li>
+      
+      <li class="mobile-only-btn">
+        <a href="book.html" class="btn-nav-book">Book Now</a>
+      </li>
+    </ul>
+
+    <div class="nav-controls">
+      <a href="book.html" class="btn-nav-book desktop-only-btn">Book Now</a>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">🌙</button>
+      
+    <button class="hamburger" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('nav-active'); this.classList.toggle('toggle');">
+      <span></span>
+      <span></span>
+        <span></span>
+      </button>
+    </div> </nav>
+  </nav>
+</header>  
+
     <div class="hero fade-in-element">
       <div class="hero-bg">
 <video autoplay loop muted playsinline preload="auto">
@@ -615,25 +615,16 @@
     <script src="darkmode.js"></script>
     <script src="script.js"></script>
   </body>
-  <footer>
-
+   <footer>
 
 <div id="footer">
-
-
   <div id="bande-deco"></div>
-
-
   <div id="footer-titre">
-    <h2>&#9670; MOROCCO &#9670;</h2>
-  
+    <h2>&#9670; MOROCCO &#9670;</h2>  
   </div>
-
-
   <div id="footer-colonnes">
-    <table id="table-colonnes" border="0" cellspacing="0" cellpadding="0">
+    <table id="table-colonnes">
       <tr>
-
         <td class="col">
           <p class="col-titre">&#9670; Destinations</p>
           <ul class="liste-footer">
@@ -649,13 +640,9 @@
             <li><a href="agadir.html">&#9658; Agadir &ndash; The Beach City</a></li>
           </ul>
         </td>
-
-
         <td class="separateur"></td>
-
         <td class="col">
           <p class="col-titre">&#9670; Contact</p>
-
           <p class="contact-ligne">
             <span class="contact-label">Address :</span><br>
             FSSM, Marrakech &ndash; Maroc
@@ -663,13 +650,13 @@
 
           <p class="contact-ligne">
             <span class="contact-label">Phone :</span><br>
-            +212 5 00 00 00 00
+            +212 7 71 27 88 82
           </p>
 
           <p class="contact-ligne">
             <span class="contact-label">Email :</span><br>
             <a class="lien-email" href="mailto:contact@maroc.ma">
-              contact@maroc.ma
+              e.elmellouki6998@uca.ac.ma
             </a>
           </p>
       </tr>
@@ -678,25 +665,23 @@
 
 
   <div id="reseaux">
-    <a href="#">HOME</a>
-    <a href="#">What to do</a>
-    <a href="#">Distinations</a>
-    <a href="#">About</a>
-    <a href="#">Book now</a>
+    <a href="index.html">HOME</a>
+    <a href="what-to-do.html">What to do</a>
+    <a href="destinations.html">Distinations</a>
+    <a href="about.html">About</a>
+    <a href="book.html">Book now</a>
   </div>
 
-  
   <div id="footer-bas">
     <p>
       &copy; 2025 Morocco Authentic &ndash; All rights reserved
       <span class="pipe">|</span>
-      <a href="#">Site Map</a>
+      <a href="index.html#guide-box">Site Map</a>
     </p>
   </div>
-
- </div>
-  </div>
+</div>
 </footer>
+
 
 <script src="darkmode.js"></script>
 <script src="script.js"></script>

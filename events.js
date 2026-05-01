@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const prevBtn    = document.querySelector('.slider-btn.prev');
   const nextBtn    = document.querySelector('.slider-btn.next');
 
-  const SLIDE_DURATION = 3000;
+  const SLIDE_DURATION = 2000;
 
   let interval;
   const originals = [...document.querySelectorAll('.fest-card')];
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const cards = [...document.querySelectorAll('.fest-card')];
   const CLONE  = 2;
-  let current  = CLONE; // start on first real card
+  let current  = CLONE; 
 
   function getCardWidth() {
     const gap = parseInt(window.getComputedStyle(grid).gap) || 24;
@@ -23,9 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
   function showCard(index, animate = true) {
     current = index;
 
-    const cardWidth      = getCardWidth();
+    const cardWidth = getCardWidth();
     const containerWidth = sliderWrap.offsetWidth;
-    const offset         = index * cardWidth - (containerWidth / 2 - cardWidth / 2);
+    const offset = index * cardWidth - (containerWidth / 2 - cardWidth / 2);
 
     grid.style.transition = animate ? 'transform 0.5s ease' : 'none';
     grid.style.transform  = `translateX(-${offset}px)`;
@@ -42,7 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
   grid.addEventListener('transitionend', () => {
     const total = cards.length;
     if (current >= total - CLONE) showCard(CLONE, false);
-    if (current < CLONE)          showCard(total - CLONE - 1, false);
+    if (current < CLONE)
+      showCard(total - CLONE - 1, false);
   });
 
   function next() { showCard(current + 1); }
@@ -76,8 +77,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const button  = form?.querySelector('button');
   if (!form || !input || !button) return;
 
-  // Inject message block right after the form
-  const msg = document.createElement('div');
+ // Inject message block right after the form
+ const msg = document.createElement('div');
   msg.className = 'cta-message';
   msg.innerHTML = '<span class="msg-icon"></span><span class="msg-text"></span>';
   form.insertAdjacentElement('afterend', msg);

@@ -4,78 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discover Morocco | Trips</title>
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
     <link rel="stylesheet" href="style-what-to-do.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="generalCSS.css">
-    <style>
-        .gallery-mini {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin: 20px 0;
-        }
-        .gallery-img {
-            width: 130px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 24px;
-            box-shadow: 0 6px 14px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
-        }
-        .gallery-img:hover {
-            transform: scale(1.05);
-        }
-        .info-grid {
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        }
-        .back-trips, .btn-book {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-    </style>
 </head>
 <body>
-    <header class="global-header">
-        <nav class="navbar">
-            <a href="index.html" class="logo">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="spinning-plane">
-                    <path d="M21,16V14L13,9V3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V9L2,14V16L10,13.5V19L8,20.5V22L11.5,21L15,22V20.5L13,19V13.5L21,16Z"/>
-                </svg>
-                <span class="logo-text">Majlis</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="what-to-do.html">What to do</a></li>
-                <li class="dropdown">
-                    <a href="destinations.html">Destinations</a>
-                    <div class="dropdown-content">
-                        <a href="marrakech.html">Marrakech</a>
-                        <a href="essaouira.html">Essaouira</a>
-                        <a href="rabat.html">Rabat</a>
-                        <a href="fes.html">Fès</a>
-                        <a href="agadir.html">Agadir</a>
-                        <a href="ifrane.html">Ifrane</a>
-                        <a href="ouarzazate.html">Ouarzazate</a>
-                        <a href="chefchaouen.html">Chefchaouen</a>
-                        <a href="sahara_desert.html">Sahara desert</a>
-                    </div>
-                </li>
-                <li><a href="about.html">About</a></li>
-                <li class="mobile-only-btn">
-                    <a href="book.html" class="btn-nav-book">Book Now</a>
-                </li>
-            </ul>
-            <div class="nav-controls">
-                <a href="book.html" class="btn-nav-book desktop-only-btn">Book Now</a>
-                <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">🌙</button>
-                <button class="hamburger" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('nav-active'); this.classList.toggle('toggle');">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </nav>
-    </header>
+  <header class="global-header">
+    <nav class="navbar">    
+    <a href="index.html" class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="spinning-plane">
+        <path d="M21,16V14L13,9V3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V9L2,14V16L10,13.5V19L8,20.5V22L11.5,21L15,22V20.5L13,19V13.5L21,16Z" />
+      </svg>
+      <span class="logo-text">Majlis</span>
+    </a>
+
+    <ul class="nav-links">
+      <li class="dropdown"><a href="index.html">Home</a>
+       <div class="dropdown-content">
+        <a href="history.html">History</a>
+        <a href="food.html">Food</a>
+        <a href="events.html">Events</a>
+        <a href="activities.html">Activities</a>
+      </div>
+      </li>
+
+      <li><a href="what-to-do.html">What to do</a></li>
+      
+      <li class="dropdown">
+        <a href="destinations.html">Destinations</a>
+        <div class="dropdown-content">
+          <a href="marrakech.html">Marrakech</a>
+          <a href="essaouira.html">Essaouira</a>
+          <a href="rabat.html">Rabat</a>
+          <a href="fes.html">Fès</a>
+          <a href="tanger.html">Tanger</a>
+          <a href="agadir.html">Agadir</a>
+          <a href="ifrane.html">Ifrane</a>
+          <a href="ouarzazate.html">Ouarzazate</a>
+          <a href="chefchaouen.html">Chefchaouen</a>
+          <a href="sahara_desert.html">Sahara desert</a>
+        </div>
+      </li>
+      
+      <li><a href="about.html">About</a></li>
+      
+      <li class="mobile-only-btn">
+        <a href="book.html" class="btn-nav-book">Book Now</a>
+      </li>
+    </ul>
+
+    <div class="nav-controls">
+      <a href="book.html" class="btn-nav-book desktop-only-btn">Book Now</a>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">🌙</button>
+      
+    <button class="hamburger" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('nav-active'); this.classList.toggle('toggle');">
+      <span></span>
+      <span></span>
+        <span></span>
+      </button>
+    </div> </nav>
+  </nav>
+</header>  
 
     <section class="hero">
         <div class="badge">TIMELESS ESCAPES</div>
@@ -88,66 +78,107 @@
         <div class="gallery" id="tripsGallery"></div>
     </section>
 
-    <footer>
-        <div id="footer">
-            <div id="bande-deco"></div>
-            <div id="footer-titre"><h2>&#9670; MOROCCO &#9670;</h2></div>
-            <div id="footer-colonnes">
-                <table id="table-colonnes" border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                        <td class="col">
-                            <p class="col-titre">&#9670; Destinations</p>
-                            <ul class="liste-footer">
-                                <li><a href="marrakech.html">&#9658; Marrakech – The Red City</a></li>
-                                <li><a href="fes.html">&#9658; Fes – The Ancient Medina</a></li>
-                                <li><a href="tanger.html">&#9658; Tanger – The Bride of the North</a></li>
-                                <li><a href="chefchaouen.html">&#9658; Chefchaouen – The Blue City</a></li>
-                                <li><a href="essaouira.html">&#9658; Essaouira – The Atlantic Coast</a></li>
-                                <li><a href="rabat.html">&#9658; Rabat – The Capital</a></li>
-                                <li><a href="ouarzazate.html">&#9658; Ouarzazate – The Door of Desert</a></li>
-                                <li><a href="sahara_desert.html">&#9658; Sahara Desert – Merzouga Dunes</a></li>
-                                <li><a href="Ifrane.html">&#9658; Ifrane – The Little Switzerland</a></li>
-                                <li><a href="agadir.html">&#9658; Agadir – The Beach City</a></li>
-                            </ul>
-                        </td>
-                        <td class="separateur"></td>
-                        <td class="col">
-                            <p class="col-titre">&#9670; Contact</p>
-                            <p class="contact-ligne"><span class="contact-label">Address :</span><br>FSSM, Marrakech – Maroc</p>
-                            <p class="contact-ligne"><span class="contact-label">Phone :</span><br>+212 5 00 00 00 00</p>
-                            <p class="contact-ligne"><span class="contact-label">Email :</span><br><a class="lien-email" href="mailto:contact@maroc.ma">contact@maroc.ma</a></p>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div id="reseaux">
-                <a href="#">HOME</a> <a href="#">What to do</a> <a href="#">Destinations</a> <a href="#">About</a> <a href="#">Book now</a>
-            </div>
-            <div id="footer-bas">
-                <p>&copy; 2025 Morocco Authentic – All rights reserved <span class="pipe">|</span> <a href="#">Site Map</a></p>
-            </div>
-        </div>
-    </footer>
-
     <div id="detailModal" class="detail-modal">
         <div class="detail-container" id="detailContainer">
             <button class="close-detail" id="closeModalBtn">&crarr;<i class="fas fa-times"></i></button>
             <div id="dynamicDetailContent"></div>
         </div>
     </div>
+    <footer>
 
-    <script>
+<div id="footer">
+  <div id="bande-deco"></div>
+  <div id="footer-titre">
+    <h2>&#9670; MOROCCO &#9670;</h2>  
+  </div>
+  <div id="footer-colonnes">
+    <table id="table-colonnes">
+      <tr>
+        <td class="col">
+          <p class="col-titre">&#9670; Destinations</p>
+          <ul class="liste-footer">
+            <li><a href="marrakech.html">&#9658; Marrakech &ndash; The Red City</a></li>
+            <li><a href="fes.html">&#9658; Fes &ndash; The Ancient Medina</a></li>
+            <li><a href="tanger.html">&#9658; Tanger &ndash; The Bride of the North</a></li>
+            <li><a href="chefchaouen.html">&#9658; Chefchaouen &ndash; The Blue City</a></li>
+            <li><a href="essaouira.html">&#9658; Essaouira &ndash; The Atlantic Coast</a></li>
+            <li><a href="rabat.html">&#9658; Rabat &ndash; The Capital</a></li>
+            <li><a href="ouarzazate.html">&#9658; Ouarzazate &ndash; The Door of Desert</a></li>
+            <li><a href="sahara_desert.html">&#9658; Sahara Desert &ndash; Merzouga Dunes</a></li>
+            <li><a href="Ifrane.html">&#9658; Ifrane &ndash; The Little Switzerland</a></li>
+            <li><a href="agadir.html">&#9658; Agadir &ndash; The Beach City</a></li>
+          </ul>
+        </td>
+        <td class="separateur"></td>
+        <td class="col">
+          <p class="col-titre">&#9670; Contact</p>
+          <p class="contact-ligne">
+            <span class="contact-label">Address :</span><br>
+            FSSM, Marrakech &ndash; Maroc
+          </p>
+
+          <p class="contact-ligne">
+            <span class="contact-label">Phone :</span><br>
+            +212 7 71 27 88 82
+          </p>
+
+          <p class="contact-ligne">
+            <span class="contact-label">Email :</span><br>
+            <a class="lien-email" href="mailto:contact@maroc.ma">
+              e.elmellouki6998@uca.ac.ma
+            </a>
+          </p>
+      </tr>
+    </table>
+  </div>
+
+
+  <div id="reseaux">
+    <a href="index.html">HOME</a>
+    <a href="what-to-do.html">What to do</a>
+    <a href="destinations.html">Distinations</a>
+    <a href="about.html">About</a>
+    <a href="book.html">Book now</a>
+  </div>
+
+  <div id="footer-bas">
+    <p>
+      &copy; 2025 Morocco Authentic &ndash; All rights reserved
+      <span class="pipe">|</span>
+      <a href="index.html#guide-box">Site Map</a>
+    </p>
+  </div>
+</div>
+</footer>
+ <script>
+        // Custom toast function (replaces alert)
+        function showCustomMessage(tripTitle) {
+            const toast = document.createElement('div');
+            toast.className = 'custom-toast';
+            toast.innerHTML = `
+                ✨ Thank you! A travel specialist will contact you about "${tripTitle}". Feel the magic of Morocco.
+                <button class="close-toast">✕</button>
+            `;
+            document.body.appendChild(toast);
+
+            toast.querySelector('.close-toast').onclick = () => toast.remove();
+
+            setTimeout(() => {
+                if (toast.parentNode) toast.remove();
+            }, 5000);
+        }
+
         const tripsData = [
             {
                 id: "sahara",
                 title: "Adveture trip to Sahara desert",
                 tagline: "Whispers of golden dunes & starlit nights",
-                heroImg: "Picturs/sliders.pic/sahara.slide.png",
+                heroImg: "Picturs/sliders.pic/sahara-slide.jpg",
                 mainDescription:" Merzouga offers a true desert adventure with golden dunes, thrilling activities, and unforgettable nights under the stars. Experience camel trekking, sandboarding, and Berber culture in a luxury camp setting. A magical escape into the heart of the Sahara.",
-                duration: "3D / 2N",
+                duration: "3 Day / 2 Night",
                 bestSeason: "Oct - Apr",
                 groupSize: "2-12 travelers",
-                priceFrom: "€290",
+                priceFrom: "290€",
                 highlights: ["Sunset camel trekking", "Sahara dunes", "Camel trekking", "Starry sky"],
                 activities: ["Camel ride", "Stargazing", "Quad biking", "Sandboarding"],
                 gallery: [
@@ -160,34 +191,34 @@
                 id: "marrakech",
                 title: "Cultural trip to Marrakech",
                 tagline: "Red city, vibrant souks & royal gardens",
-                heroImg: "Picturs/marrakech.jpg",
+                heroImg: "Picturs/marackech-slide.jpg",
                 mainDescription: "Immerse in the sensory overload of Jemaa el-Fnaa, explore hidden palaces, Majorelle gardens, and traditional riads. Marrakech blends ancient heritage with modern art and culinary excellence.",
-                duration: "4D / 3N",
+                duration: "7 Day / 6 Night",
                 bestSeason: "Mar - May / Sep - Nov",
                 groupSize: "2-10 travelers",
-                priceFrom: "€350",
+                priceFrom: "€550",
                 highlights: ["Jemaa el-Fnaa square", "Medina & souks", "Souks shopping","place and riads"],
                 activities: ["Cooking class", "Hot air balloon (optional)", "Marrakech walking tour", "Berber market visit"],
                 gallery: [
-                    "Picturs/marrakech1.jpg",
-                    "Picturs/marrakech2.jpg",
-                    "Picturs/marrakech3.jpg"
+                    "Picturs/marackech1.jpg",
+                    "Picturs/marackech2.jpg",
+                    "Picturs/marackech3.jpg"
                 ]
             },
             {
                 id: "essaouira",
                 title: "Coastal trip to Essaouira",
                 tagline: "Atlantic breeze & bohemian coastline",
-                heroImg: "Picturs/essaouira.jpg",
+                heroImg: "Picturs/essaouira-slide.jpg",
                 mainDescription: "Whitewashed medina, crashing waves, and a laid-back vibe. Essaouira is a coastal gem perfect for windsurfing, fresh seafood, and wandering through art galleries. A serene seaside escape.",
-                duration: "3D / 2N",
+                duration: "3 Day / 2 Night",
                 bestSeason: "Apr - Oct",
                 groupSize: "2-15 travelers",
                 priceFrom: "€220",
                 highlights: ["Skala de la Ville", "Port & blue boats", "Gnaoua music", "Wind & kite surfing", "Fresh fish market"],
                 activities: ["Surf lessons", "Camel riding on beach", "Art workshop", "Boat trip"],
                 gallery: [
-                    "Picturs/essaouira 1925.jpg",
+                    "Picturs/essaouira1.jpg",
                     "Picturs/essaouira2.jpg",
                     "Picturs/essaouira3.jpg"
                 ]
@@ -196,12 +227,12 @@
                 id: "atlas",
                 title: "Atlas sernity trip",
                 tagline: "Valleys, waterfalls & Berber villages",
-                heroImg: "Picturs/old-Hassan-II-Mosque.jpg",
+                heroImg: "Picturs/atlas-slide.jpg",
                 mainDescription: "Trek through the High Atlas, visit remote Berber communities, and witness breathtaking waterfalls like Ouzoud. Adventure meets culture in Morocco’s rooftop wilderness.",
-                duration: "2D / 1N (day trips available)",
+                duration: "2 Day / 1 Night (day trips available)",
                 bestSeason: "Apr - Jun / Sep - Oct",
                 groupSize: "2-12 hikers",
-                priceFrom: "€150",
+                priceFrom: "€200",
                 highlights: ["Imlil valley", "Toubkal base camp", "Berber tea ceremonies", "Waterfalls hike", "Mule-assisted trek"],
                 activities: ["Guided mountain trekking", "Mule trek", "Village homestay", "Photography tour"],
                 gallery: [
@@ -214,16 +245,16 @@
                 id: "chefchaouen",
                 title: "Photography trip to Chefchaouen",
                 tagline: "The magical blue pearl of Rif",
-                heroImg: "Picturs/sliders.pic/chefchaouen.slide.jpg",
+                heroImg: "Picturs/chefchaouen-slide.jpg",
                 mainDescription: "Wander through blue-washed alleyways, enjoy panoramic mountain views, and feel the artistic soul of Chefchaouen. One of the most photogenic and peaceful towns in Morocco.",
-                duration: "2D / 2N",
+                duration: "2 Day / 2 Night",
                 bestSeason: "Apr - Oct",
                 groupSize: "2-14 travelers",
                 priceFrom: "€185",
                 highlights: ["Blue Medina", "Spanish Mosque viewpoint", "Rif Mountains trek", "Local handwoven textiles", "Waterfall Akchour"],
                 activities: ["Photography tour", "Hiking to Akchour", "Henna painting", "Mint tea ceremony"],
                 gallery: [
-                    "Picturs/chefchaouen1.jpg",
+                    "Picturs/Chefchaouen1.jpg",
                     "Picturs/chefchaouen2.jpg",
                     "Picturs/chefchaouen3.jpg"
                 ]
@@ -316,7 +347,7 @@
             if (closeBtn) closeBtn.onclick = closeModal;
             if (backBtn) backBtn.onclick = closeModal;
             if (bookBtn) {
-                bookBtn.onclick = () => alert(`✨ Thank you! A travel specialist will contact you about "${trip.title}". Feel the magic of Morocco.`);
+                bookBtn.onclick = () => showCustomMessage(trip.title);
             }
             
             modal.addEventListener('click', function backdropHandler(e) {
@@ -358,5 +389,6 @@ toggleBtn.addEventListener("click", () => {
     }
 });    
     </script>
+ 
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
   const hiddenElements = document.querySelectorAll(".fade-in-element");
 
@@ -18,5 +19,5 @@ document.addEventListener("DOMContentLoaded", function () {
   /* delai d 1.5sc */
   setTimeout(() => {
     hiddenElements.forEach((el) => el.classList.add("visible"));
-  }, 1500);
+  }, 1000);
 });

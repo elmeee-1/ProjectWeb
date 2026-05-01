@@ -201,3 +201,33 @@ body.dark-theme .col-titre {
   color: #101010;
   margin: 0 8px;
 }
+
+/* Responsive */
+@media (max-width: 600px) {
+  #footer-colonnes {
+    width: 95%;
+  }
+  .col {
+    width: 100%;
+    padding: 0;
+  }
+  .separateur {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  #footer-titre h2 {
+    font-size: 16px;
+  }
+  .col-titre {
+    font-size: 10px;
+  }
+  .liste-footer li a,
+  .contact-ligne,
+  .lien-email,
+  #reseaux a,
+  #footer-bas p,
+  #footer-bas a {
+    font-size: 11px;
+  }
+}

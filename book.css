@@ -13,7 +13,6 @@
   --placeholder: rgba(26, 26, 26, 0.35);
   --select-option-bg: #ffffff;
   --separator-color: rgba(184, 154, 94, 0.6);
-
   --fs-hero: clamp(2.8rem, 6vw, 5.5rem);
   --fs-label: 0.68rem;
   --fs-body: clamp(0.88rem, 1.4vw, 1rem);
@@ -86,10 +85,10 @@ body {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background-image: url("img/book-pattern.jpg");
+  background-image: url("Picturs/slideBab-Oudaia.jpg");
   background-size: cover;
   background-position: center;
-  opacity: 0.3;
+  filter: opacity(0.1);
 }
 
 .book-hero::after {
@@ -99,7 +98,6 @@ body {
   left: 0;
   right: 0;
   height: 100px;
-  background: linear-gradient(to top, var(--page-bg) 0%, transparent 100%);
   z-index: 0;
   pointer-events: none;
 }
@@ -221,7 +219,6 @@ body {
   padding: 0.85rem 1rem;
   outline: none;
   transition: 0.3s;
-  -webkit-appearance: none;
 }
 .field__input::placeholder,
 .field__textarea::placeholder {
