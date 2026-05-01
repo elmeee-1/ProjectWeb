@@ -45,7 +45,7 @@ body.dark-theme .city-tag {
   justify-content: center;
   text-align: center;
   color: #fff;
-  background-image: url("https://images.unsplash.com/photo-1539020140153-e479b8c22e70?q=80&w=2070&auto=format&fit=crop");
+  background-image: url("Picturs/hero\ img.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -631,16 +631,5 @@ body.dark-theme .city-tag {
 .hero-nav-link:hover {
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-  background: #f0b429;
-}
-.hero-nav {
-  margin-top: 1.8rem;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-
-  border: 2px solid rgba(212, 147, 10, 0.6); 
-  padding: 15px 20px; 
-  border-radius: 40px;
+  background: #40E0D0;
 }
