@@ -48,9 +48,8 @@ ProjectWeb/
 ```
 🚀 Comment Lancer le Projet Localement
 Clonez ce dépôt sur votre machine :
-
-Bash
-git clone [https://github.com/elmeee-1/ProjectWeb.git](https://github.com/elmeee-1/ProjectWeb.git)
+``bash
+   git clone https://github.com/elmeee-1/ProjectWeb.git
 Ouvrez le dossier dans votre éditeur de code (ex: VS Code).
 
 Ouvrez le fichier index.html dans votre navigateur (ou utilisez l'extension Live Server).
