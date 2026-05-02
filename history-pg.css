@@ -13,7 +13,7 @@
   justify-content: start;
   text-align: justify;
   color: #fff;
-  background-image: url(/Picturs/flag.jpg);
+  background-image: url(Picturs/flag.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -253,7 +253,7 @@
 #outro .bg-img {
   position: absolute;
   inset: 0;
-  background: url("/Picturs/outer-background.jpg");
+  background: url("Picturs/outer-background.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;

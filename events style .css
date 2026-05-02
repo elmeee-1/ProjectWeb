@@ -27,7 +27,7 @@ body.dark-theme .festivals-intro,body.dark-theme .section-desc , body.dark-theme
   justify-content: center;
   text-align: center;
   color: #fff;
-  background-image: url('/Picturs/moroccan-festivals.jpg'); 
+  background-image: url('Picturs/moroccan-festivals.jpg'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -207,12 +207,12 @@ body.dark-theme .festivals-intro,body.dark-theme .section-desc , body.dark-theme
   transition: transform 0.6s ease;
 }
 
-.fc1 .fest-card-bg { background-image: url('/Picturs/thumbnails/fez-festival.jpg');filter: brightness(2); }
-.fc2 .fest-card-bg { background-image: url('/Picturs/thumbnails/rose-festival.jpg');}
-.fc3 .fest-card-bg { background-image: url('/Picturs/thumbnails/essaouira-festival.jpg'); }
-.fc4 .fest-card-bg { background-image: url('/Picturs/thumbnails/jemaa-el-fna-squar.jpg'); filter: brightness(2);}
-.fc5 .fest-card-bg { background-image: url('/Picturs/thumbnails/imilchil_festival.jpg'); }
-.fc6 .fest-card-bg { background-image: url('/Picturs/thumbnails/taragalt_festival.jpg');}
+.fc1 .fest-card-bg { background-image: url('Picturs/thumbnails/fez-festival.jpg');filter: brightness(2); }
+.fc2 .fest-card-bg { background-image: url('Picturs/thumbnails/rose-festival.jpg');}
+.fc3 .fest-card-bg { background-image: url('Picturs/thumbnails/essaouira-festival.jpg'); }
+.fc4 .fest-card-bg { background-image: url('Picturs/thumbnails/jemaa-el-fna-squar.jpg'); filter: brightness(2);}
+.fc5 .fest-card-bg { background-image: url('Picturs/thumbnails/imilchil_festival.jpg'); }
+.fc6 .fest-card-bg { background-image: url('Picturs/thumbnails/taragalt_festival.jpg');}
 
 .fest-card-bg::after {
   content: '';
