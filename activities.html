@@ -516,9 +516,41 @@
 </html>
 
 <script>
-  // Animate cards on scroll
+  (function() {
+    function showReservationToast(activityName) {
+      const existingToast = document.querySelector('.custom-toast');
+      if (existingToast) existingToast.remove();
+      
+      const toast = document.createElement('div');
+      toast.className = 'custom-toast';
+      const message = `✅ Reservation for “${activityName}” submitted! Our travel team will contact you within 24h to confirm your spot.`;
+      toast.innerHTML = `${message} <button aria-label="Close">✕</button>`;
+      document.body.appendChild(toast);
+      
+      const closeBtn = toast.querySelector('button');
+      const removeToast = () => {
+        if (toast && toast.remove) toast.remove();
+      };
+      closeBtn.addEventListener('click', removeToast);
+      setTimeout(removeToast, 4500);
+    }
+    const reserveButtons = document.querySelectorAll('.btn-reserve');
+    reserveButtons.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const card = this.closest('.act-card');
+        let activityTitle = '';
+        if (card) {
+          const titleEl = card.querySelector('.card-title');
+          if (titleEl) activityTitle = titleEl.innerText.trim();
+        }
+        if (!activityTitle) activityTitle = "your selected experience";
+        showReservationToast(activityTitle);
+      });
+    });
+  })();
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach((e, i) => {
+    entries.forEach((e) => {
       if (e.isIntersecting) {
         e.target.style.opacity = '1';
         e.target.style.transform = 'translateY(0)';
@@ -526,7 +558,6 @@
       }
     });
   }, { threshold: 0.12 });
-
   document.querySelectorAll('.act-card').forEach((card, i) => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(28px)';

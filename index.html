@@ -306,31 +306,20 @@
       </div>
     </div>
 
-    <script src="darkmode.js"></script>
-    <script>
-      const track = document.querySelector(".slider-track");
-      const dots = document.querySelectorAll(".dot");
-      const total = dots.length;
-      let current = 0;
-      function goTo(index) {
-        current = (index + total) % total;
-        track.style.transform = `translateX(-${current * 100}%)`;
-        dots.forEach((d, i) => d.classList.toggle("active", i === current));
-      }
-
-      document
-        .getElementById("nextBtn")
-        .addEventListener("click", () => goTo(current + 1));
-      document
-        .getElementById("prevBtn")
-        .addEventListener("click", () => goTo(current - 1));
-      dots.forEach((d, i) => d.addEventListener("click", () => goTo(i)));
-      setInterval(() => {
-        goTo(current + 1);
-      }, 3000);
-    </script>
+<section id="cta">
+  <div class="container">
+    <div class="reveal">
+      <p class="cta-label">Don't miss a Spot</p>
+      <h2 class="cta-title">Stay Conected to <br>Morocco's Updates</h2>
+      <p class="cta-sub">Receive notification of(Trips,Tours and hidden Spots )direct to your inbox.</p>
+      <div class="cta-form">
+        <input type="email" placeholder="your@email.com" />
+        <button type="button">Subscribe</button>
+      </div>
+    </div>
+  </div>
+</section>
   
-  </body>
  <footer>
 
 <div id="footer">
@@ -397,4 +386,30 @@
   </div>
 </div>
 </footer>
+<script src="events.js"></script>
+<script src="darkmode.js"></script>
+<script>
+      const track = document.querySelector(".slider-track");
+      const dots = document.querySelectorAll(".dot");
+      const total = dots.length;
+      let current = 0;
+      function goTo(index) {
+        current = (index + total) % total;
+        track.style.transform = `translateX(-${current * 100}%)`;
+        dots.forEach((d, i) => d.classList.toggle("active", i === current));
+      }
+
+      document
+        .getElementById("nextBtn")
+        .addEventListener("click", () => goTo(current + 1));
+      document
+        .getElementById("prevBtn")
+        .addEventListener("click", () => goTo(current - 1));
+      dots.forEach((d, i) => d.addEventListener("click", () => goTo(i)));
+      setInterval(() => {
+        goTo(current + 1);
+      }, 3000);
+  </script>
+
+  </body>
 </html>
