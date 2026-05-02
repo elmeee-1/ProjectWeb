@@ -633,7 +633,9 @@ justify-content: space-evenly;
   z-index: 0;
 }
 #cta .container {
-  width: 100vh;
+  width: 100%;
+  max-width: 500px;
+  padding: 0 15px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
@@ -764,4 +766,40 @@ justify-content: space-evenly;
 .cta-message .msg-text {
   text-align: left;
   line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .intro-text {
+    flex-direction: column;
+  }
+
+  .intro-text p {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .highlight p {
+    padding: 0 15px;
+  }
+}
+@media (max-width: 768px) {
+  .guide-content h3 {
+    padding-left: 0;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .cta-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cta-form input {
+    border-radius: 48px;
+    width: 100%;
+  }
+
+  .cta-form button {
+    border-radius: 48px;
+    width: 100%;
+  }
 }
