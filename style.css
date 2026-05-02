@@ -111,6 +111,7 @@ body.dark-theme .city-tag {
 
 .morocco-info-section {
   background-image: url(Picturs/background.jpg);
+  filter: brightness(0.8);
   background-attachment: fixed;
   margin-top: 0;
   padding: 50px ;
@@ -130,10 +131,11 @@ body.dark-theme .city-tag {
   text-align: left;
   display: flex;
   align-items: center;
-  justify-content: justify;
+  color: #333;
 }
 
 .intro-text {
+  color: #333;
   display: flex;
   align-items: start;
   text-align: left;
@@ -145,6 +147,7 @@ body.dark-theme .city-tag {
 }
 .intro-text p {
   width: calc(100% / 3 - 10px);
+  color: #333;
 }
 
 @media (max-width: 768px) {
