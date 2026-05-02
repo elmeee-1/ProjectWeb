@@ -653,7 +653,7 @@ section { padding: 7rem 0; }
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url(Picturs/meknes-morocco.jpg);
+  background-image: url('Picturs/sliders.pic/atlas-slide.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
