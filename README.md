@@ -4,7 +4,11 @@ Markdown
 # 🇲🇦 Majlis — Guide Touristique du Maroc
 
 🌍 **[VOIR LA DÉMO EN LIGNE](https://elmeee-1.github.io/ProjectWeb/)** 🌍
-
+                      
+              
+```
+https://elmeee-1.github.io/ProjectWeb/
+```
 *Un projet web immersif développé par un groupe d'étudiants de la **Faculté des Sciences Semlalia (FSSM)**.*
 
 </div>
@@ -46,11 +50,14 @@ ProjectWeb/
 │   └── script.js            # Logique du mode sombre, lightbox et interactions
 └── Picturs/                 # Médias optimisés (images, vidéos, thumbnails)
 ```
-🚀 Comment Lancer le Projet Localement
-Clonez ce dépôt sur votre machine :
+## 🚀 Lancer le projet localement
+1. Cloner le dépôt
+bash :
+```
+ git clone https://github.com/elmeee-1/ProjectWeb.git
 
-Bash
-git clone [https://github.com/elmeee-1/ProjectWeb.git](https://github.com/elmeee-1/ProjectWeb.git)
+```
+
 Ouvrez le dossier dans votre éditeur de code (ex: VS Code).
 
 Ouvrez le fichier index.html dans votre navigateur (ou utilisez l'extension Live Server).
