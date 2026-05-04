@@ -60,7 +60,19 @@ bash :
 
 Ouvrez le dossier dans votre éditeur de code (ex: VS Code).
 
+
 Ouvrez le fichier index.html dans votre navigateur (ou utilisez l'extension Live Server).
+
+
+## 👤 Author
+
+**Elmehdi Elmellouki**  
+Student at the Faculty of Sciences Semlalia, Cadi Ayyad University — Marrakech, Morocco
+
+[![GitHub](https://img.shields.io/badge/GitHub-elmeee--1-181717?style=flat&logo=github)](https://github.com/elmeee-1)
+
+---
+
 
 📌 Statut du Projet
 🟢 Terminé — Validé et prêt pour la présentation finale.
